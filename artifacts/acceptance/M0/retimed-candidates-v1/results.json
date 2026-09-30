@@ -1,0 +1,85 @@
+{
+  "checkedAt": "2026-09-30T17:49:12.501Z",
+  "method": "ffmpeg_atempo",
+  "status": "synthetic_duration_and_asr_consistency_passed",
+  "results": [
+    {
+      "voiceVersion": "kokoro-zh-zm009-v1",
+      "speed": 1,
+      "path": "artifacts/acceptance/M0/retimed-candidates-v1/kokoro-zh-zm009-v1-speed-1.wav",
+      "sourceSha256": "41f0c45181d2e436e2fa41ce23cc815ac08e1f027df9bb9806a5f96b53fe92da",
+      "sha256": "41f0c45181d2e436e2fa41ce23cc815ac08e1f027df9bb9806a5f96b53fe92da",
+      "durationSec": 2.2289166666666667,
+      "expectedDurationSec": 2.2289166666666667,
+      "durationWithinTolerance": true,
+      "text": "不用急,我走慢一點",
+      "sameRecognizedHanAsBaseline": true
+    },
+    {
+      "voiceVersion": "kokoro-zh-zm009-v1",
+      "speed": 0.8,
+      "path": "artifacts/acceptance/M0/retimed-candidates-v1/kokoro-zh-zm009-v1-speed-0.8.wav",
+      "sourceSha256": "41f0c45181d2e436e2fa41ce23cc815ac08e1f027df9bb9806a5f96b53fe92da",
+      "sha256": "733ad00a4058d20b6de72a05a7532c38a00f22a7f97cce6d29f88861f24e8d19",
+      "durationSec": 2.758,
+      "expectedDurationSec": 2.7861458333333333,
+      "durationWithinTolerance": true,
+      "text": "不用急,我走慢一點",
+      "sameRecognizedHanAsBaseline": true
+    },
+    {
+      "voiceVersion": "kokoro-zh-zm009-v1",
+      "speed": 1.2,
+      "path": "artifacts/acceptance/M0/retimed-candidates-v1/kokoro-zh-zm009-v1-speed-1.2.wav",
+      "sourceSha256": "41f0c45181d2e436e2fa41ce23cc815ac08e1f027df9bb9806a5f96b53fe92da",
+      "sha256": "05fc0ab6f857335de1c228be893e48393a487503e67ec2895055631bd83cf7da",
+      "durationSec": 1.8406666666666667,
+      "expectedDurationSec": 1.8574305555555557,
+      "durationWithinTolerance": true,
+      "text": "不用急,我走慢一點",
+      "sameRecognizedHanAsBaseline": true
+    },
+    {
+      "voiceVersion": "kokoro-zh-zf001-v1",
+      "speed": 1,
+      "path": "artifacts/acceptance/M0/retimed-candidates-v1/kokoro-zh-zf001-v1-speed-1.wav",
+      "sourceSha256": "c3b88a420b97cba161d908a79c2d5608da2714cb52971974e612afce5a1d90d5",
+      "sha256": "c3b88a420b97cba161d908a79c2d5608da2714cb52971974e612afce5a1d90d5",
+      "durationSec": 2.141375,
+      "expectedDurationSec": 2.141375,
+      "durationWithinTolerance": true,
+      "text": "不用急,我走慢一點",
+      "sameRecognizedHanAsBaseline": true
+    },
+    {
+      "voiceVersion": "kokoro-zh-zf001-v1",
+      "speed": 0.8,
+      "path": "artifacts/acceptance/M0/retimed-candidates-v1/kokoro-zh-zf001-v1-speed-0.8.wav",
+      "sourceSha256": "c3b88a420b97cba161d908a79c2d5608da2714cb52971974e612afce5a1d90d5",
+      "sha256": "8e83079242b2c96cfc07221b3ef23f84e0b5df22bca670960e4d823dd87be9c2",
+      "durationSec": 2.6744166666666667,
+      "expectedDurationSec": 2.67671875,
+      "durationWithinTolerance": true,
+      "text": "不用急,我走慢一點",
+      "sameRecognizedHanAsBaseline": true
+    },
+    {
+      "voiceVersion": "kokoro-zh-zf001-v1",
+      "speed": 1.2,
+      "path": "artifacts/acceptance/M0/retimed-candidates-v1/kokoro-zh-zf001-v1-speed-1.2.wav",
+      "sourceSha256": "c3b88a420b97cba161d908a79c2d5608da2714cb52971974e612afce5a1d90d5",
+      "sha256": "2c529bbadef523ad77d0c72b8eb2f547bf46cdb46f94dd557922d09e497db75e",
+      "durationSec": 1.7706666666666666,
+      "expectedDurationSec": 1.7844791666666668,
+      "durationWithinTolerance": true,
+      "text": "不用急,我走慢一點",
+      "sameRecognizedHanAsBaseline": true
+    }
+  ],
+  "limitations": [
+    "ASR consistency is not proof of spoken word accuracy",
+    "No human naturalness or familiarity result",
+    "No source rhythm transfer",
+    "Not a published voice version"
+  ]
+}

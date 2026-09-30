@@ -1,0 +1,15 @@
+{
+  "source": "https://quaternius.itch.io/modular-character-outfits-fantasy",
+  "license": "CC0-1.0",
+  "importedAt": "2026-09-30",
+  "archiveSha256": "c3468b18871cc8c8f05ab14df7712baf22cb9f389cbd870babf130e595187f70",
+  "glbSha256": "63b96f77930e94a9900204591561206d18dd996e66be1e7b7028e8f500f8ac1a",
+  "model": "Male_Peasant",
+  "triangles": 12894,
+  "skins": 1,
+  "joints": 65,
+  "animations": [],
+  "maxTextureEdge": 2048,
+  "textureReferenceRepairs": {},
+  "status": "candidate; requires animation, visual and device review before release"
+}

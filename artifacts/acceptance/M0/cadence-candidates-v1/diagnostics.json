@@ -1,0 +1,145 @@
+{
+  "checkedAt": "2026-09-30T17:45:07.938Z",
+  "expectedText": "不用急，我走慢一点。",
+  "scope": "synthetic_vad_and_asr_diagnostics_not_human_audio_quality",
+  "results": [
+    {
+      "speakerId": 58,
+      "speed": 0.8,
+      "source": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-58-speed-0.8-repeat-1.wav",
+      "durationSec": 3.1028125,
+      "speechActivity": {
+        "status": "measured",
+        "modelId": "silero-vad-v4",
+        "modelSha256": "a35ebf52fd3ce5f1469b2a36158dba761bc47b973ea3382b3186ca15b1f5af28",
+        "speechIntervals": [
+          {
+            "startSec": 0.134,
+            "endSec": 3.072
+          }
+        ],
+        "speechDurationSec": 2.938,
+        "pauses": [],
+        "internalPauseRatio": 0,
+        "subjectAttribution": "unverified"
+      },
+      "text": "我不用急,我走慢一点",
+      "strictHanMatch": false
+    },
+    {
+      "speakerId": 58,
+      "speed": 1,
+      "source": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-58-speed-1-repeat-1.wav",
+      "durationSec": 2.229125,
+      "speechActivity": {
+        "status": "measured",
+        "modelId": "silero-vad-v4",
+        "modelSha256": "a35ebf52fd3ce5f1469b2a36158dba761bc47b973ea3382b3186ca15b1f5af28",
+        "speechIntervals": [
+          {
+            "startSec": 0.038,
+            "endSec": 2.208
+          }
+        ],
+        "speechDurationSec": 2.1700000000000004,
+        "pauses": [],
+        "internalPauseRatio": 0,
+        "subjectAttribution": "unverified"
+      },
+      "text": "不用急,我走慢一點",
+      "strictHanMatch": false
+    },
+    {
+      "speakerId": 58,
+      "speed": 1.2,
+      "source": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-58-speed-1.2-repeat-1.wav",
+      "durationSec": 1.8284375,
+      "speechActivity": {
+        "status": "measured",
+        "modelId": "silero-vad-v4",
+        "modelSha256": "a35ebf52fd3ce5f1469b2a36158dba761bc47b973ea3382b3186ca15b1f5af28",
+        "speechIntervals": [
+          {
+            "startSec": 0.038,
+            "endSec": 1.824
+          }
+        ],
+        "speechDurationSec": 1.786,
+        "pauses": [],
+        "internalPauseRatio": 0,
+        "subjectAttribution": "unverified"
+      },
+      "text": "不用急,我走慢一點",
+      "strictHanMatch": false
+    },
+    {
+      "speakerId": 3,
+      "speed": 0.8,
+      "source": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-3-speed-0.8-repeat-1.wav",
+      "durationSec": 2.8220625,
+      "speechActivity": {
+        "status": "measured",
+        "modelId": "silero-vad-v4",
+        "modelSha256": "a35ebf52fd3ce5f1469b2a36158dba761bc47b973ea3382b3186ca15b1f5af28",
+        "speechIntervals": [
+          {
+            "startSec": 0.134,
+            "endSec": 2.816
+          }
+        ],
+        "speechDurationSec": 2.682,
+        "pauses": [],
+        "internalPauseRatio": 0,
+        "subjectAttribution": "unverified"
+      },
+      "text": "我不用急,我走慢一點點",
+      "strictHanMatch": false
+    },
+    {
+      "speakerId": 3,
+      "speed": 1,
+      "source": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-3-speed-1-repeat-1.wav",
+      "durationSec": 2.1415625,
+      "speechActivity": {
+        "status": "measured",
+        "modelId": "silero-vad-v4",
+        "modelSha256": "a35ebf52fd3ce5f1469b2a36158dba761bc47b973ea3382b3186ca15b1f5af28",
+        "speechIntervals": [
+          {
+            "startSec": 0.07,
+            "endSec": 2.112
+          }
+        ],
+        "speechDurationSec": 2.0420000000000003,
+        "pauses": [],
+        "internalPauseRatio": 0,
+        "subjectAttribution": "unverified"
+      },
+      "text": "不用急,我走慢一點",
+      "strictHanMatch": false
+    },
+    {
+      "speakerId": 3,
+      "speed": 1.2,
+      "source": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-3-speed-1.2-repeat-1.wav",
+      "durationSec": 2.1786875,
+      "speechActivity": {
+        "status": "measured",
+        "modelId": "silero-vad-v4",
+        "modelSha256": "a35ebf52fd3ce5f1469b2a36158dba761bc47b973ea3382b3186ca15b1f5af28",
+        "speechIntervals": [
+          {
+            "startSec": 1.158,
+            "endSec": 2.176
+          }
+        ],
+        "speechDurationSec": 1.0180000000000002,
+        "pauses": [],
+        "internalPauseRatio": 0,
+        "subjectAttribution": "unverified"
+      },
+      "text": "我走慢一點",
+      "strictHanMatch": false
+    }
+  ]
+}

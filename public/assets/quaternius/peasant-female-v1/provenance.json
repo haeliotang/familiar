@@ -1,0 +1,15 @@
+{
+  "source": "https://quaternius.itch.io/modular-character-outfits-fantasy",
+  "license": "CC0-1.0",
+  "importedAt": "2026-09-30",
+  "archiveSha256": "c3468b18871cc8c8f05ab14df7712baf22cb9f389cbd870babf130e595187f70",
+  "glbSha256": "a947c8b1c55f371623e8fb06d314864a281fa4aaae827bca8008b49d010dc7b9",
+  "model": "Female_Peasant",
+  "triangles": 13568,
+  "skins": 1,
+  "joints": 65,
+  "animations": [],
+  "maxTextureEdge": 2048,
+  "textureReferenceRepairs": {},
+  "status": "candidate; requires animation, visual and device review before release"
+}

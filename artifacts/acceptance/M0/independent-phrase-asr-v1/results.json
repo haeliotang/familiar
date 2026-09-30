@@ -1,0 +1,1119 @@
+{
+  "checkedAt": "2026-09-30T18:37:40.173Z",
+  "status": "independent_recognition_completed",
+  "modelId": "sherpa-onnx-paraformer-zh-2023-09-14",
+  "modelRevision": "def027084691107096b5ebba69785756d63de6c5",
+  "modelHashes": {
+    "model.int8.onnx": "f36a0433bcf096bd6d6f11b80a3ac8bed110bdca632fe0d731df8d1a84475945",
+    "tokens.txt": "59aba8873a2ed1e122c25fee421e25f283b63290efbde85c1f01a853d83cb6e6"
+  },
+  "hanVariantMap": {
+    "點": "点",
+    "風": "风",
+    "試": "试",
+    "這": "这",
+    "應": "应",
+    "該": "该"
+  },
+  "results": [
+    {
+      "path": "artifacts/acceptance/M0/phrase-candidates-v1/speaker-58-general-0.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-candidates-v1/results.json",
+      "sha256": "a01f80b913e8a4a6b804a64c8194ee7467d477a0a63e4a6cd2a4f1a07817a77f",
+      "expectedText": "今天的风很好。",
+      "earlierRecognizedText": "今天的風很好",
+      "recognizedText": "今天的风很好",
+      "tokens": [
+        "今",
+        "天",
+        "的",
+        "风",
+        "很",
+        "好"
+      ],
+      "timestamps": [
+        0.14,
+        0.28,
+        0.58,
+        0.8,
+        1.08,
+        1.26
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-candidates-v1/speaker-58-wait-0.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-candidates-v1/results.json",
+      "sha256": "654bde42133ec38a083cc3738605e4f46ab91cda7fb634638dd23e15d419a48d",
+      "expectedText": "不用急。",
+      "earlierRecognizedText": "不用急",
+      "recognizedText": "不用急",
+      "tokens": [
+        "不",
+        "用",
+        "急"
+      ],
+      "timestamps": [
+        0.12,
+        0.22,
+        0.38
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-candidates-v1/speaker-58-wait-1.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-candidates-v1/results.json",
+      "sha256": "2cdb1271950180e401c0088bab270156ea6acad39effad6d025e945d95d8a5c6",
+      "expectedText": "我走慢一点。",
+      "earlierRecognizedText": "我走慢一點",
+      "recognizedText": "我走慢一点",
+      "tokens": [
+        "我",
+        "走",
+        "慢",
+        "一",
+        "点"
+      ],
+      "timestamps": [
+        0.12,
+        0.3,
+        0.52,
+        0.76,
+        0.96
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-candidates-v1/speaker-58-repair-0.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-candidates-v1/results.json",
+      "sha256": "2ad23d6b2e0cd6f6aadeaf5befebdd073eef84e47da4be8c502d134ad447ac54",
+      "expectedText": "再试试。",
+      "earlierRecognizedText": "再續續",
+      "recognizedText": "再试试",
+      "tokens": [
+        "再",
+        "试",
+        "试"
+      ],
+      "timestamps": [
+        0.14,
+        0.28,
+        0.5
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-candidates-v1/speaker-58-repair-1.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-candidates-v1/results.json",
+      "sha256": "15bfbb6b36ee9d648a5f44a283cd36bfc5dc855370fbe27f6f9722269ccdb0c3",
+      "expectedText": "这下应该好了。",
+      "earlierRecognizedText": "这下应该好了",
+      "recognizedText": "这下应该好了",
+      "tokens": [
+        "这",
+        "下",
+        "应",
+        "该",
+        "好",
+        "了"
+      ],
+      "timestamps": [
+        0.14,
+        0.28,
+        0.6,
+        0.8,
+        1,
+        1.26
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-candidates-v1/speaker-3-general-0.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-candidates-v1/results.json",
+      "sha256": "6e9a31970b421a4440b0c6221afcf030d30e4802fef3e473d623372cf82e0478",
+      "expectedText": "今天的风很好。",
+      "earlierRecognizedText": "今天的风很好",
+      "recognizedText": "今天的风很好",
+      "tokens": [
+        "今",
+        "天",
+        "的",
+        "风",
+        "很",
+        "好"
+      ],
+      "timestamps": [
+        0.14,
+        0.28,
+        0.52,
+        0.7,
+        0.94,
+        1.14
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-candidates-v1/speaker-3-wait-0.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-candidates-v1/results.json",
+      "sha256": "04145d7ca6bbebc34db1e3f035065a0521abca1d93f52f13620c0d4d68b8d3f0",
+      "expectedText": "不用急。",
+      "earlierRecognizedText": "不用急",
+      "recognizedText": "不用急",
+      "tokens": [
+        "不",
+        "用",
+        "急"
+      ],
+      "timestamps": [
+        0.12,
+        0.22,
+        0.44
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-candidates-v1/speaker-3-wait-1.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-candidates-v1/results.json",
+      "sha256": "ca19b64199aa459dee1ecfc0cdc42ed3e1f77e52a79a722fd1528cca8efd80ba",
+      "expectedText": "我走慢一点。",
+      "earlierRecognizedText": "我走慢一點",
+      "recognizedText": "我走慢一点",
+      "tokens": [
+        "我",
+        "走",
+        "慢",
+        "一",
+        "点"
+      ],
+      "timestamps": [
+        0.12,
+        0.26,
+        0.52,
+        0.76,
+        0.9
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-candidates-v1/speaker-3-repair-0.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-candidates-v1/results.json",
+      "sha256": "afb99c250ca11f9f0f6c7dcc96be951c8e11a11c2ef25306aefd616a783c0841",
+      "expectedText": "再试试。",
+      "earlierRecognizedText": "再",
+      "recognizedText": "再试试",
+      "tokens": [
+        "再",
+        "试",
+        "试"
+      ],
+      "timestamps": [
+        0.2,
+        0.36,
+        0.56
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-candidates-v1/speaker-3-repair-1.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-candidates-v1/results.json",
+      "sha256": "993015c2051cf25b5a3ce33056b8751fe7688c615fa09167ac7cb25b854d97f3",
+      "expectedText": "这下应该好了。",
+      "earlierRecognizedText": "这下应该好了",
+      "recognizedText": "这下应该好了",
+      "tokens": [
+        "这",
+        "下",
+        "应",
+        "该",
+        "好",
+        "了"
+      ],
+      "timestamps": [
+        0.14,
+        0.28,
+        0.52,
+        0.68,
+        0.92,
+        1.2
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v1/speaker-58-wait-pause-0.25.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-pause-candidates-v1/results.json",
+      "sha256": "e2038616e39fe452939a173284494affc464b12b5c7078e133cb2fe71569de36",
+      "expectedText": "不用急，我走慢一点。",
+      "earlierRecognizedText": "不用急,我走慢一點",
+      "recognizedText": "不用急我走慢一点",
+      "tokens": [
+        "不",
+        "用",
+        "急",
+        "我",
+        "走",
+        "慢",
+        "一",
+        "点"
+      ],
+      "timestamps": [
+        0.14,
+        0.24,
+        0.4,
+        1.1,
+        1.36,
+        1.64,
+        1.86,
+        2.04
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v1/speaker-58-wait-pause-0.65.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-pause-candidates-v1/results.json",
+      "sha256": "06907e32e2677ec879d7ba36fa8c64c1fe9b7f890c419362d8a19396c7bd96f2",
+      "expectedText": "不用急，我走慢一点。",
+      "earlierRecognizedText": "不用急我走慢一点",
+      "recognizedText": "不用急我走慢一点",
+      "tokens": [
+        "不",
+        "用",
+        "急",
+        "我",
+        "走",
+        "慢",
+        "一",
+        "点"
+      ],
+      "timestamps": [
+        0.1,
+        0.24,
+        0.4,
+        1.48,
+        1.78,
+        2,
+        2.26,
+        2.46
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v1/speaker-58-repair-pause-0.25.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-pause-candidates-v1/results.json",
+      "sha256": "384ce91e7d76595945000005b28ad992c1915cfd9605968d60debbcfed25e558",
+      "expectedText": "再试试，这下应该好了。",
+      "earlierRecognizedText": "再試試,這下應該好了",
+      "recognizedText": "再试试这下应该好了",
+      "tokens": [
+        "再",
+        "试",
+        "试",
+        "这",
+        "下",
+        "应",
+        "该",
+        "好",
+        "了"
+      ],
+      "timestamps": [
+        0.14,
+        0.32,
+        0.52,
+        1.26,
+        1.54,
+        1.82,
+        2,
+        2.24,
+        2.46
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v1/speaker-58-repair-pause-0.65.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-pause-candidates-v1/results.json",
+      "sha256": "5ed38169ee6d2d45b5a76e64cb24f74a0869085d5d308e79a655d0f2a5f471ad",
+      "expectedText": "再试试，这下应该好了。",
+      "earlierRecognizedText": "再这下应该好了",
+      "recognizedText": "再试试这下应该好了",
+      "tokens": [
+        "再",
+        "试",
+        "试",
+        "这",
+        "下",
+        "应",
+        "该",
+        "好",
+        "了"
+      ],
+      "timestamps": [
+        0.14,
+        0.32,
+        0.52,
+        1.64,
+        1.9,
+        2.24,
+        2.42,
+        2.6,
+        2.88
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v1/speaker-3-wait-pause-0.25.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-pause-candidates-v1/results.json",
+      "sha256": "c4f8bd5ee8d7a7a6926ac88af146d0986d49e4ac570b33a97bd459ffab66bc84",
+      "expectedText": "不用急，我走慢一点。",
+      "earlierRecognizedText": "不用急,我走慢一點",
+      "recognizedText": "不用急我走慢一点",
+      "tokens": [
+        "不",
+        "用",
+        "急",
+        "我",
+        "走",
+        "慢",
+        "一",
+        "点"
+      ],
+      "timestamps": [
+        0.14,
+        0.24,
+        0.46,
+        1.04,
+        1.3,
+        1.52,
+        1.78,
+        1.98
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v1/speaker-3-wait-pause-0.65.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-pause-candidates-v1/results.json",
+      "sha256": "d376c691d7b975c53d668a80056a5f64a9efb563940f68d8bddfcbfcb5beb2e9",
+      "expectedText": "不用急，我走慢一点。",
+      "earlierRecognizedText": "不用急我走慢一点",
+      "recognizedText": "不用急我走慢一点",
+      "tokens": [
+        "不",
+        "用",
+        "急",
+        "我",
+        "走",
+        "慢",
+        "一",
+        "点"
+      ],
+      "timestamps": [
+        0.12,
+        0.24,
+        0.46,
+        1.42,
+        1.68,
+        1.94,
+        2.18,
+        2.34
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v1/speaker-3-repair-pause-0.25.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-pause-candidates-v1/results.json",
+      "sha256": "7e52b3ae78dc0bf151649e094ee904d6d9f54f293286d2c8e4d4b0036e707a7b",
+      "expectedText": "再试试，这下应该好了。",
+      "earlierRecognizedText": "再这下应该好了",
+      "recognizedText": "再试试这下应该好了",
+      "tokens": [
+        "再",
+        "试",
+        "试",
+        "这",
+        "下",
+        "应",
+        "该",
+        "好",
+        "了"
+      ],
+      "timestamps": [
+        0.2,
+        0.38,
+        0.58,
+        1.26,
+        1.48,
+        1.74,
+        1.88,
+        2.12,
+        2.4
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v1/speaker-3-repair-pause-0.65.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-pause-candidates-v1/results.json",
+      "sha256": "0bfa3ef3ffa243ac06e3e43fcab6e2e839a68f92450c98299bf4107bbf467879",
+      "expectedText": "再试试，这下应该好了。",
+      "earlierRecognizedText": "再这下应该好了",
+      "recognizedText": "再试试这下应该好了",
+      "tokens": [
+        "再",
+        "试",
+        "试",
+        "这",
+        "下",
+        "应",
+        "该",
+        "好",
+        "了"
+      ],
+      "timestamps": [
+        0.2,
+        0.38,
+        0.58,
+        1.64,
+        1.9,
+        2.12,
+        2.3,
+        2.48,
+        2.76
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-candidates-v2-original/speaker-58-general-0.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-candidates-v2-original/results.json",
+      "sha256": "2236a05969a20450abbf35f21d7e6fac8b8eddb137776fcfc4b02c6e9c5f1ea4",
+      "expectedText": "今天的风很好。",
+      "earlierRecognizedText": "今天的風很好",
+      "recognizedText": "今天的风很好",
+      "tokens": [
+        "今",
+        "天",
+        "的",
+        "风",
+        "很",
+        "好"
+      ],
+      "timestamps": [
+        0.14,
+        0.28,
+        0.58,
+        0.8,
+        1.06,
+        1.26
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-candidates-v2-original/speaker-58-wait-0.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-candidates-v2-original/results.json",
+      "sha256": "560a62bf30cf76deb511866f99dee34d2d64512e1fba007fed5f87070d8da2ae",
+      "expectedText": "不用急，",
+      "earlierRecognizedText": "不用急",
+      "recognizedText": "不用急",
+      "tokens": [
+        "不",
+        "用",
+        "急"
+      ],
+      "timestamps": [
+        0.12,
+        0.22,
+        0.38
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-candidates-v2-original/speaker-58-wait-1.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-candidates-v2-original/results.json",
+      "sha256": "7b843c55a45bd41d93de22476989caa9aaacbf480b3982b666ab86d309d1ddf9",
+      "expectedText": "我走慢一点。",
+      "earlierRecognizedText": "我走慢一點",
+      "recognizedText": "我走慢一点",
+      "tokens": [
+        "我",
+        "走",
+        "慢",
+        "一",
+        "点"
+      ],
+      "timestamps": [
+        0.12,
+        0.26,
+        0.52,
+        0.76,
+        0.96
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-candidates-v2-original/speaker-58-repair-0.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-candidates-v2-original/results.json",
+      "sha256": "8a57a61c344ba680b596d7d2e135307cee54b48fccb30f90e9c5739843dc4d1f",
+      "expectedText": "再试试，",
+      "earlierRecognizedText": "再續續",
+      "recognizedText": "再试试",
+      "tokens": [
+        "再",
+        "试",
+        "试"
+      ],
+      "timestamps": [
+        0.14,
+        0.28,
+        0.5
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-candidates-v2-original/speaker-58-repair-1.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-candidates-v2-original/results.json",
+      "sha256": "bc739b1f77d30a28e0f2376fc90e0221b497f3a7d37684ce8e4c8bb80a5a4ea4",
+      "expectedText": "这下应该好了。",
+      "earlierRecognizedText": "这下应该好了",
+      "recognizedText": "这下应该好了",
+      "tokens": [
+        "这",
+        "下",
+        "应",
+        "该",
+        "好",
+        "了"
+      ],
+      "timestamps": [
+        0.14,
+        0.28,
+        0.6,
+        0.8,
+        1,
+        1.26
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-candidates-v2-original/speaker-3-general-0.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-candidates-v2-original/results.json",
+      "sha256": "3d4319dd467854edcf334eb3432e0b15ed1da1d593adc26efad18e0950bcd1e1",
+      "expectedText": "今天的风很好。",
+      "earlierRecognizedText": "今天的很好",
+      "recognizedText": "今天的风很好",
+      "tokens": [
+        "今",
+        "天",
+        "的",
+        "风",
+        "很",
+        "好"
+      ],
+      "timestamps": [
+        0.14,
+        0.28,
+        0.52,
+        0.7,
+        0.94,
+        1.14
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-candidates-v2-original/speaker-3-wait-0.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-candidates-v2-original/results.json",
+      "sha256": "56004559f515744aaac3056547f0a153fc99869f626d392cdbf8e56c088808cc",
+      "expectedText": "不用急，",
+      "earlierRecognizedText": "不用急",
+      "recognizedText": "不用急",
+      "tokens": [
+        "不",
+        "用",
+        "急"
+      ],
+      "timestamps": [
+        0.12,
+        0.22,
+        0.44
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-candidates-v2-original/speaker-3-wait-1.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-candidates-v2-original/results.json",
+      "sha256": "82c9b3d7fcc9f6b4f725e237d0149ccf6822fb85cd3059da4212985f6e9f3bba",
+      "expectedText": "我走慢一点。",
+      "earlierRecognizedText": "我走慢一點",
+      "recognizedText": "我走慢一点",
+      "tokens": [
+        "我",
+        "走",
+        "慢",
+        "一",
+        "点"
+      ],
+      "timestamps": [
+        0.12,
+        0.26,
+        0.52,
+        0.76,
+        0.9
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-candidates-v2-original/speaker-3-repair-0.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-candidates-v2-original/results.json",
+      "sha256": "8fe40e1df5afbe1e77b385260c38c3a1af92bab31998c41395ac23129fe5b8c8",
+      "expectedText": "再试试，",
+      "earlierRecognizedText": "再",
+      "recognizedText": "再试试",
+      "tokens": [
+        "再",
+        "试",
+        "试"
+      ],
+      "timestamps": [
+        0.2,
+        0.36,
+        0.56
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-candidates-v2-original/speaker-3-repair-1.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-candidates-v2-original/results.json",
+      "sha256": "0664469f69a317d9f3c181fcbbe3b616f0d43120500e3d6689a60c0e4f2815cd",
+      "expectedText": "这下应该好了。",
+      "earlierRecognizedText": "这下应该好了",
+      "recognizedText": "这下应该好了",
+      "tokens": [
+        "这",
+        "下",
+        "应",
+        "该",
+        "好",
+        "了"
+      ],
+      "timestamps": [
+        0.14,
+        0.28,
+        0.52,
+        0.68,
+        0.92,
+        1.2
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v2-original/speaker-58-wait-pause-0.25.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-pause-candidates-v2-original/results.json",
+      "sha256": "947c996f6dff2cd1a4794130acd9f38e3d8157b958cd93a6f133c8a4d943a84c",
+      "expectedText": "不用急，我走慢一点。",
+      "earlierRecognizedText": "不用急,我走慢一點",
+      "recognizedText": "不用急我走慢一点",
+      "tokens": [
+        "不",
+        "用",
+        "急",
+        "我",
+        "走",
+        "慢",
+        "一",
+        "点"
+      ],
+      "timestamps": [
+        0.12,
+        0.24,
+        0.4,
+        1.1,
+        1.36,
+        1.64,
+        1.84,
+        2.04
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v2-original/speaker-58-wait-pause-0.65.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-pause-candidates-v2-original/results.json",
+      "sha256": "e5da5b4bc2d147f5800871ee6b1888b9c1b434b90c5a22afd7e0a92b69729b1a",
+      "expectedText": "不用急，我走慢一点。",
+      "earlierRecognizedText": "不用急我走慢一点",
+      "recognizedText": "不用急我走慢一点",
+      "tokens": [
+        "不",
+        "用",
+        "急",
+        "我",
+        "走",
+        "慢",
+        "一",
+        "点"
+      ],
+      "timestamps": [
+        0.1,
+        0.24,
+        0.4,
+        1.48,
+        1.74,
+        2,
+        2.26,
+        2.46
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v2-original/speaker-58-repair-pause-0.25.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-pause-candidates-v2-original/results.json",
+      "sha256": "c33f2f577f92d86b016dbade02f303c15a70547db849df044aab14044ffb707c",
+      "expectedText": "再试试，这下应该好了。",
+      "earlierRecognizedText": "再,这下应该好了",
+      "recognizedText": "再试试这下应该好了",
+      "tokens": [
+        "再",
+        "试",
+        "试",
+        "这",
+        "下",
+        "应",
+        "该",
+        "好",
+        "了"
+      ],
+      "timestamps": [
+        0.14,
+        0.32,
+        0.52,
+        1.24,
+        1.48,
+        1.82,
+        2,
+        2.18,
+        2.46
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v2-original/speaker-58-repair-pause-0.65.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-pause-candidates-v2-original/results.json",
+      "sha256": "3739f40fa973f3314d919850b0821aeec2d308a9cde6fd2de4a8e1ecfa283e6e",
+      "expectedText": "再试试，这下应该好了。",
+      "earlierRecognizedText": "再这下应该好了",
+      "recognizedText": "再试试这下应该好了",
+      "tokens": [
+        "再",
+        "试",
+        "试",
+        "这",
+        "下",
+        "应",
+        "该",
+        "好",
+        "了"
+      ],
+      "timestamps": [
+        0.14,
+        0.32,
+        0.52,
+        1.62,
+        1.9,
+        2.22,
+        2.42,
+        2.6,
+        2.88
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v2-original/speaker-3-wait-pause-0.25.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-pause-candidates-v2-original/results.json",
+      "sha256": "7624e7a15b06202c9b3ce9832eade24863061127780e7c87d1e8ce1a634c4d8e",
+      "expectedText": "不用急，我走慢一点。",
+      "earlierRecognizedText": "不用急,我走慢一點",
+      "recognizedText": "不用急我走慢一点",
+      "tokens": [
+        "不",
+        "用",
+        "急",
+        "我",
+        "走",
+        "慢",
+        "一",
+        "点"
+      ],
+      "timestamps": [
+        0.14,
+        0.24,
+        0.46,
+        1.04,
+        1.3,
+        1.52,
+        1.76,
+        1.98
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v2-original/speaker-3-wait-pause-0.65.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-pause-candidates-v2-original/results.json",
+      "sha256": "fad46cc5e416151c043ea8323d2bb919749d3a67037e96368d7061c00d955f63",
+      "expectedText": "不用急，我走慢一点。",
+      "earlierRecognizedText": "不用急,我走慢一点",
+      "recognizedText": "不用急我走慢一点",
+      "tokens": [
+        "不",
+        "用",
+        "急",
+        "我",
+        "走",
+        "慢",
+        "一",
+        "点"
+      ],
+      "timestamps": [
+        0.12,
+        0.24,
+        0.46,
+        1.4,
+        1.66,
+        1.94,
+        2.18,
+        2.34
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v2-original/speaker-3-repair-pause-0.25.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-pause-candidates-v2-original/results.json",
+      "sha256": "191f8e0870a9bd580af2ac4f38d21615aa2f7f54fc07fff84683168ddb711800",
+      "expectedText": "再试试，这下应该好了。",
+      "earlierRecognizedText": "再这下应该好了",
+      "recognizedText": "再试试这下应该好了",
+      "tokens": [
+        "再",
+        "试",
+        "试",
+        "这",
+        "下",
+        "应",
+        "该",
+        "好",
+        "了"
+      ],
+      "timestamps": [
+        0.2,
+        0.38,
+        0.58,
+        1.26,
+        1.48,
+        1.7,
+        1.88,
+        2.12,
+        2.4
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v2-original/speaker-3-repair-pause-0.65.wav",
+      "sourceReport": "artifacts/acceptance/M0/phrase-pause-candidates-v2-original/results.json",
+      "sha256": "2f5705b6e062582a4e309a47fa532bbc2032b347405faf968ce0727cf99c997e",
+      "expectedText": "再试试，这下应该好了。",
+      "earlierRecognizedText": "再这下应该好了",
+      "recognizedText": "再试试这下应该好了",
+      "tokens": [
+        "再",
+        "试",
+        "试",
+        "这",
+        "下",
+        "应",
+        "该",
+        "好",
+        "了"
+      ],
+      "timestamps": [
+        0.2,
+        0.38,
+        0.58,
+        1.62,
+        1.84,
+        2.12,
+        2.3,
+        2.48,
+        2.76
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "public/assets/voices/kokoro-zh-zm009-v1/general.wav",
+      "sourceReport": null,
+      "sha256": "92f2aa65f63c8dcceed12b916f1528fe99db528b9c1e1899c067a3e534dea391",
+      "expectedText": "今天的风很好。",
+      "earlierRecognizedText": null,
+      "recognizedText": "今天的风很好",
+      "tokens": [
+        "今",
+        "天",
+        "的",
+        "风",
+        "很",
+        "好"
+      ],
+      "timestamps": [
+        0.14,
+        0.28,
+        0.58,
+        0.8,
+        1.08,
+        1.26
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "public/assets/voices/kokoro-zh-zm009-v1/wait.wav",
+      "sourceReport": null,
+      "sha256": "41f0c45181d2e436e2fa41ce23cc815ac08e1f027df9bb9806a5f96b53fe92da",
+      "expectedText": "不用急，我走慢一点。",
+      "earlierRecognizedText": null,
+      "recognizedText": "不用急我走慢一点",
+      "tokens": [
+        "不",
+        "用",
+        "急",
+        "我",
+        "走",
+        "慢",
+        "一",
+        "点"
+      ],
+      "timestamps": [
+        0.14,
+        0.24,
+        0.4,
+        0.9,
+        1.12,
+        1.34,
+        1.6,
+        1.8
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "public/assets/voices/kokoro-zh-zm009-v1/repair.wav",
+      "sourceReport": null,
+      "sha256": "0a24effa9d39f3b15a22668e955a2cafa60ccf24b0b70f4a7aa7633a112a1ab6",
+      "expectedText": "再试试，这下应该好了。",
+      "earlierRecognizedText": null,
+      "recognizedText": "再试试这下应该好了",
+      "tokens": [
+        "再",
+        "试",
+        "试",
+        "这",
+        "下",
+        "应",
+        "该",
+        "好",
+        "了"
+      ],
+      "timestamps": [
+        0.14,
+        0.32,
+        0.52,
+        1.04,
+        1.24,
+        1.56,
+        1.76,
+        1.94,
+        2.22
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "public/assets/voices/kokoro-zh-zf001-v1/general.wav",
+      "sourceReport": null,
+      "sha256": "aa4c188072c5ffa459f698f0ed828fb967047e95d8997f198a6eb107b7f67430",
+      "expectedText": "今天的风很好。",
+      "earlierRecognizedText": null,
+      "recognizedText": "今天的风很好",
+      "tokens": [
+        "今",
+        "天",
+        "的",
+        "风",
+        "很",
+        "好"
+      ],
+      "timestamps": [
+        0.14,
+        0.28,
+        0.52,
+        0.7,
+        0.94,
+        1.14
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "public/assets/voices/kokoro-zh-zf001-v1/wait.wav",
+      "sourceReport": null,
+      "sha256": "c3b88a420b97cba161d908a79c2d5608da2714cb52971974e612afce5a1d90d5",
+      "expectedText": "不用急，我走慢一点。",
+      "earlierRecognizedText": null,
+      "recognizedText": "不用急我走慢一点",
+      "tokens": [
+        "不",
+        "用",
+        "急",
+        "我",
+        "走",
+        "慢",
+        "一",
+        "点"
+      ],
+      "timestamps": [
+        0.14,
+        0.24,
+        0.46,
+        0.84,
+        1.02,
+        1.28,
+        1.52,
+        1.68
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "public/assets/voices/kokoro-zh-zf001-v1/repair.wav",
+      "sourceReport": null,
+      "sha256": "989847fea9fe923eea341f5896061629375cd6738f848d6f36293cd716919464",
+      "expectedText": "再试试，这下应该好了。",
+      "earlierRecognizedText": null,
+      "recognizedText": "再试试这下应该好了",
+      "tokens": [
+        "再",
+        "试",
+        "试",
+        "这",
+        "下",
+        "应",
+        "该",
+        "好",
+        "了"
+      ],
+      "timestamps": [
+        0.2,
+        0.38,
+        0.58,
+        1.04,
+        1.24,
+        1.46,
+        1.64,
+        1.82,
+        2.1
+      ],
+      "matchesHanWithListedVariants": true
+    }
+  ],
+  "limitations": [
+    "Independent ASR is not human listening or proof of spoken correctness",
+    "Earlier failed gates remain failed",
+    "No new published voice or source pause transfer"
+  ]
+}

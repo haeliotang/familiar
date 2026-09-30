@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="zh"><meta charset="utf-8"><title>成人角色与动画候选审核</title>
+<style>body{margin:0;background:#e7e7df;font:16px system-ui;color:#283329}header{padding:16px}canvas{display:block;width:100%;height:70vh}button{padding:10px;margin:4px}pre{white-space:pre-wrap}</style>
+<header><h1>成人角色与动画候选审核</h1><p>仅供本地审核，尚未进入正式相遇。方向、关节和地面接触仍需走查。</p><p><a href="?textures=png">原始 PNG 贴图</a> · <a href="?textures=webp">无损 WebP 贴图</a></p><div id="controls"></div><pre id="status">正在加载角色与动作…</pre></header><div id="scene"></div>
+<script type="module">
+import * as THREE from 'three'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import { parseCharacterClips } from '/src/character-clips.ts'
+import { composeCandidateCharacter } from '/src/candidate-character.ts'
+import { groundCharacter } from '/src/ground-character.ts'
+import { createRepairCrate } from '/src/repair-prop.ts'
+import { femaleAvatarVersion, currentAvatarVersion } from '/src/avatar-catalog.ts'
+import { currentPerformanceVersion } from '/src/performance-catalog.ts'
+import { characterTimeline } from '/src/character-timeline.ts'
+import { spatialVoice } from '/src/spatial-voice.ts'
+import { samplePlayback } from '/src/sample-playback.ts'
+import { spokenLine } from '/src/encounter.ts'
+import { createReviewSeat } from '/src/review-seat.ts'
+import { sittingReview } from '/src/sitting-review.ts'
+import { createPickupReviewTarget } from '/src/pickup-review.ts'
+const host = document.querySelector('#scene')
+const status = document.querySelector('#status')
+const scene = new THREE.Scene()
+scene.background = new THREE.Color('#c8d1bd')
+const camera = new THREE.PerspectiveCamera(40, innerWidth / (innerHeight * .7), .1, 100)
+camera.position.set(2.8, 2, 4)
+camera.lookAt(0, 1, 0)
+const renderer = new THREE.WebGLRenderer({antialias:true})
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2))
+renderer.setSize(innerWidth, innerHeight * .7)
+renderer.shadowMap.enabled = true
+host.append(renderer.domElement)
+scene.add(new THREE.HemisphereLight(0xffffff, 0x536346, 2.5))
+const light = new THREE.DirectionalLight(0xffe4c3, 3)
+light.position.set(3, 5, 4)
+light.castShadow = true
+scene.add(light)
+const floor = new THREE.Mesh(new THREE.PlaneGeometry(60,60), new THREE.MeshStandardMaterial({color:0x869477}))
+floor.rotation.x = -Math.PI / 2
+floor.receiveShadow = true
+scene.add(floor, new THREE.GridHelper(10, 20, 0x57694f, 0x75866c))
+try {
+  const female = new URLSearchParams(location.search).get('character') === 'female'
+  const base = female ? '/assets/quaternius/base-female-v1/' : '/assets/quaternius/base-character-v1/'
+  const outfitBase = female ? '/assets/quaternius/peasant-female-v1/' : '/assets/quaternius/peasant-male-v1/'
+  document.querySelectorAll('header a').forEach(link => { link.href += '&character=' + (female ? 'female' : 'male') })
+  const optimized = new URLSearchParams(location.search).get('textures') === 'webp'
+  const interactions = new URLSearchParams(location.search).get('actions') === 'interaction'
+  const suffix = optimized ? '-webp.glb' : '.glb'
+  const [model, outfit, library] = await Promise.all([new GLTFLoader().loadAsync(base + (female ? 'adult-female' : 'adult-male') + suffix), new GLTFLoader().loadAsync(outfitBase + 'outfit' + suffix), fetch(outfitBase + 'animations.json').then(response => response.json())])
+  const { character, headTriangles } = composeCandidateCharacter(model.scene, outfit.scene)
+  character.traverse(object => { if (object.isMesh) object.castShadow = true })
+  scene.add(character)
+  const mixer = new THREE.AnimationMixer(character)
+  const clips = parseCharacterClips(library)
+  let pickup
+  if (interactions) {
+    const response = await fetch(outfitBase + 'interaction-candidate-v1/animations.json')
+    if (!response.ok) throw new Error('interaction_candidate_unavailable')
+    clips.push(...parseCharacterClips(await response.json()))
+    const jointResponse = await fetch(outfitBase + 'interaction-candidate-v1/joint-samples.json')
+    if (!jointResponse.ok) throw new Error('interaction_joint_samples_unavailable')
+    const samples = await jointResponse.json()
+    pickup = createPickupReviewTarget(samples.samples.find(sample => sample.clip === 'PickUp_Table').frames)
+    pickup.target.visible = false
+    scene.add(pickup.target)
+    const notice = document.createElement('p')
+    notice.textContent = '交互候选：座面高度仅为审核起点，请检查臀部、衣物和手部接触。尚未发布。'
+    document.querySelector('header').append(notice)
+  }
+  const { seat, setHeight: setSeatHeight } = createReviewSeat()
+  seat.position.set(0, 0, -.33)
+  seat.visible = false
+  scene.add(seat)
+  let current
+  let timeline
+  let sitting
+  let sampleTime = 0
+  let samplePaused = false
+  let sampleCue = 'general'
+  let audioMode = false
+  let player
+  const audioContext = new AudioContext()
+  await audioContext.suspend()
+  const forward = camera.getWorldDirection(new THREE.Vector3())
+  const up = camera.up.clone().applyQuaternion(camera.quaternion)
+  const panner = spatialVoice(audioContext, camera.position.toArray(), forward.toArray(), up.toArray())
+  const buffers = Object.fromEntries(await Promise.all(['general','wait','repair'].map(async name => {
+    const response = await fetch('/assets/' + (female ? 'sample-voices-female/' : 'sample-voices/') + name + '.wav')
+    if (!response.ok) throw new Error('sample_voice_unavailable')
+    return [name, await audioContext.decodeAudioData(await response.arrayBuffer())]
+  })))
+  const stopSound = () => {
+    audioMode = false
+    void player?.stop()
+    player = undefined
+    cue.disabled = false
+  }
+  const start = clip => {
+    sitting?.dispose()
+    sitting = undefined
+    stopSound()
+    timeline?.dispose()
+    timeline = undefined
+    character.position.z = 0
+    character.rotation.y = 0
+    mixer.stopAllAction()
+    current = mixer.clipAction(clip).play()
+    if (clip.name === 'Sitting_Enter' || clip.name === 'Sitting_Exit' || clip.name === 'PickUp_Table' || clip.name === 'Interact') {
+      current.setLoop(THREE.LoopOnce, 1)
+      current.clampWhenFinished = true
+    }
+    seat.visible = clip.name.startsWith('Sitting_')
+    if (pickup) pickup.target.visible = clip.name === 'PickUp_Table'
+    mixer.update(0)
+    status.textContent = '加载成功：' + (optimized ? '无损 WebP' : '原始 PNG') + '；' + (female ? '女性' : '男性') + '朴素衣物 + 成人头部；' + headTriangles + ' 个头部三角形；' + clip.name + '，' + clip.duration.toFixed(2) + ' 秒；' + clip.tracks.length + ' 条骨骼轨道。'
+  }
+  for (const clip of clips) {
+    const button = document.createElement('button')
+    button.textContent = clip.name
+    button.onclick = () => start(clip)
+    document.querySelector('#controls').append(button)
+  }
+  const pause = document.createElement('button')
+  pause.textContent = '暂停 / 继续'
+  pause.onclick = async () => {
+    if (timeline && audioMode) {
+      if (player.state === 'paused') await player.resume(); else await player.pause()
+    } else if (timeline || sitting) samplePaused = !samplePaused
+    else if (current) current.paused = !current.paused
+  }
+  document.querySelector('#controls').append(pause)
+  if (interactions) {
+    const sequence = document.createElement('button')
+    sequence.textContent = '坐下 → 停留 → 起身'
+    sequence.onclick = () => {
+      stopSound()
+      timeline?.dispose()
+      timeline = undefined
+      sitting?.dispose()
+      mixer.stopAllAction()
+      current = undefined
+      character.position.z = 0
+      character.rotation.y = 0
+      sitting = sittingReview(character, clips)
+      sampleTime = 0
+      samplePaused = false
+      grounded = true
+      ground.textContent = '查看原始地面偏移'
+      seat.visible = true
+      pickup.target.visible = false
+    }
+    document.querySelector('#controls').append(sequence)
+    const clipTime = document.createElement('input')
+    clipTime.type = 'number'
+    clipTime.min = '0'
+    clipTime.step = '.01'
+    clipTime.setAttribute('aria-label', '动作秒数')
+    clipTime.oninput = () => {
+      const time = Number(clipTime.value)
+      if (sitting && Number.isFinite(time) && time >= 0 && time <= sitting.duration) {
+        sampleTime = time
+        samplePaused = true
+        return
+      }
+      if (current && Number.isFinite(time) && time >= 0 && time <= current.getClip().duration) {
+        current.enabled = true
+        current.paused = true
+        current.time = time
+        mixer.update(0)
+      }
+    }
+    document.querySelector('#controls').append(clipTime)
+    const height = document.createElement('input')
+    height.type = 'number'
+    height.min = '.3'
+    height.max = '.65'
+    height.step = '.01'
+    height.value = '.46'
+    height.setAttribute('aria-label', '审核座面高度（米）')
+    height.oninput = () => {
+      const value = Number(height.value)
+      if (Number.isFinite(value) && value >= .3 && value <= .65) setSeatHeight(value)
+    }
+    document.querySelector('#controls').append(height)
+  }
+  let grounded = false
+  const ground = document.createElement('button')
+  ground.textContent = '启用地面校正'
+  ground.onclick = () => { grounded = !grounded; ground.textContent = grounded ? '查看原始地面偏移' : '启用地面校正' }
+  document.querySelector('#controls').append(ground)
+  const bounds = new THREE.Box3()
+  const contact = document.createElement('p')
+  document.querySelector('header').append(contact)
+  const motion = await fetch('/assets/quaternius/animation-library-v3/walking-motion.json').then(response => response.json())
+  const crate = createRepairCrate(female ? femaleAvatarVersion : currentAvatarVersion, motion.forwardMetresPerSec)
+  scene.add(crate)
+  crate.visible = false
+  const sample = document.createElement('button')
+  sample.textContent = '完整75秒样片'
+  sample.onclick = () => {
+    sitting?.dispose()
+    sitting = undefined
+    seat.visible = false
+    if (pickup) pickup.target.visible = false
+    stopSound()
+    mixer.stopAllAction()
+    timeline?.dispose()
+    timeline = characterTimeline(character, clips, motion.forwardMetresPerSec, 12, currentPerformanceVersion)
+    sampleTime = 0
+    samplePaused = false
+    grounded = true
+    ground.textContent = '查看原始地面偏移'
+  }
+  document.querySelector('#controls').append(sample)
+  const voiced = document.createElement('button')
+  const audioNotice = document.createElement('p')
+  audioNotice.textContent = '本地台词已准备；需点击开启声音。定位时间会停止声音。'
+  document.querySelector('header').append(audioNotice)
+  voiced.textContent = '开启声音并从头播放'
+  voiced.onclick = async () => {
+    sitting?.dispose()
+    sitting = undefined
+    seat.visible = false
+    if (pickup) pickup.target.visible = false
+    stopSound()
+    mixer.stopAllAction()
+    timeline?.dispose()
+    timeline = characterTimeline(character, clips, motion.forwardMetresPerSec, buffers[sampleCue].duration, currentPerformanceVersion)
+    sampleTime = 0
+    samplePaused = true
+    grounded = true
+    ground.textContent = '查看原始地面偏移'
+    const pending = samplePlayback(audioContext, buffers[sampleCue], panner)
+    player = pending
+    voiced.disabled = true
+    cue.disabled = true
+    try {
+      await pending.start()
+      if (player === pending && pending.state === 'playing') { audioMode = true; samplePaused = false; audioNotice.textContent = '第43秒播放本地新音色：“' + spokenLine(sampleCue) + '”' }
+    } catch (error) { stopSound(); audioNotice.textContent = '声音未开启：' + error.message + '；可选择无声样片。' }
+    finally { voiced.disabled = false }
+  }
+  document.querySelector('#controls').append(voiced)
+  const cue = document.createElement('select')
+  cue.setAttribute('aria-label', '样片线索')
+  for (const [value, label] of [['general','普通停步'],['wait','回头等待'],['repair','修补动作']]) {
+    const option = document.createElement('option')
+    option.value = value
+    option.textContent = label
+    cue.append(option)
+  }
+  cue.onchange = () => { sampleCue = cue.value }
+  document.querySelector('#controls').append(cue)
+  const seek = document.createElement('input')
+  seek.type = 'range'
+  seek.min = '0'
+  seek.max = '75'
+  seek.step = '.1'
+  seek.setAttribute('aria-label', '样片时间')
+  seek.oninput = () => { stopSound(); sampleTime = Number(seek.value); samplePaused = true }
+  document.querySelector('#controls').append(seek)
+  const seekNumber = document.createElement('input')
+  seekNumber.type = 'number'
+  seekNumber.min = '0'
+  seekNumber.max = '75'
+  seekNumber.step = '.1'
+  seekNumber.setAttribute('aria-label', '样片秒数')
+  seekNumber.oninput = () => {
+    const value = Number(seekNumber.value)
+    if (Number.isFinite(value) && value >= 0 && value <= 75) { stopSound(); sampleTime = value; samplePaused = true }
+  }
+  document.querySelector('#controls').append(seekNumber)
+  window.addEventListener('pagehide', () => { void player?.stop(); panner.disconnect(); void audioContext.close() }, {once:true})
+  start(clips.find(clip => clip.name === 'Walk_Loop'))
+  const clock = new THREE.Clock()
+  const animate = () => {
+    requestAnimationFrame(animate)
+    const elapsed = Math.min(clock.getDelta(), .1)
+    crate.visible = !!timeline && sampleCue === 'repair'
+    if (timeline) {
+      if (audioMode) sampleTime = player.time
+      else if (!samplePaused) sampleTime = Math.min(75, sampleTime + elapsed)
+      timeline.pose(sampleTime, sampleCue)
+      seek.value = String(sampleTime)
+      if (document.activeElement !== seekNumber) seekNumber.value = sampleTime.toFixed(1)
+      status.textContent = '75秒动作样片（' + (audioMode ? '有声，共享音频时钟，' + {playing:'播放中',paused:'已暂停',finished:'已结束',idle:'已停止'}[player.state] : '无声审核') + '）：' + sampleTime.toFixed(1) + ' 秒；行走速度 ' + motion.forwardMetresPerSec.toFixed(3) + ' 米/秒；线索 ' + cue.selectedOptions[0].textContent
+    } else if (sitting) {
+      if (!samplePaused) sampleTime = Math.min(sitting.duration, sampleTime + elapsed)
+      const phase = sitting.pose(sampleTime)
+      status.textContent = '坐下与起身序列：' + sampleTime.toFixed(2) + ' / ' + sitting.duration.toFixed(2) + ' 秒；' + phase + '；接触质量待验收。'
+    } else mixer.update(elapsed)
+    if (grounded) {
+      const offset = groundCharacter(character, bounds)
+      contact.textContent = '地面校正开启；当前竖直偏移 ' + (offset * 100).toFixed(1) + ' 厘米。仍需检查脚滑与动作衔接。'
+    } else {
+      character.position.y = 0
+      character.updateMatrixWorld(true)
+      bounds.setFromObject(character, true)
+      contact.textContent = '原始模型；当前最低表面 ' + (bounds.min.y * 100).toFixed(1) + ' 厘米。负值表示低于地面。'
+    }
+    panner.positionX.value = character.position.x
+    if (pickup) {
+      const active = !timeline && !sitting && current?.getClip().name === 'PickUp_Table'
+      pickup.updateGrip(active ? character.getObjectByName('hand_l') : undefined, active ? current.time : 0)
+    }
+    panner.positionY.value = character.position.y + 1.65
+    panner.positionZ.value = character.position.z
+    renderer.render(scene, camera)
+  }
+  animate()
+} catch (error) { status.textContent = '加载失败：' + error.message }
+</script></html>

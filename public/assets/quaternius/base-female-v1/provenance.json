@@ -1,0 +1,17 @@
+{
+  "source": "https://quaternius.itch.io/universal-base-characters",
+  "license": "CC0-1.0",
+  "importedAt": "2026-09-30",
+  "archiveSha256": "fdbf1804c90dfc1ea03e992bff7da2dfd1a79318e13270a660180f9308455f40",
+  "glbSha256": "09ca9a4a8f90cd136f058eb380b3c26955a9c032f351c219c18503a7198a654d",
+  "model": "Superhero_Female_FullBody",
+  "triangles": 15060,
+  "skins": 1,
+  "joints": 65,
+  "animations": [],
+  "maxTextureEdge": 2048,
+  "textureReferenceRepairs": {
+    "T_Eye_Normal_png.png": "T_Eye_Normal.png"
+  },
+  "status": "candidate; requires animation, visual and device review before release"
+}

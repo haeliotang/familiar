@@ -1,0 +1,48 @@
+name: Local implementation checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_PASSWORD: synthetic_test_only
+          POSTGRES_DB: familiar_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d familiar_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      TEST_DATABASE_URL: postgres://postgres:synthetic_test_only@127.0.0.1:5432/familiar_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.32.1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Install local media tools
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg libheif-examples
+      - run: pnpm install --frozen-lockfile
+      - name: Install pinned offline models
+        run: |
+          sh scripts/install-local-voice.sh
+          sh scripts/install-local-asr.sh
+          sh scripts/install-local-vad.sh
+      - run: pnpm check:local
+      - run: pnpm exec vitest run --maxWorkers=2
+      - run: pnpm build

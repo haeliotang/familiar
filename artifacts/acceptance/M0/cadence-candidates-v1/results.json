@@ -1,0 +1,266 @@
+{
+  "checkedAt": "2026-09-30T17:42:28.925Z",
+  "status": "speed_control_not_monotonic",
+  "model": "kokoro-int8-multi-lang-v1_1",
+  "cue": "wait",
+  "text": "不用急，我走慢一点。",
+  "silenceScale": 0.2,
+  "initialSinglePass": [
+    {
+      "speakerId": 58,
+      "speed": 0.8,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-58-speed-0.8.wav",
+      "durationSec": 3.106708333333333
+    },
+    {
+      "speakerId": 58,
+      "speed": 1,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-58-speed-1.wav",
+      "durationSec": 2.2291666666666665
+    },
+    {
+      "speakerId": 58,
+      "speed": 1.2,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-58-speed-1.2.wav",
+      "durationSec": 1.8187916666666666
+    },
+    {
+      "speakerId": 3,
+      "speed": 0.8,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-3-speed-0.8.wav",
+      "durationSec": 2.833458333333333
+    },
+    {
+      "speakerId": 3,
+      "speed": 1,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-3-speed-1.wav",
+      "durationSec": 2.1417083333333333
+    },
+    {
+      "speakerId": 3,
+      "speed": 1.2,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-3-speed-1.2.wav",
+      "durationSec": 2.1783333333333332
+    }
+  ],
+  "conditions": [
+    {
+      "speakerId": 58,
+      "speed": 0.8,
+      "meanDurationSec": 3.106027777777778
+    },
+    {
+      "speakerId": 58,
+      "speed": 1,
+      "meanDurationSec": 2.228986111111111
+    },
+    {
+      "speakerId": 58,
+      "speed": 1.2,
+      "meanDurationSec": 1.83225
+    },
+    {
+      "speakerId": 3,
+      "speed": 0.8,
+      "meanDurationSec": 2.8267777777777776
+    },
+    {
+      "speakerId": 3,
+      "speed": 1,
+      "meanDurationSec": 2.141958333333333
+    },
+    {
+      "speakerId": 3,
+      "speed": 1.2,
+      "meanDurationSec": 2.1785972222222223
+    }
+  ],
+  "samples": [
+    {
+      "speakerId": 58,
+      "speed": 0.8,
+      "repeat": 1,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-58-speed-0.8-repeat-1.wav",
+      "durationSec": 3.1027916666666666,
+      "sampleRate": 24000,
+      "generationMs": 3291,
+      "sha256": "77b051bc35af8f52caf5ec58765a98c1fea4201c90ecd7ea9f021df9f0fb5eb5"
+    },
+    {
+      "speakerId": 58,
+      "speed": 0.8,
+      "repeat": 2,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-58-speed-0.8-repeat-2.wav",
+      "durationSec": 3.1057916666666667,
+      "sampleRate": 24000,
+      "generationMs": 2596,
+      "sha256": "968d754d14fcd61cb7134e44b77306a2ab8db2c9e634bedfb6d39f0a9d801060"
+    },
+    {
+      "speakerId": 58,
+      "speed": 0.8,
+      "repeat": 3,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-58-speed-0.8-repeat-3.wav",
+      "durationSec": 3.1095,
+      "sampleRate": 24000,
+      "generationMs": 2584,
+      "sha256": "06f66eef3076dd68d2f195925138d6a72eaec11bd82f9df3cf5c7f0f23c64ccf"
+    },
+    {
+      "speakerId": 58,
+      "speed": 1,
+      "repeat": 1,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-58-speed-1-repeat-1.wav",
+      "durationSec": 2.2290833333333335,
+      "sampleRate": 24000,
+      "generationMs": 2038,
+      "sha256": "8a85b0c42e96caac3286529998499e248799c721406945017a5e1d395077df39"
+    },
+    {
+      "speakerId": 58,
+      "speed": 1,
+      "repeat": 2,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-58-speed-1-repeat-2.wav",
+      "durationSec": 2.228833333333333,
+      "sampleRate": 24000,
+      "generationMs": 2038,
+      "sha256": "8671984c9d05f1fa8e22785910154856383988267ee442534efaae0aef183580"
+    },
+    {
+      "speakerId": 58,
+      "speed": 1,
+      "repeat": 3,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-58-speed-1-repeat-3.wav",
+      "durationSec": 2.229041666666667,
+      "sampleRate": 24000,
+      "generationMs": 2044,
+      "sha256": "44d4600afba064f071e24580e8209429e35c84feae6f323977faba44f6678254"
+    },
+    {
+      "speakerId": 58,
+      "speed": 1.2,
+      "repeat": 1,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-58-speed-1.2-repeat-1.wav",
+      "durationSec": 1.8284166666666666,
+      "sampleRate": 24000,
+      "generationMs": 1737,
+      "sha256": "22a7cb5ab16f40d1a919ff2674992f0447753311fed6d31739376f9679047428"
+    },
+    {
+      "speakerId": 58,
+      "speed": 1.2,
+      "repeat": 2,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-58-speed-1.2-repeat-2.wav",
+      "durationSec": 1.8320833333333333,
+      "sampleRate": 24000,
+      "generationMs": 1735,
+      "sha256": "f7f39e28eaee667f17b9813c82a59e42929ecd0038551c06ea27d6df417a529f"
+    },
+    {
+      "speakerId": 58,
+      "speed": 1.2,
+      "repeat": 3,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-58-speed-1.2-repeat-3.wav",
+      "durationSec": 1.83625,
+      "sampleRate": 24000,
+      "generationMs": 1736,
+      "sha256": "2ac21bc62f5a6d688ea386646ee30b7ec9e48cc5ef4b9c4a22fd54bb54f856b8"
+    },
+    {
+      "speakerId": 3,
+      "speed": 0.8,
+      "repeat": 1,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-3-speed-0.8-repeat-1.wav",
+      "durationSec": 2.822041666666667,
+      "sampleRate": 24000,
+      "generationMs": 2442,
+      "sha256": "9fb70356cb9335fbecf4a5405aad2b77b6333a9ed343de5d8086bb392d8749c6"
+    },
+    {
+      "speakerId": 3,
+      "speed": 0.8,
+      "repeat": 2,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-3-speed-0.8-repeat-2.wav",
+      "durationSec": 2.836125,
+      "sampleRate": 24000,
+      "generationMs": 2422,
+      "sha256": "53756ea7d012ef9308c3faa8bced1abc6a3c766f2e3eb4ed8ed3660140690227"
+    },
+    {
+      "speakerId": 3,
+      "speed": 0.8,
+      "repeat": 3,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-3-speed-0.8-repeat-3.wav",
+      "durationSec": 2.8221666666666665,
+      "sampleRate": 24000,
+      "generationMs": 2427,
+      "sha256": "19c4378ec8a11c2c313019651cee633e2f56832011fff1f2a2bb1cf17ca180bd"
+    },
+    {
+      "speakerId": 3,
+      "speed": 1,
+      "repeat": 1,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-3-speed-1-repeat-1.wav",
+      "durationSec": 2.1415416666666665,
+      "sampleRate": 24000,
+      "generationMs": 1964,
+      "sha256": "733080fe7bbb39bcc5b0242de2691de5f432bc838be2f2a4fb02cb74f68e130f"
+    },
+    {
+      "speakerId": 3,
+      "speed": 1,
+      "repeat": 2,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-3-speed-1-repeat-2.wav",
+      "durationSec": 2.1415,
+      "sampleRate": 24000,
+      "generationMs": 1962,
+      "sha256": "31c1d5972b30c8419bea183f2f84e1efa8a9a0d0381e4ab27f3291aa94526864"
+    },
+    {
+      "speakerId": 3,
+      "speed": 1,
+      "repeat": 3,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-3-speed-1-repeat-3.wav",
+      "durationSec": 2.1428333333333334,
+      "sampleRate": 24000,
+      "generationMs": 1963,
+      "sha256": "0f0360a7e7d80de37ff04b5d6c8a7e88138a5cce030ec89ef25f5cdc27f18ce8"
+    },
+    {
+      "speakerId": 3,
+      "speed": 1.2,
+      "repeat": 1,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-3-speed-1.2-repeat-1.wav",
+      "durationSec": 2.1786666666666665,
+      "sampleRate": 24000,
+      "generationMs": 1641,
+      "sha256": "1526d79be1d0053a2a77c343a7cd61e5828b9c10624625c1135b0ee08cda95d3"
+    },
+    {
+      "speakerId": 3,
+      "speed": 1.2,
+      "repeat": 2,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-3-speed-1.2-repeat-2.wav",
+      "durationSec": 2.1785833333333335,
+      "sampleRate": 24000,
+      "generationMs": 1644,
+      "sha256": "ea6e1416260065fb4726efa875aefa1f30fd747a7cab7748a7cd051670ae72d1"
+    },
+    {
+      "speakerId": 3,
+      "speed": 1.2,
+      "repeat": 3,
+      "path": "artifacts/acceptance/M0/cadence-candidates-v1/speaker-3-speed-1.2-repeat-3.wav",
+      "durationSec": 2.178541666666667,
+      "sampleRate": 24000,
+      "generationMs": 1642,
+      "sha256": "b4cb68208824d1c454e94457e7442a4b7b8e1bb1560c9107b69902d413fb0bb0"
+    }
+  ],
+  "limitations": [
+    "No human listening or familiarity result",
+    "No source recording transfer",
+    "No pause control verified",
+    "Not a published episode voice version"
+  ]
+}

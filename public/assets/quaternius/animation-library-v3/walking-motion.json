@@ -1,0 +1,14 @@
+{
+  "source": "https://quaternius.itch.io/universal-animation-library",
+  "variant": "Standard_RM",
+  "sourceGlbSha256": "be684571ed655a1b892c2c07e6e2aeca053b606c442d34004adaf1d944090d01",
+  "clip": "Walk_Loop",
+  "durationSec": 1.3333333730697632,
+  "rootDisplacementMetres": [
+    0.0,
+    0.0,
+    1.2999999523162842
+  ],
+  "forwardMetresPerSec": 0.9749999351799508,
+  "status": "source motion measurement; target foot sliding still requires review"
+}

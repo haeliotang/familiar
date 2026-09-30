@@ -1,0 +1,141 @@
+{
+  "checkedAt": "2026-09-30T18:27:07.111Z",
+  "status": "synthetic_joined_phrase_asr_gate_failed",
+  "hanVariantMap": {
+    "點": "点",
+    "風": "风",
+    "試": "试",
+    "這": "这",
+    "應": "应",
+    "該": "该"
+  },
+  "results": [
+    {
+      "speakerId": 58,
+      "cue": "wait",
+      "addedPauseSec": 0.25,
+      "sourceHashes": [
+        "654bde42133ec38a083cc3738605e4f46ab91cda7fb634638dd23e15d419a48d",
+        "2cdb1271950180e401c0088bab270156ea6acad39effad6d025e945d95d8a5c6"
+      ],
+      "expectedText": "不用急，我走慢一点。",
+      "recognizedText": "不用急,我走慢一點",
+      "matchesHanWithListedVariants": true,
+      "durationSec": 2.48475,
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v1/speaker-58-wait-pause-0.25.wav",
+      "sha256": "e2038616e39fe452939a173284494affc464b12b5c7078e133cb2fe71569de36"
+    },
+    {
+      "speakerId": 58,
+      "cue": "wait",
+      "addedPauseSec": 0.65,
+      "sourceHashes": [
+        "654bde42133ec38a083cc3738605e4f46ab91cda7fb634638dd23e15d419a48d",
+        "2cdb1271950180e401c0088bab270156ea6acad39effad6d025e945d95d8a5c6"
+      ],
+      "expectedText": "不用急，我走慢一点。",
+      "recognizedText": "不用急我走慢一点",
+      "matchesHanWithListedVariants": true,
+      "durationSec": 2.88475,
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v1/speaker-58-wait-pause-0.65.wav",
+      "sha256": "06907e32e2677ec879d7ba36fa8c64c1fe9b7f890c419362d8a19396c7bd96f2"
+    },
+    {
+      "speakerId": 58,
+      "cue": "repair",
+      "addedPauseSec": 0.25,
+      "sourceHashes": [
+        "2ad23d6b2e0cd6f6aadeaf5befebdd073eef84e47da4be8c502d134ad447ac54",
+        "15bfbb6b36ee9d648a5f44a283cd36bfc5dc855370fbe27f6f9722269ccdb0c3"
+      ],
+      "expectedText": "再试试，这下应该好了。",
+      "recognizedText": "再試試,這下應該好了",
+      "matchesHanWithListedVariants": true,
+      "durationSec": 2.8495833333333334,
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v1/speaker-58-repair-pause-0.25.wav",
+      "sha256": "384ce91e7d76595945000005b28ad992c1915cfd9605968d60debbcfed25e558"
+    },
+    {
+      "speakerId": 58,
+      "cue": "repair",
+      "addedPauseSec": 0.65,
+      "sourceHashes": [
+        "2ad23d6b2e0cd6f6aadeaf5befebdd073eef84e47da4be8c502d134ad447ac54",
+        "15bfbb6b36ee9d648a5f44a283cd36bfc5dc855370fbe27f6f9722269ccdb0c3"
+      ],
+      "expectedText": "再试试，这下应该好了。",
+      "recognizedText": "再这下应该好了",
+      "matchesHanWithListedVariants": false,
+      "durationSec": 3.2495833333333333,
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v1/speaker-58-repair-pause-0.65.wav",
+      "sha256": "5ed38169ee6d2d45b5a76e64cb24f74a0869085d5d308e79a655d0f2a5f471ad"
+    },
+    {
+      "speakerId": 3,
+      "cue": "wait",
+      "addedPauseSec": 0.25,
+      "sourceHashes": [
+        "04145d7ca6bbebc34db1e3f035065a0521abca1d93f52f13620c0d4d68b8d3f0",
+        "ca19b64199aa459dee1ecfc0cdc42ed3e1f77e52a79a722fd1528cca8efd80ba"
+      ],
+      "expectedText": "不用急，我走慢一点。",
+      "recognizedText": "不用急,我走慢一點",
+      "matchesHanWithListedVariants": true,
+      "durationSec": 2.3978333333333333,
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v1/speaker-3-wait-pause-0.25.wav",
+      "sha256": "c4f8bd5ee8d7a7a6926ac88af146d0986d49e4ac570b33a97bd459ffab66bc84"
+    },
+    {
+      "speakerId": 3,
+      "cue": "wait",
+      "addedPauseSec": 0.65,
+      "sourceHashes": [
+        "04145d7ca6bbebc34db1e3f035065a0521abca1d93f52f13620c0d4d68b8d3f0",
+        "ca19b64199aa459dee1ecfc0cdc42ed3e1f77e52a79a722fd1528cca8efd80ba"
+      ],
+      "expectedText": "不用急，我走慢一点。",
+      "recognizedText": "不用急我走慢一点",
+      "matchesHanWithListedVariants": true,
+      "durationSec": 2.797833333333333,
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v1/speaker-3-wait-pause-0.65.wav",
+      "sha256": "d376c691d7b975c53d668a80056a5f64a9efb563940f68d8bddfcbfcb5beb2e9"
+    },
+    {
+      "speakerId": 3,
+      "cue": "repair",
+      "addedPauseSec": 0.25,
+      "sourceHashes": [
+        "afb99c250ca11f9f0f6c7dcc96be951c8e11a11c2ef25306aefd616a783c0841",
+        "993015c2051cf25b5a3ce33056b8751fe7688c615fa09167ac7cb25b854d97f3"
+      ],
+      "expectedText": "再试试，这下应该好了。",
+      "recognizedText": "再这下应该好了",
+      "matchesHanWithListedVariants": false,
+      "durationSec": 2.7699166666666666,
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v1/speaker-3-repair-pause-0.25.wav",
+      "sha256": "7e52b3ae78dc0bf151649e094ee904d6d9f54f293286d2c8e4d4b0036e707a7b"
+    },
+    {
+      "speakerId": 3,
+      "cue": "repair",
+      "addedPauseSec": 0.65,
+      "sourceHashes": [
+        "afb99c250ca11f9f0f6c7dcc96be951c8e11a11c2ef25306aefd616a783c0841",
+        "993015c2051cf25b5a3ce33056b8751fe7688c615fa09167ac7cb25b854d97f3"
+      ],
+      "expectedText": "再试试，这下应该好了。",
+      "recognizedText": "再这下应该好了",
+      "matchesHanWithListedVariants": false,
+      "durationSec": 3.1699166666666665,
+      "path": "artifacts/acceptance/M0/phrase-pause-candidates-v1/speaker-3-repair-pause-0.65.wav",
+      "sha256": "0bfa3ef3ffa243ac06e3e43fcab6e2e839a68f92450c98299bf4107bbf467879"
+    }
+  ],
+  "limitations": [
+    "Short isolated repair phrases failed their earlier ASR gate",
+    "ASR matching does not prove spoken text correctness",
+    "Added silence is not total acoustic pause duration",
+    "No source pause transfer or human listening result",
+    "Not a published phrase version"
+  ]
+}

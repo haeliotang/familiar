@@ -1,0 +1,1068 @@
+{
+  "checkedAt": "2026-09-30T18:53:27.529Z",
+  "status": "synthetic_rendered_pause_asr_gate_passed",
+  "modelId": "sherpa-onnx-paraformer-zh-2023-09-14",
+  "modelRevision": "def027084691107096b5ebba69785756d63de6c5",
+  "modelHashes": {
+    "model.int8.onnx": "f36a0433bcf096bd6d6f11b80a3ac8bed110bdca632fe0d731df8d1a84475945",
+    "tokens.txt": "59aba8873a2ed1e122c25fee421e25f283b63290efbde85c1f01a853d83cb6e6"
+  },
+  "hanVariantMap": {
+    "點": "点",
+    "風": "风",
+    "試": "试",
+    "這": "这",
+    "應": "应",
+    "該": "该"
+  },
+  "results": [
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zm009-v1-wait-pause-0.25-speed-0.8.wav",
+      "sourceReport": null,
+      "sha256": "60815e30d7130bfe3fcb4327f3b4ad4a8c550255cdb69f24d07e0305dc659c99",
+      "expectedText": "不用急，我走慢一点。",
+      "earlierRecognizedText": null,
+      "recognizedText": "不用急我走慢一点",
+      "tokens": [
+        "不",
+        "用",
+        "急",
+        "我",
+        "走",
+        "慢",
+        "一",
+        "点"
+      ],
+      "timestamps": [
+        0.1,
+        0.24,
+        0.52,
+        1.28,
+        1.56,
+        1.88,
+        2.22,
+        2.46
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zm009-v1-wait-pause-0.25-speed-1.2.wav",
+      "sourceReport": null,
+      "sha256": "601cdc1dc00b4b667fc8fbadd87ff4428e35c58e6033d6fc1e73dd9590dd0bb3",
+      "expectedText": "不用急，我走慢一点。",
+      "earlierRecognizedText": null,
+      "recognizedText": "不用急我走慢一点",
+      "tokens": [
+        "不",
+        "用",
+        "急",
+        "我",
+        "走",
+        "慢",
+        "一",
+        "点"
+      ],
+      "timestamps": [
+        0.08,
+        0.18,
+        0.34,
+        0.9,
+        1.14,
+        1.4,
+        1.58,
+        1.74
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zm009-v1-wait-pause-0.65-speed-0.8.wav",
+      "sourceReport": null,
+      "sha256": "92b53082e7db45c8e98877a9821b1d654810f314d1b3fe76f9f8ed4268f25f9e",
+      "expectedText": "不用急，我走慢一点。",
+      "earlierRecognizedText": null,
+      "recognizedText": "不用急我走慢一点",
+      "tokens": [
+        "不",
+        "用",
+        "急",
+        "我",
+        "走",
+        "慢",
+        "一",
+        "点"
+      ],
+      "timestamps": [
+        0.1,
+        0.24,
+        0.52,
+        1.64,
+        1.98,
+        2.3,
+        2.6,
+        2.82
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zm009-v1-wait-pause-0.65-speed-1.2.wav",
+      "sourceReport": null,
+      "sha256": "287b89f509fdc4c317ef74e6279f5e62961ec979b8fe57406b8b6ee1e3001caf",
+      "expectedText": "不用急，我走慢一点。",
+      "earlierRecognizedText": null,
+      "recognizedText": "不用急我走慢一点",
+      "tokens": [
+        "不",
+        "用",
+        "急",
+        "我",
+        "走",
+        "慢",
+        "一",
+        "点"
+      ],
+      "timestamps": [
+        0.08,
+        0.18,
+        0.34,
+        1.3,
+        1.54,
+        1.76,
+        1.94,
+        2.1
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zm009-v1-repair-pause-0.25-speed-0.8.wav",
+      "sourceReport": null,
+      "sha256": "778eafc423f3712780ba5d164fb19185f68573d621f6b4708362d247b34c060c",
+      "expectedText": "再试试，这下应该好了。",
+      "earlierRecognizedText": null,
+      "recognizedText": "再试试这下应该好了",
+      "tokens": [
+        "再",
+        "试",
+        "试",
+        "这",
+        "下",
+        "应",
+        "该",
+        "好",
+        "了"
+      ],
+      "timestamps": [
+        0.16,
+        0.4,
+        0.64,
+        1.48,
+        1.78,
+        2.18,
+        2.36,
+        2.66,
+        3
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zm009-v1-repair-pause-0.25-speed-1.2.wav",
+      "sourceReport": null,
+      "sha256": "601519799008c6346ee70e482297c505b1fc56380de7eee3cc2df7c1397c2a8e",
+      "expectedText": "再试试，这下应该好了。",
+      "earlierRecognizedText": null,
+      "recognizedText": "再试试这下应该好了",
+      "tokens": [
+        "再",
+        "试",
+        "试",
+        "这",
+        "下",
+        "应",
+        "该",
+        "好",
+        "了"
+      ],
+      "timestamps": [
+        0.12,
+        0.3,
+        0.46,
+        1.06,
+        1.24,
+        1.52,
+        1.7,
+        1.86,
+        2.04
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zm009-v1-repair-pause-0.65-speed-0.8.wav",
+      "sourceReport": null,
+      "sha256": "53bcfbe0a58750db89b9b2e3da74e34e863875188d141b668481ef85740c3efd",
+      "expectedText": "再试试，这下应该好了。",
+      "earlierRecognizedText": null,
+      "recognizedText": "再试试这下应该好了",
+      "tokens": [
+        "再",
+        "试",
+        "试",
+        "这",
+        "下",
+        "应",
+        "该",
+        "好",
+        "了"
+      ],
+      "timestamps": [
+        0.16,
+        0.38,
+        0.64,
+        1.84,
+        2.14,
+        2.56,
+        2.78,
+        3.08,
+        3.36
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zm009-v1-repair-pause-0.65-speed-1.2.wav",
+      "sourceReport": null,
+      "sha256": "8790b66448f731805c4502d19eac7f257480a454911cb7c3740e220234126e46",
+      "expectedText": "再试试，这下应该好了。",
+      "earlierRecognizedText": null,
+      "recognizedText": "再试试这下应该好了",
+      "tokens": [
+        "再",
+        "试",
+        "试",
+        "这",
+        "下",
+        "应",
+        "该",
+        "好",
+        "了"
+      ],
+      "timestamps": [
+        0.12,
+        0.3,
+        0.46,
+        1.42,
+        1.66,
+        1.92,
+        2.06,
+        2.24,
+        2.46
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zf001-v1-wait-pause-0.25-speed-0.8.wav",
+      "sourceReport": null,
+      "sha256": "d73402d1a9542c0b3d4b5c8641f9aba9daaa6c8ed0f068900402aa686a7e97bc",
+      "expectedText": "不用急，我走慢一点。",
+      "earlierRecognizedText": null,
+      "recognizedText": "不用急我走慢一点",
+      "tokens": [
+        "不",
+        "用",
+        "急",
+        "我",
+        "走",
+        "慢",
+        "一",
+        "点"
+      ],
+      "timestamps": [
+        0.14,
+        0.3,
+        0.58,
+        1.24,
+        1.48,
+        1.82,
+        2.14,
+        2.34
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zf001-v1-wait-pause-0.25-speed-1.2.wav",
+      "sourceReport": null,
+      "sha256": "32ebde29fa4966ba43c8e26e1b61ef5c014b8ce888466b6f941318c4c410f717",
+      "expectedText": "不用急，我走慢一点。",
+      "earlierRecognizedText": null,
+      "recognizedText": "不用急我走慢一点",
+      "tokens": [
+        "不",
+        "用",
+        "急",
+        "我",
+        "走",
+        "慢",
+        "一",
+        "点"
+      ],
+      "timestamps": [
+        0.12,
+        0.24,
+        0.4,
+        0.9,
+        1.12,
+        1.34,
+        1.52,
+        1.68
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zf001-v1-wait-pause-0.65-speed-0.8.wav",
+      "sourceReport": null,
+      "sha256": "0487308272254677c1182b2c8856a2ef050b859ba35aaec43352f0a6585a42fe",
+      "expectedText": "不用急，我走慢一点。",
+      "earlierRecognizedText": null,
+      "recognizedText": "不用急我走慢一点",
+      "tokens": [
+        "不",
+        "用",
+        "急",
+        "我",
+        "走",
+        "慢",
+        "一",
+        "点"
+      ],
+      "timestamps": [
+        0.14,
+        0.3,
+        0.58,
+        1.6,
+        1.9,
+        2.24,
+        2.52,
+        2.76
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zf001-v1-wait-pause-0.65-speed-1.2.wav",
+      "sourceReport": null,
+      "sha256": "e87f206cb736c56c916bcc6c66757abbe1bd822d0fbc42718ac876d2777ffc42",
+      "expectedText": "不用急，我走慢一点。",
+      "earlierRecognizedText": null,
+      "recognizedText": "不用急我走慢一点",
+      "tokens": [
+        "不",
+        "用",
+        "急",
+        "我",
+        "走",
+        "慢",
+        "一",
+        "点"
+      ],
+      "timestamps": [
+        0.1,
+        0.24,
+        0.4,
+        1.26,
+        1.54,
+        1.76,
+        1.9,
+        2.1
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zf001-v1-repair-pause-0.25-speed-0.8.wav",
+      "sourceReport": null,
+      "sha256": "9ab6022e71e3c37e0d2117f9ba8a337134cb832b1a1b57abb9eceb3118d1b9c0",
+      "expectedText": "再试试，这下应该好了。",
+      "earlierRecognizedText": null,
+      "recognizedText": "再试试这下应该好了",
+      "tokens": [
+        "再",
+        "试",
+        "试",
+        "这",
+        "下",
+        "应",
+        "该",
+        "好",
+        "了"
+      ],
+      "timestamps": [
+        0.22,
+        0.46,
+        0.76,
+        1.48,
+        1.72,
+        2.06,
+        2.24,
+        2.54,
+        2.88
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zf001-v1-repair-pause-0.25-speed-1.2.wav",
+      "sourceReport": null,
+      "sha256": "632e4274f3094840f9e970249bc552087d5b1dd9a13073a0c725b784eef7ec30",
+      "expectedText": "再试试，这下应该好了。",
+      "earlierRecognizedText": null,
+      "recognizedText": "再试试这下应该好了",
+      "tokens": [
+        "再",
+        "试",
+        "试",
+        "这",
+        "下",
+        "应",
+        "该",
+        "好",
+        "了"
+      ],
+      "timestamps": [
+        0.16,
+        0.32,
+        0.52,
+        1.08,
+        1.3,
+        1.48,
+        1.64,
+        1.82,
+        2.04
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zf001-v1-repair-pause-0.65-speed-0.8.wav",
+      "sourceReport": null,
+      "sha256": "1b133eba2c034f9e17b5da6026dfbc29a215b4455d816d694aa1fa9012b76b9d",
+      "expectedText": "再试试，这下应该好了。",
+      "earlierRecognizedText": null,
+      "recognizedText": "再试试这下应该好了",
+      "tokens": [
+        "再",
+        "试",
+        "试",
+        "这",
+        "下",
+        "应",
+        "该",
+        "好",
+        "了"
+      ],
+      "timestamps": [
+        0.22,
+        0.48,
+        0.76,
+        1.86,
+        2.14,
+        2.46,
+        2.66,
+        2.96,
+        3.3
+      ],
+      "matchesHanWithListedVariants": true
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zf001-v1-repair-pause-0.65-speed-1.2.wav",
+      "sourceReport": null,
+      "sha256": "0e0bc0fad63a33a2fa2e776a72cbd4aefff6f12bda4a63741cb23078d71b1d07",
+      "expectedText": "再试试，这下应该好了。",
+      "earlierRecognizedText": null,
+      "recognizedText": "再试试这下应该好了",
+      "tokens": [
+        "再",
+        "试",
+        "试",
+        "这",
+        "下",
+        "应",
+        "该",
+        "好",
+        "了"
+      ],
+      "timestamps": [
+        0.16,
+        0.32,
+        0.52,
+        1.46,
+        1.66,
+        1.86,
+        2,
+        2.18,
+        2.46
+      ],
+      "matchesHanWithListedVariants": true
+    }
+  ],
+  "renderedPlans": [
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zm009-v1-wait-pause-0.25-speed-0.8.wav",
+      "plan": {
+        "method": "confirmed_window_rate_phrase_pause_v1",
+        "sourceAssetId": "synthetic-analysis-fixture",
+        "observationFingerprint": "b7aac56e7397e4968fb7b0f3f947440273102a4e7a9df672a7cfc9e507a8a8dd",
+        "normalizedAudioSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "selectedWindow": {
+          "startSec": 0,
+          "endSec": 6
+        },
+        "confirmationSource": "user",
+        "baselineVoiceVersion": "kokoro-zh-zm009-v1",
+        "baselineSha256": "41f0c45181d2e436e2fa41ce23cc815ac08e1f027df9bb9806a5f96b53fe92da",
+        "baselineDurationSec": 2.228833333333333,
+        "baselineCharactersPerWindowSec": 3.589321767740971,
+        "sourceCharactersPerWindowSec": 1,
+        "requestedSpeed": 0.28759139784946236,
+        "speed": 0.8,
+        "limited": true,
+        "durationSec": 2.9672916666666667,
+        "sha256": "60815e30d7130bfe3fcb4327f3b4ad4a8c550255cdb69f24d07e0305dc659c99",
+        "pauseTransfer": true,
+        "pausePlan": {
+          "sourceMedianPauseSec": 0.25,
+          "addedPauseSec": 0.25,
+          "pauseLimited": false,
+          "phrasePackVersion": "original-boundary-phrases-v1",
+          "phraseHashes": [
+            "560a62bf30cf76deb511866f99dee34d2d64512e1fba007fed5f87070d8da2ae",
+            "7b843c55a45bd41d93de22476989caa9aaacbf480b3982b666ab86d309d1ddf9"
+          ]
+        }
+      }
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zm009-v1-wait-pause-0.25-speed-1.2.wav",
+      "plan": {
+        "method": "confirmed_window_rate_phrase_pause_v1",
+        "sourceAssetId": "synthetic-analysis-fixture",
+        "observationFingerprint": "b7aac56e7397e4968fb7b0f3f947440273102a4e7a9df672a7cfc9e507a8a8dd",
+        "normalizedAudioSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "selectedWindow": {
+          "startSec": 0,
+          "endSec": 6
+        },
+        "confirmationSource": "user",
+        "baselineVoiceVersion": "kokoro-zh-zm009-v1",
+        "baselineSha256": "41f0c45181d2e436e2fa41ce23cc815ac08e1f027df9bb9806a5f96b53fe92da",
+        "baselineDurationSec": 2.228833333333333,
+        "baselineCharactersPerWindowSec": 3.589321767740971,
+        "sourceCharactersPerWindowSec": 10,
+        "requestedSpeed": 4.052424242424242,
+        "speed": 1.2,
+        "limited": true,
+        "durationSec": 2.06925,
+        "sha256": "601cdc1dc00b4b667fc8fbadd87ff4428e35c58e6033d6fc1e73dd9590dd0bb3",
+        "pauseTransfer": true,
+        "pausePlan": {
+          "sourceMedianPauseSec": 0.25,
+          "addedPauseSec": 0.25,
+          "pauseLimited": false,
+          "phrasePackVersion": "original-boundary-phrases-v1",
+          "phraseHashes": [
+            "560a62bf30cf76deb511866f99dee34d2d64512e1fba007fed5f87070d8da2ae",
+            "7b843c55a45bd41d93de22476989caa9aaacbf480b3982b666ab86d309d1ddf9"
+          ]
+        }
+      }
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zm009-v1-wait-pause-0.65-speed-0.8.wav",
+      "plan": {
+        "method": "confirmed_window_rate_phrase_pause_v1",
+        "sourceAssetId": "synthetic-analysis-fixture",
+        "observationFingerprint": "0302541a732fa1cb09dba43f2f28e2c4e77c5be7081c63ecb7ca7c68ad4a3831",
+        "normalizedAudioSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "selectedWindow": {
+          "startSec": 0,
+          "endSec": 6
+        },
+        "confirmationSource": "user",
+        "baselineVoiceVersion": "kokoro-zh-zm009-v1",
+        "baselineSha256": "41f0c45181d2e436e2fa41ce23cc815ac08e1f027df9bb9806a5f96b53fe92da",
+        "baselineDurationSec": 2.228833333333333,
+        "baselineCharactersPerWindowSec": 3.589321767740971,
+        "sourceCharactersPerWindowSec": 1,
+        "requestedSpeed": 0.30324263038548754,
+        "speed": 0.8,
+        "limited": true,
+        "durationSec": 3.3672916666666666,
+        "sha256": "92b53082e7db45c8e98877a9821b1d654810f314d1b3fe76f9f8ed4268f25f9e",
+        "pauseTransfer": true,
+        "pausePlan": {
+          "sourceMedianPauseSec": 0.6499999999999999,
+          "addedPauseSec": 0.6499999999999999,
+          "pauseLimited": false,
+          "phrasePackVersion": "original-boundary-phrases-v1",
+          "phraseHashes": [
+            "560a62bf30cf76deb511866f99dee34d2d64512e1fba007fed5f87070d8da2ae",
+            "7b843c55a45bd41d93de22476989caa9aaacbf480b3982b666ab86d309d1ddf9"
+          ]
+        }
+      }
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zm009-v1-wait-pause-0.65-speed-1.2.wav",
+      "plan": {
+        "method": "confirmed_window_rate_phrase_pause_v1",
+        "sourceAssetId": "synthetic-analysis-fixture",
+        "observationFingerprint": "0302541a732fa1cb09dba43f2f28e2c4e77c5be7081c63ecb7ca7c68ad4a3831",
+        "normalizedAudioSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "selectedWindow": {
+          "startSec": 0,
+          "endSec": 6
+        },
+        "confirmationSource": "user",
+        "baselineVoiceVersion": "kokoro-zh-zm009-v1",
+        "baselineSha256": "41f0c45181d2e436e2fa41ce23cc815ac08e1f027df9bb9806a5f96b53fe92da",
+        "baselineDurationSec": 2.228833333333333,
+        "baselineCharactersPerWindowSec": 3.589321767740971,
+        "sourceCharactersPerWindowSec": 10,
+        "requestedSpeed": 14.858888888888876,
+        "speed": 1.2,
+        "limited": true,
+        "durationSec": 2.46925,
+        "sha256": "287b89f509fdc4c317ef74e6279f5e62961ec979b8fe57406b8b6ee1e3001caf",
+        "pauseTransfer": true,
+        "pausePlan": {
+          "sourceMedianPauseSec": 0.6499999999999999,
+          "addedPauseSec": 0.6499999999999999,
+          "pauseLimited": false,
+          "phrasePackVersion": "original-boundary-phrases-v1",
+          "phraseHashes": [
+            "560a62bf30cf76deb511866f99dee34d2d64512e1fba007fed5f87070d8da2ae",
+            "7b843c55a45bd41d93de22476989caa9aaacbf480b3982b666ab86d309d1ddf9"
+          ]
+        }
+      }
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zm009-v1-repair-pause-0.25-speed-0.8.wav",
+      "plan": {
+        "method": "confirmed_window_rate_phrase_pause_v1",
+        "sourceAssetId": "synthetic-analysis-fixture",
+        "observationFingerprint": "b7aac56e7397e4968fb7b0f3f947440273102a4e7a9df672a7cfc9e507a8a8dd",
+        "normalizedAudioSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "selectedWindow": {
+          "startSec": 0,
+          "endSec": 6
+        },
+        "confirmationSource": "user",
+        "baselineVoiceVersion": "kokoro-zh-zm009-v1",
+        "baselineSha256": "0a24effa9d39f3b15a22668e955a2cafa60ccf24b0b70f4a7aa7633a112a1ab6",
+        "baselineDurationSec": 2.58025,
+        "baselineCharactersPerWindowSec": 3.4880341052223622,
+        "sourceCharactersPerWindowSec": 1,
+        "requestedSpeed": 0.29488571428571425,
+        "speed": 0.8,
+        "limited": true,
+        "durationSec": 3.4147916666666664,
+        "sha256": "778eafc423f3712780ba5d164fb19185f68573d621f6b4708362d247b34c060c",
+        "pauseTransfer": true,
+        "pausePlan": {
+          "sourceMedianPauseSec": 0.25,
+          "addedPauseSec": 0.25,
+          "pauseLimited": false,
+          "phrasePackVersion": "original-boundary-phrases-v1",
+          "phraseHashes": [
+            "8a57a61c344ba680b596d7d2e135307cee54b48fccb30f90e9c5739843dc4d1f",
+            "bc739b1f77d30a28e0f2376fc90e0221b497f3a7d37684ce8e4c8bb80a5a4ea4"
+          ]
+        }
+      }
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zm009-v1-repair-pause-0.25-speed-1.2.wav",
+      "plan": {
+        "method": "confirmed_window_rate_phrase_pause_v1",
+        "sourceAssetId": "synthetic-analysis-fixture",
+        "observationFingerprint": "b7aac56e7397e4968fb7b0f3f947440273102a4e7a9df672a7cfc9e507a8a8dd",
+        "normalizedAudioSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "selectedWindow": {
+          "startSec": 0,
+          "endSec": 6
+        },
+        "confirmationSource": "user",
+        "baselineVoiceVersion": "kokoro-zh-zm009-v1",
+        "baselineSha256": "0a24effa9d39f3b15a22668e955a2cafa60ccf24b0b70f4a7aa7633a112a1ab6",
+        "baselineDurationSec": 2.58025,
+        "baselineCharactersPerWindowSec": 3.4880341052223622,
+        "sourceCharactersPerWindowSec": 10,
+        "requestedSpeed": 3.9696153846153845,
+        "speed": 1.2,
+        "limited": true,
+        "durationSec": 2.353833333333333,
+        "sha256": "601519799008c6346ee70e482297c505b1fc56380de7eee3cc2df7c1397c2a8e",
+        "pauseTransfer": true,
+        "pausePlan": {
+          "sourceMedianPauseSec": 0.25,
+          "addedPauseSec": 0.25,
+          "pauseLimited": false,
+          "phrasePackVersion": "original-boundary-phrases-v1",
+          "phraseHashes": [
+            "8a57a61c344ba680b596d7d2e135307cee54b48fccb30f90e9c5739843dc4d1f",
+            "bc739b1f77d30a28e0f2376fc90e0221b497f3a7d37684ce8e4c8bb80a5a4ea4"
+          ]
+        }
+      }
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zm009-v1-repair-pause-0.65-speed-0.8.wav",
+      "plan": {
+        "method": "confirmed_window_rate_phrase_pause_v1",
+        "sourceAssetId": "synthetic-analysis-fixture",
+        "observationFingerprint": "0302541a732fa1cb09dba43f2f28e2c4e77c5be7081c63ecb7ca7c68ad4a3831",
+        "normalizedAudioSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "selectedWindow": {
+          "startSec": 0,
+          "endSec": 6
+        },
+        "confirmationSource": "user",
+        "baselineVoiceVersion": "kokoro-zh-zm009-v1",
+        "baselineSha256": "0a24effa9d39f3b15a22668e955a2cafa60ccf24b0b70f4a7aa7633a112a1ab6",
+        "baselineDurationSec": 2.58025,
+        "baselineCharactersPerWindowSec": 3.4880341052223622,
+        "sourceCharactersPerWindowSec": 1,
+        "requestedSpeed": 0.3090119760479042,
+        "speed": 0.8,
+        "limited": true,
+        "durationSec": 3.814791666666667,
+        "sha256": "53bcfbe0a58750db89b9b2e3da74e34e863875188d141b668481ef85740c3efd",
+        "pauseTransfer": true,
+        "pausePlan": {
+          "sourceMedianPauseSec": 0.6499999999999999,
+          "addedPauseSec": 0.6499999999999999,
+          "pauseLimited": false,
+          "phrasePackVersion": "original-boundary-phrases-v1",
+          "phraseHashes": [
+            "8a57a61c344ba680b596d7d2e135307cee54b48fccb30f90e9c5739843dc4d1f",
+            "bc739b1f77d30a28e0f2376fc90e0221b497f3a7d37684ce8e4c8bb80a5a4ea4"
+          ]
+        }
+      }
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zm009-v1-repair-pause-0.65-speed-1.2.wav",
+      "plan": {
+        "method": "confirmed_window_rate_phrase_pause_v1",
+        "sourceAssetId": "synthetic-analysis-fixture",
+        "observationFingerprint": "0302541a732fa1cb09dba43f2f28e2c4e77c5be7081c63ecb7ca7c68ad4a3831",
+        "normalizedAudioSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "selectedWindow": {
+          "startSec": 0,
+          "endSec": 6
+        },
+        "confirmationSource": "user",
+        "baselineVoiceVersion": "kokoro-zh-zm009-v1",
+        "baselineSha256": "0a24effa9d39f3b15a22668e955a2cafa60ccf24b0b70f4a7aa7633a112a1ab6",
+        "baselineDurationSec": 2.58025,
+        "baselineCharactersPerWindowSec": 3.4880341052223622,
+        "sourceCharactersPerWindowSec": 10,
+        "requestedSpeed": 10.320999999999994,
+        "speed": 1.2,
+        "limited": true,
+        "durationSec": 2.753833333333333,
+        "sha256": "8790b66448f731805c4502d19eac7f257480a454911cb7c3740e220234126e46",
+        "pauseTransfer": true,
+        "pausePlan": {
+          "sourceMedianPauseSec": 0.6499999999999999,
+          "addedPauseSec": 0.6499999999999999,
+          "pauseLimited": false,
+          "phrasePackVersion": "original-boundary-phrases-v1",
+          "phraseHashes": [
+            "8a57a61c344ba680b596d7d2e135307cee54b48fccb30f90e9c5739843dc4d1f",
+            "bc739b1f77d30a28e0f2376fc90e0221b497f3a7d37684ce8e4c8bb80a5a4ea4"
+          ]
+        }
+      }
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zf001-v1-wait-pause-0.25-speed-0.8.wav",
+      "plan": {
+        "method": "confirmed_window_rate_phrase_pause_v1",
+        "sourceAssetId": "synthetic-analysis-fixture",
+        "observationFingerprint": "b7aac56e7397e4968fb7b0f3f947440273102a4e7a9df672a7cfc9e507a8a8dd",
+        "normalizedAudioSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "selectedWindow": {
+          "startSec": 0,
+          "endSec": 6
+        },
+        "confirmationSource": "user",
+        "baselineVoiceVersion": "kokoro-zh-zf001-v1",
+        "baselineSha256": "c3b88a420b97cba161d908a79c2d5608da2714cb52971974e612afce5a1d90d5",
+        "baselineDurationSec": 2.1413333333333333,
+        "baselineCharactersPerWindowSec": 3.7359900373599,
+        "sourceCharactersPerWindowSec": 1,
+        "requestedSpeed": 0.2763010752688172,
+        "speed": 0.8,
+        "limited": true,
+        "durationSec": 2.884541666666667,
+        "sha256": "d73402d1a9542c0b3d4b5c8641f9aba9daaa6c8ed0f068900402aa686a7e97bc",
+        "pauseTransfer": true,
+        "pausePlan": {
+          "sourceMedianPauseSec": 0.25,
+          "addedPauseSec": 0.25,
+          "pauseLimited": false,
+          "phrasePackVersion": "original-boundary-phrases-v1",
+          "phraseHashes": [
+            "56004559f515744aaac3056547f0a153fc99869f626d392cdbf8e56c088808cc",
+            "82c9b3d7fcc9f6b4f725e237d0149ccf6822fb85cd3059da4212985f6e9f3bba"
+          ]
+        }
+      }
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zf001-v1-wait-pause-0.25-speed-1.2.wav",
+      "plan": {
+        "method": "confirmed_window_rate_phrase_pause_v1",
+        "sourceAssetId": "synthetic-analysis-fixture",
+        "observationFingerprint": "b7aac56e7397e4968fb7b0f3f947440273102a4e7a9df672a7cfc9e507a8a8dd",
+        "normalizedAudioSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "selectedWindow": {
+          "startSec": 0,
+          "endSec": 6
+        },
+        "confirmationSource": "user",
+        "baselineVoiceVersion": "kokoro-zh-zf001-v1",
+        "baselineSha256": "c3b88a420b97cba161d908a79c2d5608da2714cb52971974e612afce5a1d90d5",
+        "baselineDurationSec": 2.1413333333333333,
+        "baselineCharactersPerWindowSec": 3.7359900373599,
+        "sourceCharactersPerWindowSec": 10,
+        "requestedSpeed": 3.893333333333333,
+        "speed": 1.2,
+        "limited": true,
+        "durationSec": 2.00625,
+        "sha256": "32ebde29fa4966ba43c8e26e1b61ef5c014b8ce888466b6f941318c4c410f717",
+        "pauseTransfer": true,
+        "pausePlan": {
+          "sourceMedianPauseSec": 0.25,
+          "addedPauseSec": 0.25,
+          "pauseLimited": false,
+          "phrasePackVersion": "original-boundary-phrases-v1",
+          "phraseHashes": [
+            "56004559f515744aaac3056547f0a153fc99869f626d392cdbf8e56c088808cc",
+            "82c9b3d7fcc9f6b4f725e237d0149ccf6822fb85cd3059da4212985f6e9f3bba"
+          ]
+        }
+      }
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zf001-v1-wait-pause-0.65-speed-0.8.wav",
+      "plan": {
+        "method": "confirmed_window_rate_phrase_pause_v1",
+        "sourceAssetId": "synthetic-analysis-fixture",
+        "observationFingerprint": "0302541a732fa1cb09dba43f2f28e2c4e77c5be7081c63ecb7ca7c68ad4a3831",
+        "normalizedAudioSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "selectedWindow": {
+          "startSec": 0,
+          "endSec": 6
+        },
+        "confirmationSource": "user",
+        "baselineVoiceVersion": "kokoro-zh-zf001-v1",
+        "baselineSha256": "c3b88a420b97cba161d908a79c2d5608da2714cb52971974e612afce5a1d90d5",
+        "baselineDurationSec": 2.1413333333333333,
+        "baselineCharactersPerWindowSec": 3.7359900373599,
+        "sourceCharactersPerWindowSec": 1,
+        "requestedSpeed": 0.2913378684807256,
+        "speed": 0.8,
+        "limited": true,
+        "durationSec": 3.2845416666666667,
+        "sha256": "0487308272254677c1182b2c8856a2ef050b859ba35aaec43352f0a6585a42fe",
+        "pauseTransfer": true,
+        "pausePlan": {
+          "sourceMedianPauseSec": 0.6499999999999999,
+          "addedPauseSec": 0.6499999999999999,
+          "pauseLimited": false,
+          "phrasePackVersion": "original-boundary-phrases-v1",
+          "phraseHashes": [
+            "56004559f515744aaac3056547f0a153fc99869f626d392cdbf8e56c088808cc",
+            "82c9b3d7fcc9f6b4f725e237d0149ccf6822fb85cd3059da4212985f6e9f3bba"
+          ]
+        }
+      }
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zf001-v1-wait-pause-0.65-speed-1.2.wav",
+      "plan": {
+        "method": "confirmed_window_rate_phrase_pause_v1",
+        "sourceAssetId": "synthetic-analysis-fixture",
+        "observationFingerprint": "0302541a732fa1cb09dba43f2f28e2c4e77c5be7081c63ecb7ca7c68ad4a3831",
+        "normalizedAudioSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "selectedWindow": {
+          "startSec": 0,
+          "endSec": 6
+        },
+        "confirmationSource": "user",
+        "baselineVoiceVersion": "kokoro-zh-zf001-v1",
+        "baselineSha256": "c3b88a420b97cba161d908a79c2d5608da2714cb52971974e612afce5a1d90d5",
+        "baselineDurationSec": 2.1413333333333333,
+        "baselineCharactersPerWindowSec": 3.7359900373599,
+        "sourceCharactersPerWindowSec": 10,
+        "requestedSpeed": 14.275555555555544,
+        "speed": 1.2,
+        "limited": true,
+        "durationSec": 2.40625,
+        "sha256": "e87f206cb736c56c916bcc6c66757abbe1bd822d0fbc42718ac876d2777ffc42",
+        "pauseTransfer": true,
+        "pausePlan": {
+          "sourceMedianPauseSec": 0.6499999999999999,
+          "addedPauseSec": 0.6499999999999999,
+          "pauseLimited": false,
+          "phrasePackVersion": "original-boundary-phrases-v1",
+          "phraseHashes": [
+            "56004559f515744aaac3056547f0a153fc99869f626d392cdbf8e56c088808cc",
+            "82c9b3d7fcc9f6b4f725e237d0149ccf6822fb85cd3059da4212985f6e9f3bba"
+          ]
+        }
+      }
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zf001-v1-repair-pause-0.25-speed-0.8.wav",
+      "plan": {
+        "method": "confirmed_window_rate_phrase_pause_v1",
+        "sourceAssetId": "synthetic-analysis-fixture",
+        "observationFingerprint": "b7aac56e7397e4968fb7b0f3f947440273102a4e7a9df672a7cfc9e507a8a8dd",
+        "normalizedAudioSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "selectedWindow": {
+          "startSec": 0,
+          "endSec": 6
+        },
+        "confirmationSource": "user",
+        "baselineVoiceVersion": "kokoro-zh-zf001-v1",
+        "baselineSha256": "989847fea9fe923eea341f5896061629375cd6738f848d6f36293cd716919464",
+        "baselineDurationSec": 2.510083333333333,
+        "baselineCharactersPerWindowSec": 3.585538328740746,
+        "sourceCharactersPerWindowSec": 1,
+        "requestedSpeed": 0.28686666666666666,
+        "speed": 0.8,
+        "limited": true,
+        "durationSec": 3.3491666666666666,
+        "sha256": "9ab6022e71e3c37e0d2117f9ba8a337134cb832b1a1b57abb9eceb3118d1b9c0",
+        "pauseTransfer": true,
+        "pausePlan": {
+          "sourceMedianPauseSec": 0.25,
+          "addedPauseSec": 0.25,
+          "pauseLimited": false,
+          "phrasePackVersion": "original-boundary-phrases-v1",
+          "phraseHashes": [
+            "8fe40e1df5afbe1e77b385260c38c3a1af92bab31998c41395ac23129fe5b8c8",
+            "0664469f69a317d9f3c181fcbbe3b616f0d43120500e3d6689a60c0e4f2815cd"
+          ]
+        }
+      }
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zf001-v1-repair-pause-0.25-speed-1.2.wav",
+      "plan": {
+        "method": "confirmed_window_rate_phrase_pause_v1",
+        "sourceAssetId": "synthetic-analysis-fixture",
+        "observationFingerprint": "b7aac56e7397e4968fb7b0f3f947440273102a4e7a9df672a7cfc9e507a8a8dd",
+        "normalizedAudioSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "selectedWindow": {
+          "startSec": 0,
+          "endSec": 6
+        },
+        "confirmationSource": "user",
+        "baselineVoiceVersion": "kokoro-zh-zf001-v1",
+        "baselineSha256": "989847fea9fe923eea341f5896061629375cd6738f848d6f36293cd716919464",
+        "baselineDurationSec": 2.510083333333333,
+        "baselineCharactersPerWindowSec": 3.585538328740746,
+        "sourceCharactersPerWindowSec": 10,
+        "requestedSpeed": 3.8616666666666664,
+        "speed": 1.2,
+        "limited": true,
+        "durationSec": 2.3281666666666667,
+        "sha256": "632e4274f3094840f9e970249bc552087d5b1dd9a13073a0c725b784eef7ec30",
+        "pauseTransfer": true,
+        "pausePlan": {
+          "sourceMedianPauseSec": 0.25,
+          "addedPauseSec": 0.25,
+          "pauseLimited": false,
+          "phrasePackVersion": "original-boundary-phrases-v1",
+          "phraseHashes": [
+            "8fe40e1df5afbe1e77b385260c38c3a1af92bab31998c41395ac23129fe5b8c8",
+            "0664469f69a317d9f3c181fcbbe3b616f0d43120500e3d6689a60c0e4f2815cd"
+          ]
+        }
+      }
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zf001-v1-repair-pause-0.65-speed-0.8.wav",
+      "plan": {
+        "method": "confirmed_window_rate_phrase_pause_v1",
+        "sourceAssetId": "synthetic-analysis-fixture",
+        "observationFingerprint": "0302541a732fa1cb09dba43f2f28e2c4e77c5be7081c63ecb7ca7c68ad4a3831",
+        "normalizedAudioSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "selectedWindow": {
+          "startSec": 0,
+          "endSec": 6
+        },
+        "confirmationSource": "user",
+        "baselineVoiceVersion": "kokoro-zh-zf001-v1",
+        "baselineSha256": "989847fea9fe923eea341f5896061629375cd6738f848d6f36293cd716919464",
+        "baselineDurationSec": 2.510083333333333,
+        "baselineCharactersPerWindowSec": 3.585538328740746,
+        "sourceCharactersPerWindowSec": 1,
+        "requestedSpeed": 0.30060878243512973,
+        "speed": 0.8,
+        "limited": true,
+        "durationSec": 3.7491666666666665,
+        "sha256": "1b133eba2c034f9e17b5da6026dfbc29a215b4455d816d694aa1fa9012b76b9d",
+        "pauseTransfer": true,
+        "pausePlan": {
+          "sourceMedianPauseSec": 0.6499999999999999,
+          "addedPauseSec": 0.6499999999999999,
+          "pauseLimited": false,
+          "phrasePackVersion": "original-boundary-phrases-v1",
+          "phraseHashes": [
+            "8fe40e1df5afbe1e77b385260c38c3a1af92bab31998c41395ac23129fe5b8c8",
+            "0664469f69a317d9f3c181fcbbe3b616f0d43120500e3d6689a60c0e4f2815cd"
+          ]
+        }
+      }
+    },
+    {
+      "path": "artifacts/acceptance/M0/rendered-pause-asr-v1/kokoro-zh-zf001-v1-repair-pause-0.65-speed-1.2.wav",
+      "plan": {
+        "method": "confirmed_window_rate_phrase_pause_v1",
+        "sourceAssetId": "synthetic-analysis-fixture",
+        "observationFingerprint": "0302541a732fa1cb09dba43f2f28e2c4e77c5be7081c63ecb7ca7c68ad4a3831",
+        "normalizedAudioSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "selectedWindow": {
+          "startSec": 0,
+          "endSec": 6
+        },
+        "confirmationSource": "user",
+        "baselineVoiceVersion": "kokoro-zh-zf001-v1",
+        "baselineSha256": "989847fea9fe923eea341f5896061629375cd6738f848d6f36293cd716919464",
+        "baselineDurationSec": 2.510083333333333,
+        "baselineCharactersPerWindowSec": 3.585538328740746,
+        "sourceCharactersPerWindowSec": 10,
+        "requestedSpeed": 10.040333333333328,
+        "speed": 1.2,
+        "limited": true,
+        "durationSec": 2.7281666666666666,
+        "sha256": "0e0bc0fad63a33a2fa2e776a72cbd4aefff6f12bda4a63741cb23078d71b1d07",
+        "pauseTransfer": true,
+        "pausePlan": {
+          "sourceMedianPauseSec": 0.6499999999999999,
+          "addedPauseSec": 0.6499999999999999,
+          "pauseLimited": false,
+          "phrasePackVersion": "original-boundary-phrases-v1",
+          "phraseHashes": [
+            "8fe40e1df5afbe1e77b385260c38c3a1af92bab31998c41395ac23129fe5b8c8",
+            "0664469f69a317d9f3c181fcbbe3b616f0d43120500e3d6689a60c0e4f2815cd"
+          ]
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Independent ASR is not human listening or proof of spoken correctness",
+    "Earlier failed gates remain failed",
+    "Rendered source parameters use structured synthetic fixtures",
+    "No real person familiarity result"
+  ]
+}

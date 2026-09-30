@@ -1,0 +1,72 @@
+{
+  "phrasePackVersion": "original-boundary-phrases-v1",
+  "sourceModel": "kokoro-int8-multi-lang-v1_1",
+  "speakerId": 3,
+  "speed": 1,
+  "silenceScale": 0.2,
+  "sourceBoundary": "original",
+  "diagnosticReport": "artifacts/acceptance/M0/independent-phrase-asr-v1/results.json",
+  "diagnosticReportSha256": "062b0e4c288bcaed386cc986cfdfa2d341960253536e759a35b35bb930f5b27c",
+  "samples": [
+    {
+      "speakerId": 3,
+      "cue": "general",
+      "part": 0,
+      "expectedText": "今天的风很好。",
+      "recognizedText": "今天的很好",
+      "matchesHanWithListedVariants": false,
+      "durationSec": 1.6569166666666666,
+      "path": "artifacts/acceptance/M0/phrase-candidates-v2-original/speaker-3-general-0.wav",
+      "sha256": "3d4319dd467854edcf334eb3432e0b15ed1da1d593adc26efad18e0950bcd1e1"
+    },
+    {
+      "speakerId": 3,
+      "cue": "wait",
+      "part": 0,
+      "expectedText": "不用急，",
+      "recognizedText": "不用急",
+      "matchesHanWithListedVariants": true,
+      "durationSec": 0.78575,
+      "path": "artifacts/acceptance/M0/phrase-candidates-v2-original/speaker-3-wait-0.wav",
+      "sha256": "56004559f515744aaac3056547f0a153fc99869f626d392cdbf8e56c088808cc"
+    },
+    {
+      "speakerId": 3,
+      "cue": "wait",
+      "part": 1,
+      "expectedText": "我走慢一点。",
+      "recognizedText": "我走慢一點",
+      "matchesHanWithListedVariants": true,
+      "durationSec": 1.3555833333333334,
+      "path": "artifacts/acceptance/M0/phrase-candidates-v2-original/speaker-3-wait-1.wav",
+      "sha256": "82c9b3d7fcc9f6b4f725e237d0149ccf6822fb85cd3059da4212985f6e9f3bba"
+    },
+    {
+      "speakerId": 3,
+      "cue": "repair",
+      "part": 0,
+      "expectedText": "再试试，",
+      "recognizedText": "再",
+      "matchesHanWithListedVariants": false,
+      "durationSec": 0.9555,
+      "path": "artifacts/acceptance/M0/phrase-candidates-v2-original/speaker-3-repair-0.wav",
+      "sha256": "8fe40e1df5afbe1e77b385260c38c3a1af92bab31998c41395ac23129fe5b8c8"
+    },
+    {
+      "speakerId": 3,
+      "cue": "repair",
+      "part": 1,
+      "expectedText": "这下应该好了。",
+      "recognizedText": "这下应该好了",
+      "matchesHanWithListedVariants": true,
+      "durationSec": 1.5545833333333334,
+      "path": "artifacts/acceptance/M0/phrase-candidates-v2-original/speaker-3-repair-1.wav",
+      "sha256": "0664469f69a317d9f3c181fcbbe3b616f0d43120500e3d6689a60c0e4f2815cd"
+    }
+  ],
+  "qualityStatus": "synthetic_candidate_only",
+  "limitations": [
+    "No human listening or familiarity result",
+    "Earlier Whisper failures preserved"
+  ]
+}

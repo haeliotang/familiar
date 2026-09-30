@@ -1,0 +1,18 @@
+{
+  "source": "https://quaternius.itch.io/universal-base-characters",
+  "license": "CC0-1.0",
+  "importedAt": "2026-09-30",
+  "archiveSha256": "fdbf1804c90dfc1ea03e992bff7da2dfd1a79318e13270a660180f9308455f40",
+  "glbSha256": "ef969dbbe67e69dc72beb40edd6e292d1c54e12a71bad8b90eadb0e291313118",
+  "model": "Superhero_Male_FullBody",
+  "triangles": 14318,
+  "skins": 1,
+  "joints": 65,
+  "animations": [],
+  "maxTextureEdge": 2048,
+  "textureReferenceRepairs": {
+    "T_Hair_1_Normal_png.png": "T_Hair_1_Normal.png",
+    "T_Eye_Normal_png.png": "T_Eye_Normal.png"
+  },
+  "status": "candidate; requires animation, visual and device review before release"
+}

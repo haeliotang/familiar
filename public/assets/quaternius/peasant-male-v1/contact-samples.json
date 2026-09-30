@@ -1,0 +1,31 @@
+{
+  "units": "metres; original model origin; no ground correction",
+  "frequencyHz": 30,
+  "status": "diagnostic only; no foot sliding or visual contact verdict",
+  "samples": [
+    {
+      "clip": "Idle_Loop",
+      "frames": 75,
+      "lowestSurfaceY": -0.05030783653397249,
+      "highestLowestSurfaceY": -0.048325554373741336
+    },
+    {
+      "clip": "Walk_Loop",
+      "frames": 41,
+      "lowestSurfaceY": -0.06118645023676859,
+      "highestLowestSurfaceY": -0.04392192301866496
+    },
+    {
+      "clip": "Idle_Talking_Loop",
+      "frames": 89,
+      "lowestSurfaceY": -0.04995161939322561,
+      "highestLowestSurfaceY": -0.04865854103514858
+    },
+    {
+      "clip": "Fixing_Kneeling",
+      "frames": 156,
+      "lowestSurfaceY": -0.08280916044801084,
+      "highestLowestSurfaceY": -0.022221064795229353
+    }
+  ]
+}

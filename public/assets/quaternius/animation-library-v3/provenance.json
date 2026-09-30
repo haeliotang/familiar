@@ -1,0 +1,9 @@
+{
+  "source": "https://quaternius.itch.io/universal-animation-library",
+  "license": "CC0-1.0",
+  "archiveSha256": "cc73fc4e495b82958207316596317a3f40b9fa38065bde1027937452da537724",
+  "glbSha256": "69591853d817488edaa8fd9bf8fc1d821eaeaf789f8627b3cd23b41c4ed67997",
+  "version": "v3.0",
+  "variant": "Standard without root motion",
+  "status": "candidate; not release-approved"
+}

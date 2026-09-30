@@ -1,0 +1,41 @@
+* { box-sizing: border-box }
+body { margin: 0; background: #f5f2e9; color: #292d29; font-family: -apple-system, BlinkMacSystemFont, "Noto Sans SC", sans-serif }
+button, textarea { font: inherit }
+button { border: 0; border-radius: 999px; padding: 12px 22px; background: #435c50; color: white; cursor: pointer }
+button:hover { filter: brightness(1.08) }
+main { max-width: 1100px; margin: auto; min-height: 100vh; padding: 0 24px 40px }
+header { height: 76px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #deded3 }
+.brand { font-family: serif; font-size: 25px; letter-spacing: 4px }
+.edition, .note { color: #777f77; font-size: 13px }
+.intro { max-width: 650px; margin: 10vh auto 0 }
+.eyebrow { color: #6c8976; letter-spacing: 3px; font-size: 13px }
+h1 { font-family: serif; font-size: clamp(42px, 7vw, 76px); font-weight: 400; line-height: 1.2; margin: 20px 0 }
+.lead { max-width: 530px; line-height: 1.9; color: #596158; margin-bottom: 40px }
+label { display: block; margin-bottom: 12px; font-size: 14px }
+textarea { display: block; width: 100%; min-height: 130px; padding: 18px; border: 1px solid #cdd4c9; border-radius: 14px; background: #fffcf5; resize: vertical; outline-color: #668879 }
+.actions, .controls { display: flex; gap: 12px; align-items: center; flex-wrap: wrap }
+.actions { margin-top: 18px }
+.quiet { color: #435c50; background: #e1e9df }
+.error { color: #a04038 }
+.history { border-top: 1px solid #deded3; margin-top: 55px; padding-top: 20px }
+.history h2 { font-size: 17px; font-weight: 500 }
+.history-item { display: block; margin: 8px 0; border-radius: 8px; width: 100%; text-align: left; color: #435c50; background: #e9eee5 }
+.text-button { padding-left: 0; background: transparent; color: #8b5e54; font-size: 13px }
+.note { margin-top: 42px; line-height: 1.7 }
+.view { margin-top: 30px }
+.view-header, .view-footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; color: #666f66; font-size: 14px }
+.view-header { margin-bottom: 18px }
+.scene { width: 100%; height: min(58vw, 590px); min-height: 350px; overflow: hidden; border-radius: 20px; background: #afc4b8 }
+.scene canvas { display: block }
+.scene-placeholder { min-height: 350px; display: flex; align-items: center; justify-content: center; flex-direction: column; border-radius: 20px; background: #afc4b8; text-align: center; padding: 24px }
+.subtitle { min-height: 72px; display: flex; align-items: center; justify-content: center; text-align: center; font-family: serif; font-size: clamp(17px, 2.3vw, 24px) }
+.controls { justify-content: center; color: #7a8379; font-size: 14px }
+.controls button { padding: 8px 15px; font-size: 13px }
+.voice-note { margin: 12px 0; text-align: center; color: #666f66; font-size: 13px }
+.feedback { margin-top: 24px; color: #596158; font-size: 14px }
+.feedback summary { cursor: pointer }
+.feedback form { max-width: 600px; margin-top: 20px }
+.feedback select { display: block; margin-top: 8px; padding: 10px; width: 100%; border: 1px solid #cdd4c9; border-radius: 8px; background: #fffcf5; color: #292d29; font: inherit }
+.feedback textarea { margin-top: 8px; min-height: 90px }
+.view-footer { border-top: 1px solid #deded3; margin-top: 22px; padding-top: 22px }
+@media (max-width: 650px) { main { padding: 0 16px 30px } .intro { margin-top: 7vh } .view-footer { align-items: flex-start; flex-direction: column } .scene { min-height: 420px } }

@@ -1,0 +1,35 @@
+{
+  "id": "adult-peasant-female-webp-v1",
+  "status": "local prototype candidate; not approved for trial publication",
+  "composition": "rigged female outfit plus rigid adult head; no facial morphs or hair",
+  "joints": 65,
+  "headTriangles": 5364,
+  "outfitTriangles": 13568,
+  "sourceLicenses": [
+    "base-female-v1/LICENSE.txt",
+    "peasant-female-v1/LICENSE.txt",
+    "animation-library-v3/LICENSE.txt"
+  ],
+  "files": [
+    {
+      "path": "base-female-v1/adult-female-webp.glb",
+      "bytes": 10548788,
+      "sha256": "b557eebb6aea2f930a2792c3dd89e8b3726eff1fdeb3bd0acaf62afefe9ebb62"
+    },
+    {
+      "path": "peasant-female-v1/outfit-webp.glb",
+      "bytes": 6102924,
+      "sha256": "2d8d09484f9ba6f348aad71448cbb444ae8d273f14d3c91e7fe941425d859435"
+    },
+    {
+      "path": "peasant-female-v1/animations.json",
+      "bytes": 2317195,
+      "sha256": "53586a8ba0b6b77b450587980cf6efb4824964f8bdb7aca4dec2aa81a2856ba1"
+    }
+  ],
+  "knownLimitations": [
+    "5.2 second repair clip stands up before the 15 second repair beat ends",
+    "no repair prop",
+    "device performance and listening review pending"
+  ]
+}

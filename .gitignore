@@ -1,0 +1,14 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.local-db/
+.local-assets/
+.models/
+*.local
+.env
+
+.env.*
+!.env.example
+.aws/
+.codex/
+.DS_Store

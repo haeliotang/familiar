@@ -1,0 +1,287 @@
+{
+  "datasetVersion": "synthetic-preparation-v1",
+  "sourceSha256": "00798612e43b4422e122892c102d6e19a3f893e9a5981884eeba347aa5858966",
+  "cases": [
+    {
+      "id": "memory_audio-1",
+      "group": "memory_audio",
+      "description": "wait + male general WAV",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "memory_audio-2",
+      "group": "memory_audio",
+      "description": "repair + male wait WAV",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "memory_audio-3",
+      "group": "memory_audio",
+      "description": "general + male repair WAV",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "memory_audio-4",
+      "group": "memory_audio",
+      "description": "500 emoji + female general WAV",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "memory_audio-5",
+      "group": "memory_audio",
+      "description": "general + female wait WAV",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "memory-1",
+      "group": "memory",
+      "description": "wait cue",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "memory-2",
+      "group": "memory",
+      "description": "repair cue",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "memory-3",
+      "group": "memory",
+      "description": "general cue",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "memory-4",
+      "group": "memory",
+      "description": "500 Unicode code points",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "memory-5",
+      "group": "memory",
+      "description": "non-matching slow walk memory",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "photo-1",
+      "group": "photo",
+      "description": "JPEG",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "photo-2",
+      "group": "photo",
+      "description": "PNG",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "photo-3",
+      "group": "photo",
+      "description": "WebP",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "photo-4",
+      "group": "photo",
+      "description": "HEIC",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "photo-5",
+      "group": "photo",
+      "description": "JPEG different dimensions",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "audio-1",
+      "group": "audio",
+      "description": "male general WAV",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "audio-2",
+      "group": "audio",
+      "description": "male wait WAV",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "audio-3",
+      "group": "audio",
+      "description": "male repair WAV",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "audio-4",
+      "group": "audio",
+      "description": "female general WAV",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "audio-5",
+      "group": "audio",
+      "description": "female wait WAV",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "damaged-1",
+      "group": "damaged",
+      "description": "invalid JPEG",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "damaged-2",
+      "group": "damaged",
+      "description": "invalid WAV",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "damaged-3",
+      "group": "damaged",
+      "description": "invalid PNG",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "damaged-4",
+      "group": "damaged",
+      "description": "181 second stream WebM",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "damaged-5",
+      "group": "damaged",
+      "description": "unsupported TIFF",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "composite-1",
+      "group": "composite",
+      "description": "two synthetic color images JPEG",
+      "authorization": "synthetic_non_private",
+      "limitation": "abstract inputs do not test actual subject detection"
+    },
+    {
+      "id": "composite-2",
+      "group": "composite",
+      "description": "two synthetic color images PNG/JPEG",
+      "authorization": "synthetic_non_private",
+      "limitation": "abstract inputs do not test actual subject detection"
+    },
+    {
+      "id": "composite-3",
+      "group": "composite",
+      "description": "two synthetic color images WebP/JPEG",
+      "authorization": "synthetic_non_private",
+      "limitation": "abstract inputs do not test actual subject detection"
+    },
+    {
+      "id": "composite-4",
+      "group": "composite",
+      "description": "two synthetic color images HEIC/JPEG",
+      "authorization": "synthetic_non_private",
+      "limitation": "abstract inputs do not test actual subject detection"
+    },
+    {
+      "id": "composite-5",
+      "group": "composite",
+      "description": "two different synthetic JPEG sizes",
+      "authorization": "synthetic_non_private",
+      "limitation": "abstract inputs do not test actual subject detection"
+    },
+    {
+      "id": "withdrawn-1",
+      "group": "withdrawn",
+      "description": "retract before queue",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "withdrawn-2",
+      "group": "withdrawn",
+      "description": "retract after queue",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "withdrawn-3",
+      "group": "withdrawn",
+      "description": "delete after queue",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "withdrawn-4",
+      "group": "withdrawn",
+      "description": "hide completed episode",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "withdrawn-5",
+      "group": "withdrawn",
+      "description": "delete another queued variant",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "untrusted_text-1",
+      "group": "untrusted_text",
+      "description": "SQL-shaped text",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "untrusted_text-2",
+      "group": "untrusted_text",
+      "description": "script-shaped text",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "untrusted_text-3",
+      "group": "untrusted_text",
+      "description": "instruction override text",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "untrusted_text-4",
+      "group": "untrusted_text",
+      "description": "foreign-data instruction",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    },
+    {
+      "id": "untrusted_text-5",
+      "group": "untrusted_text",
+      "description": "external upload URL instruction",
+      "authorization": "synthetic_non_private",
+      "limitation": null
+    }
+  ],
+  "coverageBoundary": "Local API and template prototype outcomes; no real subject detection, personalization quality or device acceptance"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "adult-peasant-male-candidate-v1",
+  "status": "review-only",
+  "body": "peasant-male-v1/outfit.glb",
+  "headSource": "base-character-v1/adult-male.glb",
+  "headComposition": "static extracted head attached to Head joint; no facial morphs",
+  "animationLibrary": "peasant-male-v1/animations.json",
+  "rigJointCount": 65,
+  "groundPlaneY": 0,
+  "grounding": "pose-dependent lowest skinned surface correction; foot sliding not verified",
+  "licenses": [
+    "base-character-v1/LICENSE.txt",
+    "peasant-male-v1/LICENSE.txt",
+    "animation-library-v3/LICENSE.txt"
+  ],
+  "files": {
+    "peasant-male-v1/outfit.glb": {
+      "sha256": "63b96f77930e94a9900204591561206d18dd996e66be1e7b7028e8f500f8ac1a",
+      "bytes": 22074076
+    },
+    "base-character-v1/adult-male.glb": {
+      "sha256": "ef969dbbe67e69dc72beb40edd6e292d1c54e12a71bad8b90eadb0e291313118",
+      "bytes": 19363284
+    },
+    "peasant-male-v1/animations.json": {
+      "sha256": "ca16490cefaafd7d43f6f56fc160a797d6a4ac4b7b44db656cd0d00b9df1ef12",
+      "bytes": 2317195
+    }
+  }
+}

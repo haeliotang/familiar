@@ -1,0 +1,24 @@
+{
+  "method": "lossless WebP textures; geometry and rig bytes unchanged",
+  "status": "candidate; browser and device compatibility review required",
+  "measurements": [
+    {
+      "path": "base-female-v1/adult-female-webp.glb",
+      "sourceSha256": "09ca9a4a8f90cd136f058eb380b3c26955a9c032f351c219c18503a7198a654d",
+      "sha256": "b557eebb6aea2f930a2792c3dd89e8b3726eff1fdeb3bd0acaf62afefe9ebb62",
+      "sourceBytes": 18698744,
+      "bytes": 10548788,
+      "pixels": "exact decoded RGBA match",
+      "extension": "EXT_texture_webp"
+    },
+    {
+      "path": "peasant-female-v1/outfit-webp.glb",
+      "sourceSha256": "a947c8b1c55f371623e8fb06d314864a281fa4aaae827bca8008b49d010dc7b9",
+      "sha256": "2d8d09484f9ba6f348aad71448cbb444ae8d273f14d3c91e7fe941425d859435",
+      "sourceBytes": 11636840,
+      "bytes": 6102924,
+      "pixels": "exact decoded RGBA match",
+      "extension": "EXT_texture_webp"
+    }
+  ]
+}

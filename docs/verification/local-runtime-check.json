@@ -1,0 +1,115 @@
+{
+  "checkedAt": "2026-09-30T14:16:06.511Z",
+  "ok": true,
+  "scope": "local_dependencies_and_candidate_assets",
+  "checks": [
+    {
+      "component": "ffmpeg",
+      "ok": true
+    },
+    {
+      "component": "ffprobe",
+      "ok": true
+    },
+    {
+      "component": "heif-convert",
+      "ok": true
+    },
+    {
+      "component": "adult-peasant-male-webp-v1:head",
+      "ok": true
+    },
+    {
+      "component": "adult-peasant-male-webp-v1:body",
+      "ok": true
+    },
+    {
+      "component": "adult-peasant-male-webp-v1:animations",
+      "ok": true
+    },
+    {
+      "component": "adult-peasant-male-webp-v1:motion",
+      "ok": true
+    },
+    {
+      "component": "kokoro-zh-zm009-v1:general",
+      "ok": true
+    },
+    {
+      "component": "kokoro-zh-zm009-v1:wait",
+      "ok": true
+    },
+    {
+      "component": "kokoro-zh-zm009-v1:repair",
+      "ok": true
+    },
+    {
+      "component": "adult-peasant-female-webp-v1:head",
+      "ok": true
+    },
+    {
+      "component": "adult-peasant-female-webp-v1:body",
+      "ok": true
+    },
+    {
+      "component": "adult-peasant-female-webp-v1:animations",
+      "ok": true
+    },
+    {
+      "component": "adult-peasant-female-webp-v1:motion",
+      "ok": true
+    },
+    {
+      "component": "kokoro-zh-zf001-v1:general",
+      "ok": true
+    },
+    {
+      "component": "kokoro-zh-zf001-v1:wait",
+      "ok": true
+    },
+    {
+      "component": "kokoro-zh-zf001-v1:repair",
+      "ok": true
+    },
+    {
+      "component": "kokoro-int8-multi-lang-v1_1/model.int8.onnx",
+      "ok": true
+    },
+    {
+      "component": "sherpa-onnx-whisper-tiny/tiny-encoder.int8.onnx",
+      "ok": true
+    },
+    {
+      "component": "sherpa-onnx-whisper-tiny/tiny-decoder.int8.onnx",
+      "ok": true
+    },
+    {
+      "component": "kokoro:voices.bin",
+      "ok": true
+    },
+    {
+      "component": "kokoro:tokens.txt",
+      "ok": true
+    },
+    {
+      "component": "kokoro:lexicon-us-en.txt",
+      "ok": true
+    },
+    {
+      "component": "kokoro:lexicon-zh.txt",
+      "ok": true
+    },
+    {
+      "component": "kokoro:espeak-ng-data",
+      "ok": true
+    },
+    {
+      "component": "kokoro:dict",
+      "ok": true
+    },
+    {
+      "component": "whisper:tokens",
+      "ok": true
+    }
+  ]
+}

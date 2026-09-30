@@ -1,0 +1,28 @@
+{
+  "source": "locally generated synthetic sample lines; no user recordings",
+  "model": "kokoro-int8-multi-lang-v1_1",
+  "runtime": "sherpa-onnx-node 1.13.8",
+  "speakerId": 3,
+  "speed": 1,
+  "purpose": "local candidate review only",
+  "voices": [
+    {
+      "cue": "general",
+      "text": "今天的风很好。",
+      "bytes": 80012,
+      "sha256": "aa4c188072c5ffa459f698f0ed828fb967047e95d8997f198a6eb107b7f67430"
+    },
+    {
+      "cue": "wait",
+      "text": "不用急，我走慢一点。",
+      "bytes": 102830,
+      "sha256": "c3b88a420b97cba161d908a79c2d5608da2714cb52971974e612afce5a1d90d5"
+    },
+    {
+      "cue": "repair",
+      "text": "再试试，这下应该好了。",
+      "bytes": 120384,
+      "sha256": "989847fea9fe923eea341f5896061629375cd6738f848d6f36293cd716919464"
+    }
+  ]
+}
