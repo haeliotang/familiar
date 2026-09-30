@@ -59,7 +59,7 @@ brew install ffmpeg libheif
 Ubuntu 24.04 媒体工具：
 
 ```sh
-sudo apt-get install ffmpeg libheif-examples
+sudo apt-get install ffmpeg libheif-examples libheif-plugin-libde265
 ```
 
 ### 安装
