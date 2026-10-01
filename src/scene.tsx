@@ -28,6 +28,8 @@ export function Scene({ encounter, review, onRenderedFrame }: { encounter: Encou
   const [seconds, setSeconds] = useState(0)
   const [characterState, setCharacterState] = useState<'loading' | 'ready' | 'failed'>('loading')
   const [playback, setPlayback] = useState<'loading' | 'ready' | 'unlocking' | 'playing' | 'paused' | 'unavailable' | 'finished'>('loading')
+  const [soundOff, setSoundOff] = useState(false)
+  const soundOutput = useRef<GainNode | null>(null)
   const context = useRef<AudioContext | null>(null)
   const buffer = useRef<AudioBuffer | null>(null)
   const player = useRef<ReturnType<typeof samplePlayback> | null>(null)
@@ -44,6 +46,10 @@ export function Scene({ encounter, review, onRenderedFrame }: { encounter: Encou
     let active = true
     const audioContext = new AudioContext()
     context.current = audioContext
+    const output = audioContext.createGain()
+    output.connect(audioContext.destination)
+    soundOutput.current = output
+    setSoundOff(false)
     void (async () => {
       try {
         const decoded = await audioContext.decodeAudioData(await encounterVoiceBytes(encounter))
@@ -56,6 +62,8 @@ export function Scene({ encounter, review, onRenderedFrame }: { encounter: Encou
       busy.current = false
       player.current?.dispose()
       player.current = null
+      output.disconnect()
+      soundOutput.current = null
       context.current = null
       buffer.current = null
       void audioContext.close()
@@ -96,7 +104,7 @@ export function Scene({ encounter, review, onRenderedFrame }: { encounter: Encou
     try {
       if (!player.current) {
         if (!buffer.current || !voicePosition.current) throw new Error('spatial_voice_unavailable')
-        player.current = samplePlayback(audioContext, buffer.current, voicePosition.current)
+        player.current = samplePlayback(audioContext, buffer.current, voicePosition.current, soundOutput.current || undefined)
       }
       const current = player.current
       await Promise.race([
@@ -170,7 +178,7 @@ export function Scene({ encounter, review, onRenderedFrame }: { encounter: Encou
     camera.lookAt(...layout.cameraTarget)
     const direction = camera.getWorldDirection(new THREE.Vector3())
     const cameraUp = camera.up.clone().applyQuaternion(camera.quaternion)
-    const panner = context.current ? spatialVoice(context.current, camera.position.toArray(), direction.toArray(), cameraUp.toArray()) : null
+    const panner = context.current ? spatialVoice(context.current, camera.position.toArray(), direction.toArray(), cameraUp.toArray(), soundOutput.current || undefined) : null
     voicePosition.current = panner
     const renderer = new THREE.WebGLRenderer({ antialias: true })
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
@@ -307,6 +315,7 @@ export function Scene({ encounter, review, onRenderedFrame }: { encounter: Encou
       <button className="quiet" onClick={() => { view.current.position = 'seated' }}>坐下看</button>
       <button className="quiet" onClick={() => { view.current = { position: 'original', turn: 0 } }}>回到原处</button>
     </div>}
+    {!review && soundOutput.current && <button className="quiet" aria-pressed={soundOff} onClick={() => { const output = soundOutput.current; if (output) { output.gain.value = soundOff ? 1 : 0; setSoundOff(!soundOff) } }}>{soundOff ? '开启声音' : '关闭声音'}</button>}
     <div className="subtitle" aria-live="polite">{characterState === 'ready' ? encounterCaption(encounter, review?.seconds ?? seconds) : ''}</div>
     {review ? <p role="status">{characterState === 'ready' ? '人物已加载 · 定格审核' : characterState === 'failed' ? '人物加载失败' : '正在准备人物…'}</p> :
     <div className="controls"><span>{Math.floor(seconds / 60)}:{String(Math.floor(seconds) % 60).padStart(2, '0')} / 1:15</span>{characterState === 'loading' ? <span>正在准备人物…</span> : characterState === 'failed' ? <><span role="alert">{encounter.avatarVersion ? '人物暂时无法加载，或该版本尚不支持。' : '这次旧相遇未保存人物版本，无法还原当时的人物。'}</span>{encounter.avatarVersion && <button onClick={() => window.location.reload()}>重新加载</button>}</> : playback === 'loading' || playback === 'unlocking' ? <span>{playback === 'loading' ? '正在准备本地语音…' : '正在开启声音…'}</span> : playback === 'ready' ? <button onClick={() => void start()}>开启声音并开始</button> : playback === 'unavailable' ? <button onClick={() => void start()}>语音暂不可用 · 无声开始</button> : playback === 'playing' ? <><button className="quiet" onClick={() => void pause()}>暂停</button>{muted.current && <span>无声播放</span>}</> : playback === 'paused' ? <button className="quiet" onClick={() => void start()}>继续</button> : <span>相遇结束，可以在这里停留。</span>}{characterState === 'ready' && playback !== 'loading' && playback !== 'unlocking' && <button className="quiet" onClick={() => void restart()}>从头看</button>}</div>

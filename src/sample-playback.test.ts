@@ -24,7 +24,7 @@ it('schedules speech on the same clock and resumes without creating a duplicate 
   const { context, nodes, player } = audio()
   await player.start()
   expect(nodes[0].start).toHaveBeenCalledWith(53)
-  expect(wind.start).toHaveBeenCalledWith(context, 10, 75, 43, 2)
+  expect(wind.start).toHaveBeenCalledWith(context, 10, 75, 43, 2, undefined)
   context.currentTime = 30
   expect(player.time).toBe(20)
   await player.pause()
@@ -90,4 +90,15 @@ it('keeps disposed playback idle when a pending resume finishes', async () => {
   expect(nodes).toHaveLength(1)
   expect(nodes[0].stop).toHaveBeenCalledOnce()
   expect(wind.stop).toHaveBeenCalledOnce()
+})
+
+it('routes wind through the supplied shared sound output without changing the voice clock', async () => {
+  const { context, nodes } = audio()
+  const output = {} as AudioNode
+  const player = samplePlayback(context as unknown as AudioContext, { duration: 2 } as AudioBuffer, {} as AudioNode, output)
+  await player.start()
+  expect(wind.start).toHaveBeenCalledWith(context, 10, 75, 43, 2, output)
+  context.currentTime = 40
+  expect(player.time).toBe(30)
+  expect(nodes).toHaveLength(1)
 })

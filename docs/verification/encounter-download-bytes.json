@@ -4,13 +4,13 @@
     {
       "version": "adult-peasant-male-pickup-v3",
       "cue": "general",
-      "bytes": 25406836,
+      "bytes": 25407201,
       "within12MB": false,
       "files": [
         {
           "path": "dist/index.html",
           "bytes": 400,
-          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+          "sha256": "ee3ad8d330d48572bac565c7ab40eaa48e2eccdca08f3da4405f65b790849902"
         },
         {
           "path": "dist/assets/index-BD5a-PNU.css",
@@ -18,14 +18,14 @@
           "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
         },
         {
-          "path": "dist/assets/index-D2XDNmqG.js",
+          "path": "dist/assets/index-DYGmh5jP.js",
           "bytes": 264504,
-          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+          "sha256": "17a30a8b8984c7af163acb3c2f8df88ccbd79d4cad042cea40b902fe795d1760"
         },
         {
-          "path": "dist/assets/scene-DK42C8CF.js",
-          "bytes": 610561,
-          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+          "path": "dist/assets/scene-B_Ck8ms5.js",
+          "bytes": 610926,
+          "sha256": "9a50cb9e96dff9ced79b28486bfbf3d18fa8bb1c4079709756a13e4dfb37c71a"
         },
         {
           "path": "public/assets/quaternius/base-character-v1/adult-male-webp.glb",
@@ -57,13 +57,13 @@
     {
       "version": "adult-peasant-male-pickup-v3",
       "cue": "wait",
-      "bytes": 25430660,
+      "bytes": 25431025,
       "within12MB": false,
       "files": [
         {
           "path": "dist/index.html",
           "bytes": 400,
-          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+          "sha256": "ee3ad8d330d48572bac565c7ab40eaa48e2eccdca08f3da4405f65b790849902"
         },
         {
           "path": "dist/assets/index-BD5a-PNU.css",
@@ -71,14 +71,14 @@
           "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
         },
         {
-          "path": "dist/assets/index-D2XDNmqG.js",
+          "path": "dist/assets/index-DYGmh5jP.js",
           "bytes": 264504,
-          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+          "sha256": "17a30a8b8984c7af163acb3c2f8df88ccbd79d4cad042cea40b902fe795d1760"
         },
         {
-          "path": "dist/assets/scene-DK42C8CF.js",
-          "bytes": 610561,
-          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+          "path": "dist/assets/scene-B_Ck8ms5.js",
+          "bytes": 610926,
+          "sha256": "9a50cb9e96dff9ced79b28486bfbf3d18fa8bb1c4079709756a13e4dfb37c71a"
         },
         {
           "path": "public/assets/quaternius/base-character-v1/adult-male-webp.glb",
@@ -110,13 +110,13 @@
     {
       "version": "adult-peasant-male-pickup-v3",
       "cue": "repair",
-      "bytes": 25447158,
+      "bytes": 25447523,
       "within12MB": false,
       "files": [
         {
           "path": "dist/index.html",
           "bytes": 400,
-          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+          "sha256": "ee3ad8d330d48572bac565c7ab40eaa48e2eccdca08f3da4405f65b790849902"
         },
         {
           "path": "dist/assets/index-BD5a-PNU.css",
@@ -124,14 +124,14 @@
           "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
         },
         {
-          "path": "dist/assets/index-D2XDNmqG.js",
+          "path": "dist/assets/index-DYGmh5jP.js",
           "bytes": 264504,
-          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+          "sha256": "17a30a8b8984c7af163acb3c2f8df88ccbd79d4cad042cea40b902fe795d1760"
         },
         {
-          "path": "dist/assets/scene-DK42C8CF.js",
-          "bytes": 610561,
-          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+          "path": "dist/assets/scene-B_Ck8ms5.js",
+          "bytes": 610926,
+          "sha256": "9a50cb9e96dff9ced79b28486bfbf3d18fa8bb1c4079709756a13e4dfb37c71a"
         },
         {
           "path": "public/assets/quaternius/base-character-v1/adult-male-webp.glb",
@@ -163,13 +163,13 @@
     {
       "version": "adult-peasant-female-pickup-v3",
       "cue": "general",
-      "bytes": 20867548,
+      "bytes": 20867913,
       "within12MB": false,
       "files": [
         {
           "path": "dist/index.html",
           "bytes": 400,
-          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+          "sha256": "ee3ad8d330d48572bac565c7ab40eaa48e2eccdca08f3da4405f65b790849902"
         },
         {
           "path": "dist/assets/index-BD5a-PNU.css",
@@ -177,14 +177,14 @@
           "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
         },
         {
-          "path": "dist/assets/index-D2XDNmqG.js",
+          "path": "dist/assets/index-DYGmh5jP.js",
           "bytes": 264504,
-          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+          "sha256": "17a30a8b8984c7af163acb3c2f8df88ccbd79d4cad042cea40b902fe795d1760"
         },
         {
-          "path": "dist/assets/scene-DK42C8CF.js",
-          "bytes": 610561,
-          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+          "path": "dist/assets/scene-B_Ck8ms5.js",
+          "bytes": 610926,
+          "sha256": "9a50cb9e96dff9ced79b28486bfbf3d18fa8bb1c4079709756a13e4dfb37c71a"
         },
         {
           "path": "public/assets/quaternius/base-female-v1/adult-female-webp.glb",
@@ -216,13 +216,13 @@
     {
       "version": "adult-peasant-female-pickup-v3",
       "cue": "wait",
-      "bytes": 20890366,
+      "bytes": 20890731,
       "within12MB": false,
       "files": [
         {
           "path": "dist/index.html",
           "bytes": 400,
-          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+          "sha256": "ee3ad8d330d48572bac565c7ab40eaa48e2eccdca08f3da4405f65b790849902"
         },
         {
           "path": "dist/assets/index-BD5a-PNU.css",
@@ -230,14 +230,14 @@
           "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
         },
         {
-          "path": "dist/assets/index-D2XDNmqG.js",
+          "path": "dist/assets/index-DYGmh5jP.js",
           "bytes": 264504,
-          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+          "sha256": "17a30a8b8984c7af163acb3c2f8df88ccbd79d4cad042cea40b902fe795d1760"
         },
         {
-          "path": "dist/assets/scene-DK42C8CF.js",
-          "bytes": 610561,
-          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+          "path": "dist/assets/scene-B_Ck8ms5.js",
+          "bytes": 610926,
+          "sha256": "9a50cb9e96dff9ced79b28486bfbf3d18fa8bb1c4079709756a13e4dfb37c71a"
         },
         {
           "path": "public/assets/quaternius/base-female-v1/adult-female-webp.glb",
@@ -269,13 +269,13 @@
     {
       "version": "adult-peasant-female-pickup-v3",
       "cue": "repair",
-      "bytes": 20907920,
+      "bytes": 20908285,
       "within12MB": false,
       "files": [
         {
           "path": "dist/index.html",
           "bytes": 400,
-          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+          "sha256": "ee3ad8d330d48572bac565c7ab40eaa48e2eccdca08f3da4405f65b790849902"
         },
         {
           "path": "dist/assets/index-BD5a-PNU.css",
@@ -283,14 +283,14 @@
           "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
         },
         {
-          "path": "dist/assets/index-D2XDNmqG.js",
+          "path": "dist/assets/index-DYGmh5jP.js",
           "bytes": 264504,
-          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+          "sha256": "17a30a8b8984c7af163acb3c2f8df88ccbd79d4cad042cea40b902fe795d1760"
         },
         {
-          "path": "dist/assets/scene-DK42C8CF.js",
-          "bytes": 610561,
-          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+          "path": "dist/assets/scene-B_Ck8ms5.js",
+          "bytes": 610926,
+          "sha256": "9a50cb9e96dff9ced79b28486bfbf3d18fa8bb1c4079709756a13e4dfb37c71a"
         },
         {
           "path": "public/assets/quaternius/base-female-v1/adult-female-webp.glb",
@@ -322,13 +322,13 @@
     {
       "version": "adult-peasant-male-compact-v4",
       "cue": "general",
-      "bytes": 11717164,
+      "bytes": 11717529,
       "within12MB": true,
       "files": [
         {
           "path": "dist/index.html",
           "bytes": 400,
-          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+          "sha256": "ee3ad8d330d48572bac565c7ab40eaa48e2eccdca08f3da4405f65b790849902"
         },
         {
           "path": "dist/assets/index-BD5a-PNU.css",
@@ -336,14 +336,14 @@
           "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
         },
         {
-          "path": "dist/assets/index-D2XDNmqG.js",
+          "path": "dist/assets/index-DYGmh5jP.js",
           "bytes": 264504,
-          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+          "sha256": "17a30a8b8984c7af163acb3c2f8df88ccbd79d4cad042cea40b902fe795d1760"
         },
         {
-          "path": "dist/assets/scene-DK42C8CF.js",
-          "bytes": 610561,
-          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+          "path": "dist/assets/scene-B_Ck8ms5.js",
+          "bytes": 610926,
+          "sha256": "9a50cb9e96dff9ced79b28486bfbf3d18fa8bb1c4079709756a13e4dfb37c71a"
         },
         {
           "path": "public/assets/quaternius/base-character-v1/adult-male-mobile-v2.glb",
@@ -375,13 +375,13 @@
     {
       "version": "adult-peasant-male-compact-v4",
       "cue": "wait",
-      "bytes": 11740988,
+      "bytes": 11741353,
       "within12MB": true,
       "files": [
         {
           "path": "dist/index.html",
           "bytes": 400,
-          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+          "sha256": "ee3ad8d330d48572bac565c7ab40eaa48e2eccdca08f3da4405f65b790849902"
         },
         {
           "path": "dist/assets/index-BD5a-PNU.css",
@@ -389,14 +389,14 @@
           "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
         },
         {
-          "path": "dist/assets/index-D2XDNmqG.js",
+          "path": "dist/assets/index-DYGmh5jP.js",
           "bytes": 264504,
-          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+          "sha256": "17a30a8b8984c7af163acb3c2f8df88ccbd79d4cad042cea40b902fe795d1760"
         },
         {
-          "path": "dist/assets/scene-DK42C8CF.js",
-          "bytes": 610561,
-          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+          "path": "dist/assets/scene-B_Ck8ms5.js",
+          "bytes": 610926,
+          "sha256": "9a50cb9e96dff9ced79b28486bfbf3d18fa8bb1c4079709756a13e4dfb37c71a"
         },
         {
           "path": "public/assets/quaternius/base-character-v1/adult-male-mobile-v2.glb",
@@ -428,13 +428,13 @@
     {
       "version": "adult-peasant-male-compact-v4",
       "cue": "repair",
-      "bytes": 11757486,
+      "bytes": 11757851,
       "within12MB": true,
       "files": [
         {
           "path": "dist/index.html",
           "bytes": 400,
-          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+          "sha256": "ee3ad8d330d48572bac565c7ab40eaa48e2eccdca08f3da4405f65b790849902"
         },
         {
           "path": "dist/assets/index-BD5a-PNU.css",
@@ -442,14 +442,14 @@
           "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
         },
         {
-          "path": "dist/assets/index-D2XDNmqG.js",
+          "path": "dist/assets/index-DYGmh5jP.js",
           "bytes": 264504,
-          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+          "sha256": "17a30a8b8984c7af163acb3c2f8df88ccbd79d4cad042cea40b902fe795d1760"
         },
         {
-          "path": "dist/assets/scene-DK42C8CF.js",
-          "bytes": 610561,
-          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+          "path": "dist/assets/scene-B_Ck8ms5.js",
+          "bytes": 610926,
+          "sha256": "9a50cb9e96dff9ced79b28486bfbf3d18fa8bb1c4079709756a13e4dfb37c71a"
         },
         {
           "path": "public/assets/quaternius/base-character-v1/adult-male-mobile-v2.glb",
@@ -481,13 +481,13 @@
     {
       "version": "adult-peasant-female-compact-v4",
       "cue": "general",
-      "bytes": 10690448,
+      "bytes": 10690813,
       "within12MB": true,
       "files": [
         {
           "path": "dist/index.html",
           "bytes": 400,
-          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+          "sha256": "ee3ad8d330d48572bac565c7ab40eaa48e2eccdca08f3da4405f65b790849902"
         },
         {
           "path": "dist/assets/index-BD5a-PNU.css",
@@ -495,14 +495,14 @@
           "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
         },
         {
-          "path": "dist/assets/index-D2XDNmqG.js",
+          "path": "dist/assets/index-DYGmh5jP.js",
           "bytes": 264504,
-          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+          "sha256": "17a30a8b8984c7af163acb3c2f8df88ccbd79d4cad042cea40b902fe795d1760"
         },
         {
-          "path": "dist/assets/scene-DK42C8CF.js",
-          "bytes": 610561,
-          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+          "path": "dist/assets/scene-B_Ck8ms5.js",
+          "bytes": 610926,
+          "sha256": "9a50cb9e96dff9ced79b28486bfbf3d18fa8bb1c4079709756a13e4dfb37c71a"
         },
         {
           "path": "public/assets/quaternius/base-female-v1/adult-female-mobile-v2.glb",
@@ -534,13 +534,13 @@
     {
       "version": "adult-peasant-female-compact-v4",
       "cue": "wait",
-      "bytes": 10713266,
+      "bytes": 10713631,
       "within12MB": true,
       "files": [
         {
           "path": "dist/index.html",
           "bytes": 400,
-          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+          "sha256": "ee3ad8d330d48572bac565c7ab40eaa48e2eccdca08f3da4405f65b790849902"
         },
         {
           "path": "dist/assets/index-BD5a-PNU.css",
@@ -548,14 +548,14 @@
           "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
         },
         {
-          "path": "dist/assets/index-D2XDNmqG.js",
+          "path": "dist/assets/index-DYGmh5jP.js",
           "bytes": 264504,
-          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+          "sha256": "17a30a8b8984c7af163acb3c2f8df88ccbd79d4cad042cea40b902fe795d1760"
         },
         {
-          "path": "dist/assets/scene-DK42C8CF.js",
-          "bytes": 610561,
-          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+          "path": "dist/assets/scene-B_Ck8ms5.js",
+          "bytes": 610926,
+          "sha256": "9a50cb9e96dff9ced79b28486bfbf3d18fa8bb1c4079709756a13e4dfb37c71a"
         },
         {
           "path": "public/assets/quaternius/base-female-v1/adult-female-mobile-v2.glb",
@@ -587,13 +587,13 @@
     {
       "version": "adult-peasant-female-compact-v4",
       "cue": "repair",
-      "bytes": 10730820,
+      "bytes": 10731185,
       "within12MB": true,
       "files": [
         {
           "path": "dist/index.html",
           "bytes": 400,
-          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+          "sha256": "ee3ad8d330d48572bac565c7ab40eaa48e2eccdca08f3da4405f65b790849902"
         },
         {
           "path": "dist/assets/index-BD5a-PNU.css",
@@ -601,14 +601,14 @@
           "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
         },
         {
-          "path": "dist/assets/index-D2XDNmqG.js",
+          "path": "dist/assets/index-DYGmh5jP.js",
           "bytes": 264504,
-          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+          "sha256": "17a30a8b8984c7af163acb3c2f8df88ccbd79d4cad042cea40b902fe795d1760"
         },
         {
-          "path": "dist/assets/scene-DK42C8CF.js",
-          "bytes": 610561,
-          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+          "path": "dist/assets/scene-B_Ck8ms5.js",
+          "bytes": 610926,
+          "sha256": "9a50cb9e96dff9ced79b28486bfbf3d18fa8bb1c4079709756a13e4dfb37c71a"
         },
         {
           "path": "public/assets/quaternius/base-female-v1/adult-female-mobile-v2.glb",

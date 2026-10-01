@@ -1,6 +1,6 @@
 import { startWind } from './ambient'
 
-export function samplePlayback(context: AudioContext, voice: AudioBuffer, destination: AudioNode) {
+export function samplePlayback(context: AudioContext, voice: AudioBuffer, destination: AudioNode, soundOutput?: AudioNode) {
   let state: 'idle' | 'playing' | 'paused' | 'finished' = 'idle'
   let startAt = 0
   let source: AudioBufferSourceNode | undefined
@@ -34,7 +34,7 @@ export function samplePlayback(context: AudioContext, voice: AudioBuffer, destin
       node.onended = () => node.disconnect()
       node.start(startAt + 43)
       source = node
-      stopWind = startWind(context, startAt, 75, 43, voice.duration)
+      stopWind = startWind(context, startAt, 75, 43, voice.duration, soundOutput)
       state = 'playing'
     },
     async pause() {

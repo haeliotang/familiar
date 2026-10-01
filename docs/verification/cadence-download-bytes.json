@@ -11,7 +11,7 @@
       "voiceBytes": 102698,
       "voiceSha256": "3c4d3edcb0ea1b367d93453a3684c2cd19117d6d7d53499e524095af5363519e",
       "durationSec": 2.1379166666666665,
-      "bytes": 11736654,
+      "bytes": 11737019,
       "within12MB": true
     },
     {
@@ -24,7 +24,7 @@
       "voiceBytes": 102698,
       "voiceSha256": "3c4d3edcb0ea1b367d93453a3684c2cd19117d6d7d53499e524095af5363519e",
       "durationSec": 2.1379166666666665,
-      "bytes": 11736654,
+      "bytes": 11737019,
       "within12MB": true
     },
     {
@@ -37,7 +37,7 @@
       "voiceBytes": 102698,
       "voiceSha256": "3c4d3edcb0ea1b367d93453a3684c2cd19117d6d7d53499e524095af5363519e",
       "durationSec": 2.1379166666666665,
-      "bytes": 11736654,
+      "bytes": 11737019,
       "within12MB": true
     },
     {
@@ -50,7 +50,7 @@
       "voiceBytes": 68496,
       "voiceSha256": "7ab2d8ac28da2e360ee418ca06bcdc55c8a008aafbdc63ada6cdaf4ec19c3d2f",
       "durationSec": 1.425375,
-      "bytes": 11702452,
+      "bytes": 11702817,
       "within12MB": true
     },
     {
@@ -63,7 +63,7 @@
       "voiceBytes": 68496,
       "voiceSha256": "7ab2d8ac28da2e360ee418ca06bcdc55c8a008aafbdc63ada6cdaf4ec19c3d2f",
       "durationSec": 1.425375,
-      "bytes": 11702452,
+      "bytes": 11702817,
       "within12MB": true
     },
     {
@@ -76,7 +76,7 @@
       "voiceBytes": 68496,
       "voiceSha256": "7ab2d8ac28da2e360ee418ca06bcdc55c8a008aafbdc63ada6cdaf4ec19c3d2f",
       "durationSec": 1.425375,
-      "bytes": 11702452,
+      "bytes": 11702817,
       "within12MB": true
     },
     {
@@ -89,7 +89,7 @@
       "voiceBytes": 132462,
       "voiceSha256": "733ad00a4058d20b6de72a05a7532c38a00f22a7f97cce6d29f88861f24e8d19",
       "durationSec": 2.758,
-      "bytes": 11766418,
+      "bytes": 11766783,
       "within12MB": true
     },
     {
@@ -102,7 +102,7 @@
       "voiceBytes": 142474,
       "voiceSha256": "60815e30d7130bfe3fcb4327f3b4ad4a8c550255cdb69f24d07e0305dc659c99",
       "durationSec": 2.9672916666666667,
-      "bytes": 11776430,
+      "bytes": 11776795,
       "within12MB": true
     },
     {
@@ -115,7 +115,7 @@
       "voiceBytes": 161674,
       "voiceSha256": "92b53082e7db45c8e98877a9821b1d654810f314d1b3fe76f9f8ed4268f25f9e",
       "durationSec": 3.3672916666666666,
-      "bytes": 11795630,
+      "bytes": 11795995,
       "within12MB": true
     },
     {
@@ -128,7 +128,7 @@
       "voiceBytes": 88430,
       "voiceSha256": "05fc0ab6f857335de1c228be893e48393a487503e67ec2895055631bd83cf7da",
       "durationSec": 1.8406666666666667,
-      "bytes": 11722386,
+      "bytes": 11722751,
       "within12MB": true
     },
     {
@@ -141,7 +141,7 @@
       "voiceBytes": 99368,
       "voiceSha256": "601cdc1dc00b4b667fc8fbadd87ff4428e35c58e6033d6fc1e73dd9590dd0bb3",
       "durationSec": 2.06925,
-      "bytes": 11733324,
+      "bytes": 11733689,
       "within12MB": true
     },
     {
@@ -154,7 +154,7 @@
       "voiceBytes": 118568,
       "voiceSha256": "287b89f509fdc4c317ef74e6279f5e62961ec979b8fe57406b8b6ee1e3001caf",
       "durationSec": 2.46925,
-      "bytes": 11752524,
+      "bytes": 11752889,
       "within12MB": true
     },
     {
@@ -167,7 +167,7 @@
       "voiceBytes": 153056,
       "voiceSha256": "0e9a303f871e81c038e52c3f007b031831c733119befdcbb9979ef6d5d6d3571",
       "durationSec": 3.1870416666666666,
-      "bytes": 11787012,
+      "bytes": 11787377,
       "within12MB": true
     },
     {
@@ -180,7 +180,7 @@
       "voiceBytes": 163954,
       "voiceSha256": "778eafc423f3712780ba5d164fb19185f68573d621f6b4708362d247b34c060c",
       "durationSec": 3.4147916666666664,
-      "bytes": 11797910,
+      "bytes": 11798275,
       "within12MB": true
     },
     {
@@ -193,7 +193,7 @@
       "voiceBytes": 183154,
       "voiceSha256": "53bcfbe0a58750db89b9b2e3da74e34e863875188d141b668481ef85740c3efd",
       "durationSec": 3.814791666666667,
-      "bytes": 11817110,
+      "bytes": 11817475,
       "within12MB": true
     },
     {
@@ -206,7 +206,7 @@
       "voiceBytes": 101364,
       "voiceSha256": "f941214f46c92330fc9c6cbe5f99e5edcd9a59d5b996920edeada86d3b9d8319",
       "durationSec": 2.110125,
-      "bytes": 11735320,
+      "bytes": 11735685,
       "within12MB": true
     },
     {
@@ -219,7 +219,7 @@
       "voiceBytes": 113028,
       "voiceSha256": "601519799008c6346ee70e482297c505b1fc56380de7eee3cc2df7c1397c2a8e",
       "durationSec": 2.353833333333333,
-      "bytes": 11746984,
+      "bytes": 11747349,
       "within12MB": true
     },
     {
@@ -232,7 +232,7 @@
       "voiceBytes": 132228,
       "voiceSha256": "8790b66448f731805c4502d19eac7f257480a454911cb7c3740e220234126e46",
       "durationSec": 2.753833333333333,
-      "bytes": 11766184,
+      "bytes": 11766549,
       "within12MB": true
     },
     {
@@ -245,7 +245,7 @@
       "voiceBytes": 98684,
       "voiceSha256": "b086b590beac7e72fe0719da09c47ed219a9c909e0cd4d5efd18395f69707dfd",
       "durationSec": 2.054291666666667,
-      "bytes": 10709120,
+      "bytes": 10709485,
       "within12MB": true
     },
     {
@@ -258,7 +258,7 @@
       "voiceBytes": 98684,
       "voiceSha256": "b086b590beac7e72fe0719da09c47ed219a9c909e0cd4d5efd18395f69707dfd",
       "durationSec": 2.054291666666667,
-      "bytes": 10709120,
+      "bytes": 10709485,
       "within12MB": true
     },
     {
@@ -271,7 +271,7 @@
       "voiceBytes": 98684,
       "voiceSha256": "b086b590beac7e72fe0719da09c47ed219a9c909e0cd4d5efd18395f69707dfd",
       "durationSec": 2.054291666666667,
-      "bytes": 10709120,
+      "bytes": 10709485,
       "within12MB": true
     },
     {
@@ -284,7 +284,7 @@
       "voiceBytes": 66172,
       "voiceSha256": "6ca8e7bfb4d02e2a7dd961e4f4ee79374f6a467dce4f59ad94d33b39bf03983a",
       "durationSec": 1.3769583333333333,
-      "bytes": 10676608,
+      "bytes": 10676973,
       "within12MB": true
     },
     {
@@ -297,7 +297,7 @@
       "voiceBytes": 66172,
       "voiceSha256": "6ca8e7bfb4d02e2a7dd961e4f4ee79374f6a467dce4f59ad94d33b39bf03983a",
       "durationSec": 1.3769583333333333,
-      "bytes": 10676608,
+      "bytes": 10676973,
       "within12MB": true
     },
     {
@@ -310,7 +310,7 @@
       "voiceBytes": 66172,
       "voiceSha256": "6ca8e7bfb4d02e2a7dd961e4f4ee79374f6a467dce4f59ad94d33b39bf03983a",
       "durationSec": 1.3769583333333333,
-      "bytes": 10676608,
+      "bytes": 10676973,
       "within12MB": true
     },
     {
@@ -323,7 +323,7 @@
       "voiceBytes": 128450,
       "voiceSha256": "8e83079242b2c96cfc07221b3ef23f84e0b5df22bca670960e4d823dd87be9c2",
       "durationSec": 2.6744166666666667,
-      "bytes": 10738886,
+      "bytes": 10739251,
       "within12MB": true
     },
     {
@@ -336,7 +336,7 @@
       "voiceBytes": 138502,
       "voiceSha256": "d73402d1a9542c0b3d4b5c8641f9aba9daaa6c8ed0f068900402aa686a7e97bc",
       "durationSec": 2.884541666666667,
-      "bytes": 10748938,
+      "bytes": 10749303,
       "within12MB": true
     },
     {
@@ -349,7 +349,7 @@
       "voiceBytes": 157702,
       "voiceSha256": "0487308272254677c1182b2c8856a2ef050b859ba35aaec43352f0a6585a42fe",
       "durationSec": 3.2845416666666667,
-      "bytes": 10768138,
+      "bytes": 10768503,
       "within12MB": true
     },
     {
@@ -362,7 +362,7 @@
       "voiceBytes": 85070,
       "voiceSha256": "2c529bbadef523ad77d0c72b8eb2f547bf46cdb46f94dd557922d09e497db75e",
       "durationSec": 1.7706666666666666,
-      "bytes": 10695506,
+      "bytes": 10695871,
       "within12MB": true
     },
     {
@@ -375,7 +375,7 @@
       "voiceBytes": 96344,
       "voiceSha256": "32ebde29fa4966ba43c8e26e1b61ef5c014b8ce888466b6f941318c4c410f717",
       "durationSec": 2.00625,
-      "bytes": 10706780,
+      "bytes": 10707145,
       "within12MB": true
     },
     {
@@ -388,7 +388,7 @@
       "voiceBytes": 115544,
       "voiceSha256": "e87f206cb736c56c916bcc6c66757abbe1bd822d0fbc42718ac876d2777ffc42",
       "durationSec": 2.40625,
-      "bytes": 10725980,
+      "bytes": 10726345,
       "within12MB": true
     },
     {
@@ -401,7 +401,7 @@
       "voiceBytes": 149090,
       "voiceSha256": "5be1c5db74214184c283b1ab576de8559634480d069bf3be24ce624fa11d02cd",
       "durationSec": 3.104416666666667,
-      "bytes": 10759526,
+      "bytes": 10759891,
       "within12MB": true
     },
     {
@@ -414,7 +414,7 @@
       "voiceBytes": 160804,
       "voiceSha256": "9ab6022e71e3c37e0d2117f9ba8a337134cb832b1a1b57abb9eceb3118d1b9c0",
       "durationSec": 3.3491666666666666,
-      "bytes": 10771240,
+      "bytes": 10771605,
       "within12MB": true
     },
     {
@@ -427,7 +427,7 @@
       "voiceBytes": 180004,
       "voiceSha256": "1b133eba2c034f9e17b5da6026dfbc29a215b4455d816d694aa1fa9012b76b9d",
       "durationSec": 3.7491666666666665,
-      "bytes": 10790440,
+      "bytes": 10790805,
       "within12MB": true
     },
     {
@@ -440,7 +440,7 @@
       "voiceBytes": 99528,
       "voiceSha256": "4e5a59f9c1dc5e92f629e23387c257a0b64db117072e106ae5684e401a69ef83",
       "durationSec": 2.071875,
-      "bytes": 10709964,
+      "bytes": 10710329,
       "within12MB": true
     },
     {
@@ -453,7 +453,7 @@
       "voiceBytes": 111796,
       "voiceSha256": "632e4274f3094840f9e970249bc552087d5b1dd9a13073a0c725b784eef7ec30",
       "durationSec": 2.3281666666666667,
-      "bytes": 10722232,
+      "bytes": 10722597,
       "within12MB": true
     },
     {
@@ -466,7 +466,7 @@
       "voiceBytes": 130996,
       "voiceSha256": "0e0bc0fad63a33a2fa2e776a72cbd4aefff6f12bda4a63741cb23078d71b1d07",
       "durationSec": 2.7281666666666666,
-      "bytes": 10741432,
+      "bytes": 10741797,
       "within12MB": true
     }
   ]

@@ -16,13 +16,13 @@ export function updateVoiceListener(context: BaseAudioContext, position: [number
   }
 }
 
-export function spatialVoice(context: BaseAudioContext, position: [number, number, number], forward: [number, number, number], up: [number, number, number]) {
+export function spatialVoice(context: BaseAudioContext, position: [number, number, number], forward: [number, number, number], up: [number, number, number], output: AudioNode = context.destination) {
   updateVoiceListener(context, position, forward, up)
   const panner = context.createPanner()
   panner.panningModel = 'HRTF'
   panner.distanceModel = 'inverse'
   panner.refDistance = 6
   panner.rolloffFactor = 0.5
-  panner.connect(context.destination)
+  panner.connect(output)
   return panner
 }

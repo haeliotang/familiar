@@ -1,4 +1,4 @@
-export function startWind(context: AudioContext, startAt: number, duration: number, speechAt: number, speechDuration: number) {
+export function startWind(context: AudioContext, startAt: number, duration: number, speechAt: number, speechDuration: number, output: AudioNode = context.destination) {
   const buffer = context.createBuffer(1, context.sampleRate * 4, context.sampleRate)
   const samples = buffer.getChannelData(0)
   let seed = 173
@@ -25,7 +25,7 @@ export function startWind(context: AudioContext, startAt: number, duration: numb
   gain.gain.linearRampToValueAtTime(level, startAt + speechEnd + 0.6)
   gain.gain.setValueAtTime(level, startAt + duration - 1.5)
   gain.gain.linearRampToValueAtTime(0, startAt + duration)
-  source.connect(filter).connect(gain).connect(context.destination)
+  source.connect(filter).connect(gain).connect(output)
   source.start(startAt)
   source.stop(startAt + duration)
   let stopped = false
