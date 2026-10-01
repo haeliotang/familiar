@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>标准声音试听审核</title>
+<style>body{max-width:800px;margin:32px auto;padding:0 20px;font-family:system-ui;line-height:1.6}section{border-top:1px solid #ccc;padding:16px 0}audio{display:block;width:100%}small{overflow-wrap:anywhere}</style>
+<h1>标准声音试听审核</h1>
+<p>播放当前保留版本的六条语音。请逐条对照台词，记录是否清晰、有截断或爆音。页面不采集麦克风，不上传评价；播放器结束仅证明播放完成，不代表听感通过。</p>
+<main id="samples"></main>
+<script type="module">
+import { currentVoiceVersion, femaleVoiceVersion, voicePackage } from '/src/voice-catalog.ts'
+import { spokenLine } from '/src/encounter.ts'
+for (const version of [currentVoiceVersion, femaleVoiceVersion]) {
+  for (const cue of ['general', 'wait', 'repair']) {
+    const section = document.createElement('section')
+    const heading = document.createElement('h2')
+    heading.textContent = `${version} · ${cue}`
+    const line = document.createElement('p')
+    line.textContent = spokenLine(cue)
+    const audio = document.createElement('audio')
+    audio.controls = true
+    audio.preload = 'none'
+    audio.src = `/assets/voices/${version}/${cue}.wav`
+    audio.setAttribute('aria-label', `${version} ${cue} 试听`)
+    const status = document.createElement('p')
+    status.textContent = '尚未播放'
+    audio.addEventListener('ended', () => { status.textContent = '播放结束；听感待人工判断' })
+    audio.addEventListener('error', () => { status.textContent = '音频加载或解码失败' })
+    const hash = document.createElement('small')
+    hash.textContent = `记录的 SHA-256：${voicePackage(version).hashes[cue]}`
+    section.append(heading, line, audio, status, hash)
+    document.querySelector('#samples').append(section)
+  }
+}
+</script>
+</html>
