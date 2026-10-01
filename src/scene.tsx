@@ -16,11 +16,15 @@ import { groundCharacter } from './ground-character'
 import { createReviewSeat } from './review-seat'
 import { createEncounterSun } from './encounter-sun'
 import { encounterVoiceBytes } from './encounter-voice'
+import { createPickupProp } from './pickup-prop'
+import { pickupStart, pickupContactPhase } from './pickup-performance'
 
-export function Scene({ encounter, review }: { encounter: Encounter; review?: { seconds: number; eye: readonly [number, number, number]; target: readonly [number, number, number] } }) {
+export function Scene({ encounter, review, onRenderedFrame }: { encounter: Encounter; review?: { seconds: number; eye: readonly [number, number, number]; target: readonly [number, number, number] }; onRenderedFrame?: (atMs: number, playback: string) => void }) {
   const mount = useRef<HTMLDivElement>(null)
   const reviewFrame = useRef(review)
   reviewFrame.current = review
+  const frameObserver = useRef(onRenderedFrame)
+  frameObserver.current = onRenderedFrame
   const [seconds, setSeconds] = useState(0)
   const [characterState, setCharacterState] = useState<'loading' | 'ready' | 'failed'>('loading')
   const [playback, setPlayback] = useState<'loading' | 'ready' | 'unlocking' | 'playing' | 'paused' | 'unavailable' | 'finished'>('loading')
@@ -204,13 +208,14 @@ export function Scene({ encounter, review }: { encounter: Encounter; review?: { 
 
     let active = true
     const repair = encounter.cue === 'repair' && resolvePerformanceVersion(encounter.performanceVersion) !== 'character-timeline-v1'
-    if (encounter.performanceVersion === 'character-timeline-v3') {
+    if (encounter.performanceVersion === 'character-timeline-v3' || encounter.performanceVersion === 'character-timeline-v4') {
       const { seat } = createReviewSeat()
       seat.position.set(0, path.position.y, -18.33)
       scene.add(seat)
     }
     let loaded: Awaited<ReturnType<typeof loadCharacter>> | undefined
     let motion: ReturnType<typeof characterTimeline> | undefined
+    let pickup: ReturnType<typeof createPickupProp> | undefined
     let speechDuration = -1
     const bounds = new THREE.Box3()
     setCharacterState('loading')
@@ -219,9 +224,18 @@ export function Scene({ encounter, review }: { encounter: Encounter; review?: { 
       loaded = result
       scene.add(result.character)
       if (repair) scene.add(createRepairCrate(encounter.avatarVersion!, result.walkingSpeed))
+      if (encounter.performanceVersion === 'character-timeline-v4' && encounter.cue === 'general') {
+        motion = characterTimeline(result.character, result.clips, result.walkingSpeed, 12, 'character-timeline-v4')
+        motion.pose(pickupStart + pickupContactPhase, 'general')
+        groundCharacter(result.character, bounds, path.position.y)
+        pickup = createPickupProp(result.character, path.position.y)
+        scene.add(pickup.group)
+        motion.pose(0, 'general')
+        groundCharacter(result.character, bounds, path.position.y)
+      }
       setCharacterState('ready')
     }).catch(() => { if (active) setCharacterState('failed') })
-    if (!repair) {
+    if (!repair && !(encounter.performanceVersion === 'character-timeline-v4' && encounter.cue === 'general')) {
       const basket = new THREE.Mesh(new THREE.CylinderGeometry(0.35, 0.25, 0.45, 12), new THREE.MeshStandardMaterial({ color: 0x927352 }))
       basket.position.set(0.8, 0.25, -1.5)
       scene.add(basket)
@@ -256,7 +270,9 @@ export function Scene({ encounter, review }: { encounter: Encounter; review?: { 
           speechDuration = duration
         }
         motion.pose(t, encounter.cue)
+        pickup?.detach()
         groundCharacter(loaded.character, bounds, path.position.y)
+        pickup?.update(t)
         if (panner) {
           panner.positionX.value = loaded.character.position.x
           panner.positionY.value = loaded.character.position.y + 1.65
@@ -264,6 +280,7 @@ export function Scene({ encounter, review }: { encounter: Encounter; review?: { 
         }
       }
       renderer.render(scene, camera)
+      frameObserver.current?.(performance.now(), host.dataset.playback || 'loading')
     }
     animate()
     return () => {
@@ -275,13 +292,14 @@ export function Scene({ encounter, review }: { encounter: Encounter; review?: { 
       renderer.dispose()
       host.removeChild(renderer.domElement)
       motion?.dispose()
+      pickup?.detach()
       loaded?.dispose()
       disposeScene(scene)
     }
   }, [encounter.id, encounter.scene, encounter.cue, encounter.avatarVersion, encounter.sceneVersion, encounter.seed, encounter.performanceVersion])
 
   return <>
-    <div className="scene" ref={mount} data-seconds={review?.seconds ?? seconds} aria-label="一段风格化的三维相遇场景" />
+    <div className="scene" ref={mount} data-seconds={review?.seconds ?? seconds} data-playback={playback} aria-label="一段风格化的三维相遇场景" />
     {!review && <div className="controls" aria-label="观看位置">
       <button className="quiet" onClick={() => { view.current.turn = Math.min(Math.PI / 3, view.current.turn + Math.PI / 12) }}>向左看</button>
       <button className="quiet" onClick={() => { view.current.turn = Math.max(-Math.PI / 3, view.current.turn - Math.PI / 12) }}>向右看</button>

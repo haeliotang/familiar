@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs'
 import { expect, it } from 'vitest'
+import sharp from 'sharp'
 
 function glb(path: string) {
   const bytes = readFileSync(`public/assets/quaternius/${path}.glb`)
@@ -10,11 +11,11 @@ function glb(path: string) {
   return { document: JSON.parse(bytes.subarray(20, 20 + length).toString()), binary: bytes.subarray(28 + length) }
 }
 
-for (const path of ['base-character-v1/adult-male', 'peasant-male-v1/outfit', 'base-female-v1/adult-female', 'peasant-female-v1/outfit']) {
-  it(`preserves every non-image buffer and rig in ${path}`, () => {
+for (const path of ['base-character-v1/adult-male', 'peasant-male-v1/outfit', 'base-female-v1/adult-female', 'peasant-female-v1/outfit']) for (const suffix of ['webp', 'mobile-v2']) {
+  it(`preserves every non-image buffer and rig in ${path}-${suffix}`, async () => {
     const original = glb(path)
-    const optimized = glb(`${path}-webp`)
-    for (const key of ['meshes', 'nodes', 'skins', 'accessors', 'scenes']) expect(optimized.document[key]).toEqual(original.document[key])
+    const optimized = glb(`${path}-${suffix}`)
+    for (const key of ['meshes', 'nodes', 'skins', 'accessors', 'scenes', 'materials']) expect(optimized.document[key]).toEqual(original.document[key])
     const images = new Set(original.document.images.map((image: { bufferView: number }) => image.bufferView))
     original.document.bufferViews.forEach((view: { byteOffset?: number; byteLength: number }, index: number) => {
       if (images.has(index)) return
@@ -28,6 +29,13 @@ for (const path of ['base-character-v1/adult-male', 'peasant-male-v1/outfit', 'b
       const view = optimized.document.bufferViews[image.bufferView]
       expect(optimized.binary.subarray(view.byteOffset, view.byteOffset + 4).toString()).toBe('RIFF')
       expect(optimized.binary.subarray(view.byteOffset + 8, view.byteOffset + 12).toString()).toBe('WEBP')
+      if (suffix === 'mobile-v2') {
+        const metadata = await sharp(optimized.binary.subarray(view.byteOffset, view.byteOffset + view.byteLength)).metadata()
+        expect(metadata.width).toBeGreaterThan(0)
+        expect(metadata.height).toBeGreaterThan(0)
+        expect(metadata.width).toBeLessThanOrEqual(1024)
+        expect(metadata.height).toBeLessThanOrEqual(1024)
+      }
     }
   })
 }

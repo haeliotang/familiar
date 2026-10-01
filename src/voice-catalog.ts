@@ -1,4 +1,4 @@
-import { femaleAvatarVersion, retainedFemaleAvatarVersion, avatarAssets } from './avatar-catalog'
+import { femaleAvatarVersion, retainedFemaleAvatarVersion, sittingFemaleAvatarVersion, pickupFemaleAvatarVersion, avatarAssets } from './avatar-catalog'
 import type { Cue } from './encounter'
 
 export const currentVoiceVersion = 'kokoro-zh-zm009-v1'
@@ -27,5 +27,5 @@ export function voicePackage(version: string | undefined) {
 
 export function voiceVersionForAvatar(avatarVersion: string) {
   avatarAssets(avatarVersion)
-  return avatarVersion === femaleAvatarVersion || avatarVersion === retainedFemaleAvatarVersion ? femaleVoiceVersion : currentVoiceVersion
+  return avatarVersion === femaleAvatarVersion || avatarVersion === retainedFemaleAvatarVersion || avatarVersion === sittingFemaleAvatarVersion || avatarVersion === pickupFemaleAvatarVersion ? femaleVoiceVersion : currentVoiceVersion
 }

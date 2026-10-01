@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import { readFileSync } from 'node:fs'
 import { afterEach, expect, it, vi } from 'vitest'
-import { retainedMaleAvatarVersion } from './avatar-catalog'
+import { retainedMaleAvatarVersion, sittingMaleAvatarVersion } from './avatar-catalog'
 import { loadCharacter } from './load-character'
 
 const loader = vi.hoisted(() => ({ load: vi.fn(), asset: vi.fn() }))
@@ -56,6 +56,11 @@ it('rejects unknown or missing episode versions before loading assets', async ()
 
 it('rejects a sitting performance paired with the retained four-clip avatar before loading', async () => {
   await expect(loadCharacter(retainedMaleAvatarVersion, 'character-timeline-v3')).rejects.toThrow('unsupported_character_performance')
+  expect(loader.asset).not.toHaveBeenCalled()
+})
+
+it('rejects an eight-clip performance paired with a seven-clip avatar before loading', async () => {
+  await expect(loadCharacter(sittingMaleAvatarVersion, 'character-timeline-v4')).rejects.toThrow('unsupported_character_performance')
   expect(loader.asset).not.toHaveBeenCalled()
 })
 

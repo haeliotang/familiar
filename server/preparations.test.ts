@@ -6,6 +6,7 @@ import { createApp } from './index'
 import { localPool } from './local-pool'
 import { processPreparationJobs } from './preparations'
 import { EpisodeAssetsUnavailable } from './validate-episode-assets'
+import { preparationReport, preparationReportQuery, type PreparationReportRow } from './preparation-report'
 
 async function setup() {
   const db = new PGlite()
@@ -32,6 +33,9 @@ describe('persisted preparation jobs', () => {
       expect(job.attempt_metrics[0].jobAgeAtClaimMs).toBeGreaterThanOrEqual(5000)
       expect(job.attempt_metrics[0].jobAgeAtFinishMs).toBeGreaterThanOrEqual(job.attempt_metrics[0].jobAgeAtClaimMs)
       expect(job.attempt_metrics[0].durationMs).toBeLessThan(job.attempt_metrics[0].jobAgeAtFinishMs)
+      const report = preparationReport((await pool.query<PreparationReportRow>(preparationReportQuery)).rows)
+      expect(report).toMatchObject({ jobs: 1, published: 1, currentlyPlayable: 1, recordedAttempts: 1, personalization: { memory_based: 1 }, quality: { local_placeholder: 1 }, providerCostUsd: 0, computeCostUsd: null })
+      expect(report.jobAgeAtFinishMs.p95).toBeGreaterThanOrEqual(5000)
     } finally { await app.close(); await db.close() }
   })
 

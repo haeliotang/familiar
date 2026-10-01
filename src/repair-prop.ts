@@ -1,9 +1,9 @@
 import * as THREE from 'three'
-import { avatarAssets, femaleAvatarVersion, retainedFemaleAvatarVersion } from './avatar-catalog'
+import { avatarAssets, femaleAvatarVersion, retainedFemaleAvatarVersion, sittingFemaleAvatarVersion, pickupFemaleAvatarVersion } from './avatar-catalog'
 
 export function createRepairCrate(avatarVersion: string, walkingSpeed: number) {
   avatarAssets(avatarVersion)
-  const height = avatarVersion === femaleAvatarVersion || avatarVersion === retainedFemaleAvatarVersion ? .2 : .21
+  const height = avatarVersion === femaleAvatarVersion || avatarVersion === retainedFemaleAvatarVersion || avatarVersion === sittingFemaleAvatarVersion || avatarVersion === pickupFemaleAvatarVersion ? .2 : .21
   const crate = new THREE.Group()
   const wood = new THREE.MeshStandardMaterial({ color: 0x89623e, roughness: 1 })
   const lid = new THREE.MeshStandardMaterial({ color: 0xa47b4d, roughness: 1 })

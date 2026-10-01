@@ -1,13 +1,17 @@
 // Published IDs and their paths must remain immutable; new assets need a new ID.
 export const retainedMaleAvatarVersion = 'adult-peasant-male-webp-v1'
 export const retainedFemaleAvatarVersion = 'adult-peasant-female-webp-v1'
-export const currentAvatarVersion = 'adult-peasant-male-sitting-v2'
-export const femaleAvatarVersion = 'adult-peasant-female-sitting-v2'
+export const sittingMaleAvatarVersion = 'adult-peasant-male-sitting-v2'
+export const sittingFemaleAvatarVersion = 'adult-peasant-female-sitting-v2'
+export const pickupMaleAvatarVersion = 'adult-peasant-male-pickup-v3'
+export const pickupFemaleAvatarVersion = 'adult-peasant-female-pickup-v3'
+export const compactMaleAvatarVersion = 'adult-peasant-male-compact-v4'
+export const compactFemaleAvatarVersion = 'adult-peasant-female-compact-v4'
+export const currentAvatarVersion = compactMaleAvatarVersion
+export const femaleAvatarVersion = compactFemaleAvatarVersion
 export const candidateAvatarVersions = [currentAvatarVersion, femaleAvatarVersion] as const
-export const sittingMaleAvatarVersion = currentAvatarVersion
-export const sittingFemaleAvatarVersion = femaleAvatarVersion
 
-const avatars: Record<string, { head: string; body: string; animations: string; motion: string; sitting?: boolean; hashes: Record<'head' | 'body' | 'animations' | 'motion', string> }> = {
+const avatars: Record<string, { head: string; body: string; animations: string; motion: string; sitting?: boolean; pickup?: boolean; hashes: Record<'head' | 'body' | 'animations' | 'motion', string> }> = {
   [retainedMaleAvatarVersion]: {
     head: '/assets/quaternius/base-character-v1/adult-male-webp.glb',
     body: '/assets/quaternius/peasant-male-v1/outfit-webp.glb',
@@ -37,6 +41,12 @@ const avatars: Record<string, { head: string; body: string; animations: string; 
 
 avatars[sittingMaleAvatarVersion] = { ...avatars[retainedMaleAvatarVersion], sitting: true, animations: '/assets/quaternius/peasant-male-sitting-v2/animations.json', hashes: { ...avatars[retainedMaleAvatarVersion].hashes, animations: 'ab571fcd37e3da40309b377f0bd1215fc0822b17657aaecaf434ce2b62ec1cf4' } }
 avatars[sittingFemaleAvatarVersion] = { ...avatars[retainedFemaleAvatarVersion], sitting: true, animations: '/assets/quaternius/peasant-female-sitting-v2/animations.json', hashes: { ...avatars[retainedFemaleAvatarVersion].hashes, animations: '10cecf93b0ebb8ae653b1f20910bd485fefa7263bb406bf20170b7ad9a91a47f' } }
+
+avatars[pickupMaleAvatarVersion] = { ...avatars[sittingMaleAvatarVersion], pickup: true, animations: '/assets/quaternius/peasant-male-pickup-v3/animations.json', hashes: { ...avatars[sittingMaleAvatarVersion].hashes, animations: '0336a7155c813b8562e4c14d8ff841eb66cd72c772890b2018ba6b0e1f89b1b1' } }
+avatars[pickupFemaleAvatarVersion] = { ...avatars[sittingFemaleAvatarVersion], pickup: true, animations: '/assets/quaternius/peasant-female-pickup-v3/animations.json', hashes: { ...avatars[sittingFemaleAvatarVersion].hashes, animations: 'df0b469b6893f625852dc318ce3ab5bc088e46d0c1165320a79caf6f5c2890f7' } }
+
+avatars[compactMaleAvatarVersion] = { ...avatars[pickupMaleAvatarVersion], head: '/assets/quaternius/base-character-v1/adult-male-mobile-v2.glb', body: '/assets/quaternius/peasant-male-v1/outfit-mobile-v2.glb', hashes: { ...avatars[pickupMaleAvatarVersion].hashes, head: '04edf812ff4d8bae8ad93d68dc40bbe1251147dbd0e3a05bfc05ce7b5a5064a9', body: '9eb8041a41f1921f1079ae8015c877f2753dac62d6ad54c24d965bcc8058ec53' } }
+avatars[compactFemaleAvatarVersion] = { ...avatars[pickupFemaleAvatarVersion], head: '/assets/quaternius/base-female-v1/adult-female-mobile-v2.glb', body: '/assets/quaternius/peasant-female-v1/outfit-mobile-v2.glb', hashes: { ...avatars[pickupFemaleAvatarVersion].hashes, head: '74b38cf254d262b32a5a8ba7068660c11049ef115826c9e02e954863ce21ee53', body: '411ba1c158b981b00e73d961e9c476a446723577e5a2d87950af43cd8206e21a' } }
 
 export function avatarAssets(version: string | undefined) {
   if (!version) throw new Error('missing_character_version')

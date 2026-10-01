@@ -4,6 +4,7 @@ import sharp from 'sharp'
 
 const directory = 'public/assets/quaternius'
 const female = process.argv.includes('--female')
+const mobile = process.argv.includes('--mobile-candidate')
 const measurements = []
 for (const path of female ? ['base-female-v1/adult-female', 'peasant-female-v1/outfit'] : ['base-character-v1/adult-male', 'peasant-male-v1/outfit']) {
   const source = await readFile(`${directory}/${path}.glb`)
@@ -30,9 +31,10 @@ for (const path of female ? ['base-female-v1/adult-female', 'peasant-female-v1/o
   for (const image of document.images) {
     const view = document.bufferViews[image.bufferView]
     const original = binary.subarray(view.byteOffset || 0, (view.byteOffset || 0) + view.byteLength)
-    const encoded = await sharp(original).webp({ lossless: true, effort: 6 }).toBuffer()
+    const sampled = mobile ? await sharp(original).resize({ width: 1024, height: 1024, fit: 'inside', withoutEnlargement: true }).png().toBuffer() : original
+    const encoded = await sharp(sampled).webp({ lossless: true, effort: 6 }).toBuffer()
     // Confirm exact decoded pixel identity, including alpha, before writing.
-    const before = await sharp(original).ensureAlpha().raw().toBuffer()
+    const before = await sharp(sampled).ensureAlpha().raw().toBuffer()
     const after = await sharp(encoded).ensureAlpha().raw().toBuffer()
     if (!before.equals(after)) throw new Error(`Texture pixels changed: ${image.name}`)
     view.byteOffset = insert(encoded)
@@ -59,8 +61,9 @@ for (const path of female ? ['base-female-v1/adult-female', 'peasant-female-v1/o
   chunkHeader.writeUInt32LE(data.length, 0)
   chunkHeader.writeUInt32LE(0x004e4942, 4)
   const optimized = Buffer.concat([header, paddedJson, chunkHeader, data])
-  await writeFile(`${directory}/${path}-webp.glb`, optimized)
-  measurements.push({ path: `${path}-webp.glb`, sourceSha256: createHash('sha256').update(source).digest('hex'), sha256: createHash('sha256').update(optimized).digest('hex'), sourceBytes: source.length, bytes: optimized.length, pixels: 'exact decoded RGBA match', extension: 'EXT_texture_webp' })
+  const suffix = mobile ? 'mobile-v2' : 'webp'
+  await writeFile(`${directory}/${path}-${suffix}.glb`, optimized)
+  measurements.push({ path: `${path}-${suffix}.glb`, sourceSha256: createHash('sha256').update(source).digest('hex'), sha256: createHash('sha256').update(optimized).digest('hex'), sourceBytes: source.length, bytes: optimized.length, pixels: mobile ? 'exact decoded RGBA match to resized texture; original detail reduced to at most 1024 pixels per side' : 'exact decoded RGBA match', extension: 'EXT_texture_webp' })
 }
-await writeFile(`${directory}/optimization${female ? '-female' : ''}.json`, JSON.stringify({ method: 'lossless WebP textures; geometry and rig bytes unchanged', status: 'candidate; browser and device compatibility review required', measurements }, null, 2) + '\n')
+await writeFile(`${directory}/optimization${female ? '-female' : ''}${mobile ? '-mobile' : ''}.json`, JSON.stringify({ method: mobile ? '1024px texture sampling and lossless WebP; geometry and rig bytes unchanged' : 'lossless WebP textures; geometry and rig bytes unchanged', status: 'candidate; browser and device compatibility review required', measurements }, null, 2) + '\n')
 console.log(JSON.stringify(measurements, null, 2))

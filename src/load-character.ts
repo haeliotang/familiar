@@ -8,7 +8,8 @@ import { disposeScene } from './dispose-scene'
 
 export async function loadCharacter(version: string | undefined, performanceVersion?: string) {
   const assets = avatarAssets(version)
-  if (performanceVersion === 'character-timeline-v3' && !assets.sitting) throw new Error('unsupported_character_performance')
+  if ((performanceVersion === 'character-timeline-v3' || performanceVersion === 'character-timeline-v4') && !assets.sitting) throw new Error('unsupported_character_performance')
+  if (performanceVersion === 'character-timeline-v4' && !assets.pickup) throw new Error('unsupported_character_performance')
   const loader = new GLTFLoader()
   const results = await Promise.allSettled([
     verifiedAsset(assets.head, assets.hashes.head).then(bytes => loader.parseAsync(bytes, '')),
@@ -30,6 +31,7 @@ export async function loadCharacter(version: string | undefined, performanceVers
     const clips = parseCharacterClips(values[2])
     for (const name of ['Idle_Loop', 'Walk_Loop', 'Idle_Talking_Loop', 'Fixing_Kneeling']) if (!clips.some(clip => clip.name === name && clip.duration > 0 && clip.validate())) throw new Error(`invalid_character_clip:${name}`)
     if (assets.sitting) for (const name of ['Sitting_Enter', 'Sitting_Idle_Loop', 'Sitting_Exit']) if (!clips.some(clip => clip.name === name && clip.duration > 0 && clip.validate())) throw new Error(`invalid_character_clip:${name}`)
+    if (assets.pickup && !clips.some(clip => clip.name === 'PickUp_Table' && clip.duration > 0 && clip.validate())) throw new Error('invalid_character_clip:PickUp_Table')
     const speed = values[3].forwardMetresPerSec
     if (!Number.isFinite(speed) || speed <= 0) throw new Error('invalid_character_motion')
     return { character, clips, walkingSpeed: speed as number, dispose }

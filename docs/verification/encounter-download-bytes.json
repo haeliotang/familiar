@@ -1,0 +1,641 @@
+{
+  "scope": "built application + selected avatar files + one standard voice; excludes HTTP overhead, API JSON, private uploads and generated cadence voice; no network timing or device result",
+  "results": [
+    {
+      "version": "adult-peasant-male-pickup-v3",
+      "cue": "general",
+      "bytes": 25406836,
+      "within12MB": false,
+      "files": [
+        {
+          "path": "dist/index.html",
+          "bytes": 400,
+          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+        },
+        {
+          "path": "dist/assets/index-BD5a-PNU.css",
+          "bytes": 3001,
+          "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
+        },
+        {
+          "path": "dist/assets/index-D2XDNmqG.js",
+          "bytes": 264504,
+          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+        },
+        {
+          "path": "dist/assets/scene-DK42C8CF.js",
+          "bytes": 610561,
+          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+        },
+        {
+          "path": "public/assets/quaternius/base-character-v1/adult-male-webp.glb",
+          "bytes": 9904148,
+          "sha256": "062c445b973ef707f876a745be8fbd2f3f7c2000fadf279c4fdcab6089aef72b"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-male-v1/outfit-webp.glb",
+          "bytes": 11283660,
+          "sha256": "e5ed6bada2861e7af6e8eeb2459843e72f612a6318032ac95d623c0a65199c3d"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-male-pickup-v3/animations.json",
+          "bytes": 3256899,
+          "sha256": "0336a7155c813b8562e4c14d8ff841eb66cd72c772890b2018ba6b0e1f89b1b1"
+        },
+        {
+          "path": "public/assets/quaternius/animation-library-v3/walking-motion.json",
+          "bytes": 455,
+          "sha256": "b35070dcf3a70b600051651d73e8d82d1c7bf66014764893edc335f894fb28fd"
+        },
+        {
+          "path": "public/assets/voices/kokoro-zh-zm009-v1/general.wav",
+          "bytes": 83208,
+          "sha256": "92f2aa65f63c8dcceed12b916f1528fe99db528b9c1e1899c067a3e534dea391"
+        }
+      ]
+    },
+    {
+      "version": "adult-peasant-male-pickup-v3",
+      "cue": "wait",
+      "bytes": 25430660,
+      "within12MB": false,
+      "files": [
+        {
+          "path": "dist/index.html",
+          "bytes": 400,
+          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+        },
+        {
+          "path": "dist/assets/index-BD5a-PNU.css",
+          "bytes": 3001,
+          "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
+        },
+        {
+          "path": "dist/assets/index-D2XDNmqG.js",
+          "bytes": 264504,
+          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+        },
+        {
+          "path": "dist/assets/scene-DK42C8CF.js",
+          "bytes": 610561,
+          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+        },
+        {
+          "path": "public/assets/quaternius/base-character-v1/adult-male-webp.glb",
+          "bytes": 9904148,
+          "sha256": "062c445b973ef707f876a745be8fbd2f3f7c2000fadf279c4fdcab6089aef72b"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-male-v1/outfit-webp.glb",
+          "bytes": 11283660,
+          "sha256": "e5ed6bada2861e7af6e8eeb2459843e72f612a6318032ac95d623c0a65199c3d"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-male-pickup-v3/animations.json",
+          "bytes": 3256899,
+          "sha256": "0336a7155c813b8562e4c14d8ff841eb66cd72c772890b2018ba6b0e1f89b1b1"
+        },
+        {
+          "path": "public/assets/quaternius/animation-library-v3/walking-motion.json",
+          "bytes": 455,
+          "sha256": "b35070dcf3a70b600051651d73e8d82d1c7bf66014764893edc335f894fb28fd"
+        },
+        {
+          "path": "public/assets/voices/kokoro-zh-zm009-v1/wait.wav",
+          "bytes": 107032,
+          "sha256": "41f0c45181d2e436e2fa41ce23cc815ac08e1f027df9bb9806a5f96b53fe92da"
+        }
+      ]
+    },
+    {
+      "version": "adult-peasant-male-pickup-v3",
+      "cue": "repair",
+      "bytes": 25447158,
+      "within12MB": false,
+      "files": [
+        {
+          "path": "dist/index.html",
+          "bytes": 400,
+          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+        },
+        {
+          "path": "dist/assets/index-BD5a-PNU.css",
+          "bytes": 3001,
+          "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
+        },
+        {
+          "path": "dist/assets/index-D2XDNmqG.js",
+          "bytes": 264504,
+          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+        },
+        {
+          "path": "dist/assets/scene-DK42C8CF.js",
+          "bytes": 610561,
+          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+        },
+        {
+          "path": "public/assets/quaternius/base-character-v1/adult-male-webp.glb",
+          "bytes": 9904148,
+          "sha256": "062c445b973ef707f876a745be8fbd2f3f7c2000fadf279c4fdcab6089aef72b"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-male-v1/outfit-webp.glb",
+          "bytes": 11283660,
+          "sha256": "e5ed6bada2861e7af6e8eeb2459843e72f612a6318032ac95d623c0a65199c3d"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-male-pickup-v3/animations.json",
+          "bytes": 3256899,
+          "sha256": "0336a7155c813b8562e4c14d8ff841eb66cd72c772890b2018ba6b0e1f89b1b1"
+        },
+        {
+          "path": "public/assets/quaternius/animation-library-v3/walking-motion.json",
+          "bytes": 455,
+          "sha256": "b35070dcf3a70b600051651d73e8d82d1c7bf66014764893edc335f894fb28fd"
+        },
+        {
+          "path": "public/assets/voices/kokoro-zh-zm009-v1/repair.wav",
+          "bytes": 123530,
+          "sha256": "0a24effa9d39f3b15a22668e955a2cafa60ccf24b0b70f4a7aa7633a112a1ab6"
+        }
+      ]
+    },
+    {
+      "version": "adult-peasant-female-pickup-v3",
+      "cue": "general",
+      "bytes": 20867548,
+      "within12MB": false,
+      "files": [
+        {
+          "path": "dist/index.html",
+          "bytes": 400,
+          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+        },
+        {
+          "path": "dist/assets/index-BD5a-PNU.css",
+          "bytes": 3001,
+          "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
+        },
+        {
+          "path": "dist/assets/index-D2XDNmqG.js",
+          "bytes": 264504,
+          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+        },
+        {
+          "path": "dist/assets/scene-DK42C8CF.js",
+          "bytes": 610561,
+          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+        },
+        {
+          "path": "public/assets/quaternius/base-female-v1/adult-female-webp.glb",
+          "bytes": 10548788,
+          "sha256": "b557eebb6aea2f930a2792c3dd89e8b3726eff1fdeb3bd0acaf62afefe9ebb62"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-female-v1/outfit-webp.glb",
+          "bytes": 6102924,
+          "sha256": "2d8d09484f9ba6f348aad71448cbb444ae8d273f14d3c91e7fe941425d859435"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-female-pickup-v3/animations.json",
+          "bytes": 3256903,
+          "sha256": "df0b469b6893f625852dc318ce3ab5bc088e46d0c1165320a79caf6f5c2890f7"
+        },
+        {
+          "path": "public/assets/quaternius/animation-library-v3/walking-motion.json",
+          "bytes": 455,
+          "sha256": "b35070dcf3a70b600051651d73e8d82d1c7bf66014764893edc335f894fb28fd"
+        },
+        {
+          "path": "public/assets/voices/kokoro-zh-zf001-v1/general.wav",
+          "bytes": 80012,
+          "sha256": "aa4c188072c5ffa459f698f0ed828fb967047e95d8997f198a6eb107b7f67430"
+        }
+      ]
+    },
+    {
+      "version": "adult-peasant-female-pickup-v3",
+      "cue": "wait",
+      "bytes": 20890366,
+      "within12MB": false,
+      "files": [
+        {
+          "path": "dist/index.html",
+          "bytes": 400,
+          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+        },
+        {
+          "path": "dist/assets/index-BD5a-PNU.css",
+          "bytes": 3001,
+          "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
+        },
+        {
+          "path": "dist/assets/index-D2XDNmqG.js",
+          "bytes": 264504,
+          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+        },
+        {
+          "path": "dist/assets/scene-DK42C8CF.js",
+          "bytes": 610561,
+          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+        },
+        {
+          "path": "public/assets/quaternius/base-female-v1/adult-female-webp.glb",
+          "bytes": 10548788,
+          "sha256": "b557eebb6aea2f930a2792c3dd89e8b3726eff1fdeb3bd0acaf62afefe9ebb62"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-female-v1/outfit-webp.glb",
+          "bytes": 6102924,
+          "sha256": "2d8d09484f9ba6f348aad71448cbb444ae8d273f14d3c91e7fe941425d859435"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-female-pickup-v3/animations.json",
+          "bytes": 3256903,
+          "sha256": "df0b469b6893f625852dc318ce3ab5bc088e46d0c1165320a79caf6f5c2890f7"
+        },
+        {
+          "path": "public/assets/quaternius/animation-library-v3/walking-motion.json",
+          "bytes": 455,
+          "sha256": "b35070dcf3a70b600051651d73e8d82d1c7bf66014764893edc335f894fb28fd"
+        },
+        {
+          "path": "public/assets/voices/kokoro-zh-zf001-v1/wait.wav",
+          "bytes": 102830,
+          "sha256": "c3b88a420b97cba161d908a79c2d5608da2714cb52971974e612afce5a1d90d5"
+        }
+      ]
+    },
+    {
+      "version": "adult-peasant-female-pickup-v3",
+      "cue": "repair",
+      "bytes": 20907920,
+      "within12MB": false,
+      "files": [
+        {
+          "path": "dist/index.html",
+          "bytes": 400,
+          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+        },
+        {
+          "path": "dist/assets/index-BD5a-PNU.css",
+          "bytes": 3001,
+          "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
+        },
+        {
+          "path": "dist/assets/index-D2XDNmqG.js",
+          "bytes": 264504,
+          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+        },
+        {
+          "path": "dist/assets/scene-DK42C8CF.js",
+          "bytes": 610561,
+          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+        },
+        {
+          "path": "public/assets/quaternius/base-female-v1/adult-female-webp.glb",
+          "bytes": 10548788,
+          "sha256": "b557eebb6aea2f930a2792c3dd89e8b3726eff1fdeb3bd0acaf62afefe9ebb62"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-female-v1/outfit-webp.glb",
+          "bytes": 6102924,
+          "sha256": "2d8d09484f9ba6f348aad71448cbb444ae8d273f14d3c91e7fe941425d859435"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-female-pickup-v3/animations.json",
+          "bytes": 3256903,
+          "sha256": "df0b469b6893f625852dc318ce3ab5bc088e46d0c1165320a79caf6f5c2890f7"
+        },
+        {
+          "path": "public/assets/quaternius/animation-library-v3/walking-motion.json",
+          "bytes": 455,
+          "sha256": "b35070dcf3a70b600051651d73e8d82d1c7bf66014764893edc335f894fb28fd"
+        },
+        {
+          "path": "public/assets/voices/kokoro-zh-zf001-v1/repair.wav",
+          "bytes": 120384,
+          "sha256": "989847fea9fe923eea341f5896061629375cd6738f848d6f36293cd716919464"
+        }
+      ]
+    },
+    {
+      "version": "adult-peasant-male-compact-v4",
+      "cue": "general",
+      "bytes": 11717164,
+      "within12MB": true,
+      "files": [
+        {
+          "path": "dist/index.html",
+          "bytes": 400,
+          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+        },
+        {
+          "path": "dist/assets/index-BD5a-PNU.css",
+          "bytes": 3001,
+          "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
+        },
+        {
+          "path": "dist/assets/index-D2XDNmqG.js",
+          "bytes": 264504,
+          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+        },
+        {
+          "path": "dist/assets/scene-DK42C8CF.js",
+          "bytes": 610561,
+          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+        },
+        {
+          "path": "public/assets/quaternius/base-character-v1/adult-male-mobile-v2.glb",
+          "bytes": 3645372,
+          "sha256": "04edf812ff4d8bae8ad93d68dc40bbe1251147dbd0e3a05bfc05ce7b5a5064a9"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-male-v1/outfit-mobile-v2.glb",
+          "bytes": 3852764,
+          "sha256": "9eb8041a41f1921f1079ae8015c877f2753dac62d6ad54c24d965bcc8058ec53"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-male-pickup-v3/animations.json",
+          "bytes": 3256899,
+          "sha256": "0336a7155c813b8562e4c14d8ff841eb66cd72c772890b2018ba6b0e1f89b1b1"
+        },
+        {
+          "path": "public/assets/quaternius/animation-library-v3/walking-motion.json",
+          "bytes": 455,
+          "sha256": "b35070dcf3a70b600051651d73e8d82d1c7bf66014764893edc335f894fb28fd"
+        },
+        {
+          "path": "public/assets/voices/kokoro-zh-zm009-v1/general.wav",
+          "bytes": 83208,
+          "sha256": "92f2aa65f63c8dcceed12b916f1528fe99db528b9c1e1899c067a3e534dea391"
+        }
+      ]
+    },
+    {
+      "version": "adult-peasant-male-compact-v4",
+      "cue": "wait",
+      "bytes": 11740988,
+      "within12MB": true,
+      "files": [
+        {
+          "path": "dist/index.html",
+          "bytes": 400,
+          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+        },
+        {
+          "path": "dist/assets/index-BD5a-PNU.css",
+          "bytes": 3001,
+          "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
+        },
+        {
+          "path": "dist/assets/index-D2XDNmqG.js",
+          "bytes": 264504,
+          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+        },
+        {
+          "path": "dist/assets/scene-DK42C8CF.js",
+          "bytes": 610561,
+          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+        },
+        {
+          "path": "public/assets/quaternius/base-character-v1/adult-male-mobile-v2.glb",
+          "bytes": 3645372,
+          "sha256": "04edf812ff4d8bae8ad93d68dc40bbe1251147dbd0e3a05bfc05ce7b5a5064a9"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-male-v1/outfit-mobile-v2.glb",
+          "bytes": 3852764,
+          "sha256": "9eb8041a41f1921f1079ae8015c877f2753dac62d6ad54c24d965bcc8058ec53"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-male-pickup-v3/animations.json",
+          "bytes": 3256899,
+          "sha256": "0336a7155c813b8562e4c14d8ff841eb66cd72c772890b2018ba6b0e1f89b1b1"
+        },
+        {
+          "path": "public/assets/quaternius/animation-library-v3/walking-motion.json",
+          "bytes": 455,
+          "sha256": "b35070dcf3a70b600051651d73e8d82d1c7bf66014764893edc335f894fb28fd"
+        },
+        {
+          "path": "public/assets/voices/kokoro-zh-zm009-v1/wait.wav",
+          "bytes": 107032,
+          "sha256": "41f0c45181d2e436e2fa41ce23cc815ac08e1f027df9bb9806a5f96b53fe92da"
+        }
+      ]
+    },
+    {
+      "version": "adult-peasant-male-compact-v4",
+      "cue": "repair",
+      "bytes": 11757486,
+      "within12MB": true,
+      "files": [
+        {
+          "path": "dist/index.html",
+          "bytes": 400,
+          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+        },
+        {
+          "path": "dist/assets/index-BD5a-PNU.css",
+          "bytes": 3001,
+          "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
+        },
+        {
+          "path": "dist/assets/index-D2XDNmqG.js",
+          "bytes": 264504,
+          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+        },
+        {
+          "path": "dist/assets/scene-DK42C8CF.js",
+          "bytes": 610561,
+          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+        },
+        {
+          "path": "public/assets/quaternius/base-character-v1/adult-male-mobile-v2.glb",
+          "bytes": 3645372,
+          "sha256": "04edf812ff4d8bae8ad93d68dc40bbe1251147dbd0e3a05bfc05ce7b5a5064a9"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-male-v1/outfit-mobile-v2.glb",
+          "bytes": 3852764,
+          "sha256": "9eb8041a41f1921f1079ae8015c877f2753dac62d6ad54c24d965bcc8058ec53"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-male-pickup-v3/animations.json",
+          "bytes": 3256899,
+          "sha256": "0336a7155c813b8562e4c14d8ff841eb66cd72c772890b2018ba6b0e1f89b1b1"
+        },
+        {
+          "path": "public/assets/quaternius/animation-library-v3/walking-motion.json",
+          "bytes": 455,
+          "sha256": "b35070dcf3a70b600051651d73e8d82d1c7bf66014764893edc335f894fb28fd"
+        },
+        {
+          "path": "public/assets/voices/kokoro-zh-zm009-v1/repair.wav",
+          "bytes": 123530,
+          "sha256": "0a24effa9d39f3b15a22668e955a2cafa60ccf24b0b70f4a7aa7633a112a1ab6"
+        }
+      ]
+    },
+    {
+      "version": "adult-peasant-female-compact-v4",
+      "cue": "general",
+      "bytes": 10690448,
+      "within12MB": true,
+      "files": [
+        {
+          "path": "dist/index.html",
+          "bytes": 400,
+          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+        },
+        {
+          "path": "dist/assets/index-BD5a-PNU.css",
+          "bytes": 3001,
+          "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
+        },
+        {
+          "path": "dist/assets/index-D2XDNmqG.js",
+          "bytes": 264504,
+          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+        },
+        {
+          "path": "dist/assets/scene-DK42C8CF.js",
+          "bytes": 610561,
+          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+        },
+        {
+          "path": "public/assets/quaternius/base-female-v1/adult-female-mobile-v2.glb",
+          "bytes": 4069372,
+          "sha256": "74b38cf254d262b32a5a8ba7068660c11049ef115826c9e02e954863ce21ee53"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-female-v1/outfit-mobile-v2.glb",
+          "bytes": 2405240,
+          "sha256": "411ba1c158b981b00e73d961e9c476a446723577e5a2d87950af43cd8206e21a"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-female-pickup-v3/animations.json",
+          "bytes": 3256903,
+          "sha256": "df0b469b6893f625852dc318ce3ab5bc088e46d0c1165320a79caf6f5c2890f7"
+        },
+        {
+          "path": "public/assets/quaternius/animation-library-v3/walking-motion.json",
+          "bytes": 455,
+          "sha256": "b35070dcf3a70b600051651d73e8d82d1c7bf66014764893edc335f894fb28fd"
+        },
+        {
+          "path": "public/assets/voices/kokoro-zh-zf001-v1/general.wav",
+          "bytes": 80012,
+          "sha256": "aa4c188072c5ffa459f698f0ed828fb967047e95d8997f198a6eb107b7f67430"
+        }
+      ]
+    },
+    {
+      "version": "adult-peasant-female-compact-v4",
+      "cue": "wait",
+      "bytes": 10713266,
+      "within12MB": true,
+      "files": [
+        {
+          "path": "dist/index.html",
+          "bytes": 400,
+          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+        },
+        {
+          "path": "dist/assets/index-BD5a-PNU.css",
+          "bytes": 3001,
+          "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
+        },
+        {
+          "path": "dist/assets/index-D2XDNmqG.js",
+          "bytes": 264504,
+          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+        },
+        {
+          "path": "dist/assets/scene-DK42C8CF.js",
+          "bytes": 610561,
+          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+        },
+        {
+          "path": "public/assets/quaternius/base-female-v1/adult-female-mobile-v2.glb",
+          "bytes": 4069372,
+          "sha256": "74b38cf254d262b32a5a8ba7068660c11049ef115826c9e02e954863ce21ee53"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-female-v1/outfit-mobile-v2.glb",
+          "bytes": 2405240,
+          "sha256": "411ba1c158b981b00e73d961e9c476a446723577e5a2d87950af43cd8206e21a"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-female-pickup-v3/animations.json",
+          "bytes": 3256903,
+          "sha256": "df0b469b6893f625852dc318ce3ab5bc088e46d0c1165320a79caf6f5c2890f7"
+        },
+        {
+          "path": "public/assets/quaternius/animation-library-v3/walking-motion.json",
+          "bytes": 455,
+          "sha256": "b35070dcf3a70b600051651d73e8d82d1c7bf66014764893edc335f894fb28fd"
+        },
+        {
+          "path": "public/assets/voices/kokoro-zh-zf001-v1/wait.wav",
+          "bytes": 102830,
+          "sha256": "c3b88a420b97cba161d908a79c2d5608da2714cb52971974e612afce5a1d90d5"
+        }
+      ]
+    },
+    {
+      "version": "adult-peasant-female-compact-v4",
+      "cue": "repair",
+      "bytes": 10730820,
+      "within12MB": true,
+      "files": [
+        {
+          "path": "dist/index.html",
+          "bytes": 400,
+          "sha256": "5cb8cc51efe4b3b53792f2ce6b9230494a3577cfac4c40489b51cbc30cf28b1a"
+        },
+        {
+          "path": "dist/assets/index-BD5a-PNU.css",
+          "bytes": 3001,
+          "sha256": "cbce15bcd7e12c37aca281737e8ac931546c4033bd419070dd5bb28315d1d21b"
+        },
+        {
+          "path": "dist/assets/index-D2XDNmqG.js",
+          "bytes": 264504,
+          "sha256": "42952bb0099fcaea488fd740ac3d13963ec89c070e87ee4ee40703a6e24452bf"
+        },
+        {
+          "path": "dist/assets/scene-DK42C8CF.js",
+          "bytes": 610561,
+          "sha256": "76f2a838a9332d663b2a3af3f7fbb96d300bf2d3ad56e3bb6a92a66b5afec0b7"
+        },
+        {
+          "path": "public/assets/quaternius/base-female-v1/adult-female-mobile-v2.glb",
+          "bytes": 4069372,
+          "sha256": "74b38cf254d262b32a5a8ba7068660c11049ef115826c9e02e954863ce21ee53"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-female-v1/outfit-mobile-v2.glb",
+          "bytes": 2405240,
+          "sha256": "411ba1c158b981b00e73d961e9c476a446723577e5a2d87950af43cd8206e21a"
+        },
+        {
+          "path": "public/assets/quaternius/peasant-female-pickup-v3/animations.json",
+          "bytes": 3256903,
+          "sha256": "df0b469b6893f625852dc318ce3ab5bc088e46d0c1165320a79caf6f5c2890f7"
+        },
+        {
+          "path": "public/assets/quaternius/animation-library-v3/walking-motion.json",
+          "bytes": 455,
+          "sha256": "b35070dcf3a70b600051651d73e8d82d1c7bf66014764893edc335f894fb28fd"
+        },
+        {
+          "path": "public/assets/voices/kokoro-zh-zf001-v1/repair.wav",
+          "bytes": 120384,
+          "sha256": "989847fea9fe923eea341f5896061629375cd6738f848d6f36293cd716919464"
+        }
+      ]
+    }
+  ]
+}

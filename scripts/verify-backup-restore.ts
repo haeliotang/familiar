@@ -54,6 +54,34 @@ try {
   const saved = (await app.inject({ url: `/v1/episodes/${job.episodeId}`, headers })).json().manifest
   const voice = await app.inject({ url: `/v1/episodes/${job.episodeId}/voice`, headers })
   assert.equal(voice.statusCode, 200)
+  const reference = join(root, 'synthetic-reference.wav')
+  const phrase = join(root, 'synthetic-phrase.wav')
+  await run('ffmpeg', ['-nostdin', '-v', 'error', '-i', join(process.cwd(), 'public/assets/voices/kokoro-zh-zm009-v1/wait.wav'), '-af', 'atempo=0.8,apad=pad_dur=0.7', '-ar', '16000', '-ac', '1', '-c:a', 'pcm_s16le', phrase], { timeout: 10000 })
+  await run('ffmpeg', ['-nostdin', '-v', 'error', '-stream_loop', '2', '-i', phrase, '-c:a', 'pcm_s16le', reference], { timeout: 10000 })
+  const audio = await readFile(reference)
+  const audioIntent = await app.inject({ method: 'POST', url: '/v1/assets/upload-intents', headers, payload: { personId, kind: 'deceased_audio', mediaType: 'audio/wav', sizeBytes: audio.length } })
+  assert.equal(audioIntent.statusCode, 201)
+  const audioId = audioIntent.json().assetId
+  assert.equal((await app.inject({ method: 'PUT', url: `/v1/assets/${audioId}/content`, headers: { cookie, 'content-type': 'application/octet-stream' }, payload: audio })).statusCode, 202)
+  assert.equal((await app.inject({ method: 'POST', url: `/v1/assets/${audioId}/complete`, headers })).statusCode, 200)
+  const measured = await app.inject({ method: 'POST', url: `/v1/assets/${audioId}/audio-observations`, headers })
+  assert.equal(measured.statusCode, 200)
+  const observations = measured.json().observations
+  const reviewPath = `/v1/assets/${audioId}/audio-review`
+  const observationFingerprint = (await app.inject({ url: reviewPath, headers })).json().observationFingerprint
+  assert.equal((await app.inject({ method: 'POST', url: reviewPath, headers, payload: { observationFingerprint, normalizedAudioSha256: observations.normalizedAudioSha256, ...observations.selectedWindow, subject: 'single_person', text: '不用急，我走慢一点。'.repeat(3) } })).statusCode, 200)
+  const cadenceRequest = { ...request, headers: { cookie, 'idempotency-key': 'synthetic-restore-cadence' } }
+  const cadenceQueued = (await app.inject(cadenceRequest)).json()
+  await processPreparationJobs(source, undefined, sourceRoot)
+  const cadenceJob = (await app.inject({ url: cadenceQueued.statusUrl, headers })).json()
+  assert.equal(cadenceJob.status, 'completed')
+  const cadenceManifest = (await app.inject({ url: `/v1/episodes/${cadenceJob.episodeId}`, headers })).json().manifest
+  assert.equal(cadenceManifest.audioPlan.voiceMode, 'confirmed_window_rate')
+  assert.equal(cadenceManifest.audioPlan.cadence.pauseTransfer, true)
+  const cadencePath = `/v1/episodes/${cadenceJob.episodeId}/voice`
+  const cadenceVoice = await app.inject({ url: cadencePath, headers })
+  assert.equal(cadenceVoice.statusCode, 200)
+  assert.equal(digest(cadenceVoice.rawPayload), cadenceManifest.audioPlan.sha256)
   const files = await fileHashes(sourceRoot)
   assert(files.length > 0)
   await app.close(); app = undefined
@@ -75,14 +103,22 @@ try {
   assert.equal(replay.statusCode, 200)
   assert.equal(digest(replay.rawPayload), digest(voice.rawPayload))
   assert.equal((await app.inject(request)).json().preparationId, queued.preparationId)
-  assert.equal((await restored.query('SELECT count(*)::integer AS count FROM episodes')).rows[0].count, 1)
+  assert.equal((await restored.query('SELECT count(*)::integer AS count FROM episodes')).rows[0].count, 2)
+  assert.deepEqual((await app.inject({ url: `/v1/episodes/${cadenceJob.episodeId}`, headers })).json().manifest, cadenceManifest)
+  assert.equal((await app.inject(cadenceRequest)).json().preparationId, cadenceQueued.preparationId)
+  const cadenceReplay = await app.inject({ url: cadencePath, headers })
+  assert.equal(cadenceReplay.statusCode, 200)
+  assert.equal(digest(cadenceReplay.rawPayload), digest(cadenceVoice.rawPayload))
   const foreign = (await app.inject({ method: 'POST', url: '/v1/sessions/anonymous' })).headers['set-cookie'] as string
   assert.equal((await app.inject({ url: `/v1/episodes/${job.episodeId}`, headers: { cookie: foreign } })).statusCode, 404)
+  assert.equal((await app.inject({ url: cadencePath, headers: { cookie: foreign } })).statusCode, 404)
   assert.equal((await app.inject({ method: 'DELETE', url: `/v1/persons/${personId}`, headers })).statusCode, 202)
   assert.equal((await app.inject({ url: `/v1/episodes/${job.episodeId}`, headers })).statusCode, 404)
   assert.equal((await app.inject({ url: `/v1/episodes/${job.episodeId}/voice`, headers })).statusCode, 404)
+  assert.equal((await app.inject({ url: cadencePath, headers })).statusCode, 404)
+  assert.equal((await restored.query('SELECT retained_voice_base64 FROM episodes WHERE id=$1', [cadenceJob.episodeId])).rows[0]?.retained_voice_base64 ?? null, null)
   assert.deepEqual(await readdir(restoredRoot), [])
-  console.log(JSON.stringify({ status: 'synthetic_restore_passed', database: 'PostgreSQL 17 pg_dump/psql', privateFiles: files.length, checks: ['ready', 'file_hashes', 'manifest', 'voice_bytes', 'idempotency', 'isolation', 'deletion'] }))
+  console.log(JSON.stringify({ status: 'synthetic_restore_passed', database: 'PostgreSQL 17 pg_dump/psql', privateFiles: files.length, checks: ['ready', 'file_hashes', 'manifest', 'voice_bytes', 'retained_cadence_bytes', 'idempotency', 'isolation', 'deletion'] }))
 } finally {
   await app?.close()
   await source?.end()

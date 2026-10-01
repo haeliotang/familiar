@@ -63,10 +63,10 @@ describe('anonymous encounter API', () => {
     const request = { method: 'POST' as const, url: `/v1/persons/${personId}/episodes`, headers: { cookie, 'idempotency-key': 'pinned-avatar-version' } }
     const episodeId = (await app.inject(request)).json().episodeId
     const read = () => app.inject({ method: 'GET', url: `/v1/episodes/${episodeId}`, headers: { cookie } })
-    expect((await read()).json().manifest).toMatchObject({ avatarVersion: 'adult-peasant-male-sitting-v2', audioPlan: { voiceId: 'kokoro-zh-zm009', voiceVersion: 'kokoro-zh-zm009-v1', sha256: '41f0c45181d2e436e2fa41ce23cc815ac08e1f027df9bb9806a5f96b53fe92da' } })
+    expect((await read()).json().manifest).toMatchObject({ avatarVersion: 'adult-peasant-male-compact-v4', audioPlan: { voiceId: 'kokoro-zh-zm009', voiceVersion: 'kokoro-zh-zm009-v1', sha256: '41f0c45181d2e436e2fa41ce23cc815ac08e1f027df9bb9806a5f96b53fe92da' } })
     const saved = (await read()).json().manifest
     expect(saved.sceneVersion).toBe('procedural-places-v3')
-    expect(saved.performanceVersion).toBe('character-timeline-v3')
+    expect(saved.performanceVersion).toBe('character-timeline-v4')
     expect(Number.isInteger(saved.seed) && saved.seed >= 0 && saved.seed <= 0xffffffff).toBe(true)
     expect(saved.manifestHash).toBe(createHash('sha256').update(manifestContent(saved)).digest('hex'))
     expect((await app.inject(request)).json().episodeId).toBe(episodeId)

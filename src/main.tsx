@@ -10,6 +10,7 @@ import { demoEncounter } from './encounter'
 import { api, submitEvidence } from './api'
 import { SceneView } from './scene-loader'
 import { Feedback } from './feedback'
+import { EvidenceCorrection } from './evidence-correction'
 import { DeletionStatus } from './deletion-status'
 import { AudioRecorder } from './audio-recorder'
 import { AssetReview } from './asset-review'
@@ -224,7 +225,7 @@ function App() {
       <p className="voice-note">本次人物外观是虚构创作；合成语音使用新音色，不模仿上传录音。</p>
       {current.id !== 'demo' && current.personalizationLevel === 'generic' && <p className="note" role="status">这次没有使用可用的个人线索，是一段一般的想象场景。你可以返回，自愿补一句记忆。</p>}
       {current.degraded && current.degradationReason === 'audio_analysis_unavailable' ? <p className="note" role="status">这段录音暂未分析成功，本次使用预设声音。可以返回资料页重新检查录音。</p> : current.audioSignalStatus && <p className="note">{audioObservationMessage(current.audioSignalStatus)}</p>}
-      <div className="view-footer"><span>{current.retracted ? '这处线索已撤回；旧相遇仅供回看。' : current.cue === 'wait' ? '线索：回头等待' : current.cue === 'repair' ? '线索：修补物件' : '一般想象场景'}</span><div className="actions"><button className="quiet" onClick={() => setReplay(value => value + 1)}>重新观看</button>{current.id !== 'demo' && <><button className="quiet" disabled={busy || current.retracted} onClick={() => void retract()}>这个细节不对</button><button className="quiet" disabled={busy} onClick={() => void hide()}>移除这次回看</button><button disabled={busy} onClick={() => void begin(true)}>再相遇</button></>}</div></div>
+      <div className="view-footer"><span>{current.retracted ? '这处线索已撤回；旧相遇仅供回看。' : current.cue === 'wait' ? '线索：回头等待' : current.cue === 'repair' ? '线索：修补物件' : '一般想象场景'}</span><div className="actions"><button className="quiet" onClick={() => setReplay(value => value + 1)}>重新观看</button>{current.id !== 'demo' && <><EvidenceCorrection evidenceId={current.evidenceId} retracted={current.retracted} busy={busy} onRetract={() => void retract()} /><button className="quiet" disabled={busy} onClick={() => void hide()}>移除这次回看</button><button disabled={busy} onClick={() => void begin(true)}>再相遇</button></>}</div></div>
       {current.id !== 'demo' && <Feedback key={current.id} episodeId={current.id} />}
       {error && <p className="error" role="alert">{error}</p>}
     </section>}

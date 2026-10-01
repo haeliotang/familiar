@@ -1,0 +1,24 @@
+{
+  "method": "1024px texture sampling and lossless WebP; geometry and rig bytes unchanged",
+  "status": "candidate; browser and device compatibility review required",
+  "measurements": [
+    {
+      "path": "base-character-v1/adult-male-mobile-v2.glb",
+      "sourceSha256": "ef969dbbe67e69dc72beb40edd6e292d1c54e12a71bad8b90eadb0e291313118",
+      "sha256": "04edf812ff4d8bae8ad93d68dc40bbe1251147dbd0e3a05bfc05ce7b5a5064a9",
+      "sourceBytes": 19363284,
+      "bytes": 3645372,
+      "pixels": "exact decoded RGBA match to resized texture; original detail reduced to at most 1024 pixels per side",
+      "extension": "EXT_texture_webp"
+    },
+    {
+      "path": "peasant-male-v1/outfit-mobile-v2.glb",
+      "sourceSha256": "63b96f77930e94a9900204591561206d18dd996e66be1e7b7028e8f500f8ac1a",
+      "sha256": "9eb8041a41f1921f1079ae8015c877f2753dac62d6ad54c24d965bcc8058ec53",
+      "sourceBytes": 22074076,
+      "bytes": 3852764,
+      "pixels": "exact decoded RGBA match to resized texture; original detail reduced to at most 1024 pixels per side",
+      "extension": "EXT_texture_webp"
+    }
+  ]
+}

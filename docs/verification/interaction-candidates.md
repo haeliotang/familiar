@@ -51,3 +51,11 @@ Four tests passed: actual male/female reach positions, table legs meeting the fl
 ### Palm reference revision
 
 Both actual outfit rigs and the pickup tracks include left index/thumb bones. The producer now samples the midpoint of index_01_l and thumb_01_l plus the world hand quaternion. The marker uses this midpoint as its initial target and converts the contact-frame offset into hand-local coordinates for attachment, instead of snapping to the wrist centre. This is a joint-derived palm reference, not a skin surface or finished finger grasp. The pickup and joint tests passed (6 tests), including a nonzero attachment offset and backward restoration; build passed. Browser visual acceptance for this revised palm location remains pending. Earlier screenshots above record the wrist-centre revision and are not evidence for the revised palm contact.
+
+### Eight-clip package preparation
+
+User revised the content target to two bodies and eight actions. `scripts/package-pickup-clips.ts` now creates male/female `peasant-*-pickup-v3/animations.json` candidates, preserving all seven sitting-v2 clips exactly and adding the actual retargeted PickUp_Table clip. Both source packages are bound by SHA-256. Six package/contact tests passed; both libraries deserialize and validate eight distinct clips, including the left-hand track. No dependency or asset download was added.
+
+These packages are not yet selected by the runtime or planner. Finished prop geometry, contact/release behavior, a versioned timeline and combined-character visual review remain necessary before calling the eighth action delivered. The already pushed default stays sitting-v2 and seven clips during this preparation.
+
+Later in the same day, pickup-v3 packages and timeline-v4 were integrated and selected for new local encounters, with a solid object, table, release/rewind behavior and actual combined-character checks. See pickup-performance-v4.md for current evidence and remaining quality limits. The preparation paragraph above records the earlier stage.

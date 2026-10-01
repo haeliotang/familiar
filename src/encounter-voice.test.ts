@@ -1,12 +1,12 @@
 import { readFileSync } from 'node:fs'
 import { afterEach, expect, it, vi } from 'vitest'
 import { encounterVoiceBytes } from './encounter-voice'
-import { sittingMaleAvatarVersion, sittingFemaleAvatarVersion } from './avatar-catalog'
+import { sittingMaleAvatarVersion, sittingFemaleAvatarVersion, pickupMaleAvatarVersion, pickupFemaleAvatarVersion, compactMaleAvatarVersion, compactFemaleAvatarVersion } from './avatar-catalog'
 import { voiceVersionForAvatar } from './voice-catalog'
 
 afterEach(() => vi.unstubAllGlobals())
 
-it.each([sittingMaleAvatarVersion, sittingFemaleAvatarVersion].flatMap(avatarVersion => ['general', 'wait', 'repair'].map(cue => ({ avatarVersion, cue: cue as 'general' | 'wait' | 'repair' }))))('loads the pinned demo voice for $avatarVersion / $cue', async ({ avatarVersion, cue }) => {
+it.each([sittingMaleAvatarVersion, sittingFemaleAvatarVersion, pickupMaleAvatarVersion, pickupFemaleAvatarVersion, compactMaleAvatarVersion, compactFemaleAvatarVersion].flatMap(avatarVersion => ['general', 'wait', 'repair'].map(cue => ({ avatarVersion, cue: cue as 'general' | 'wait' | 'repair' }))))('loads the pinned demo voice for $avatarVersion / $cue', async ({ avatarVersion, cue }) => {
   const url = `/assets/voices/${voiceVersionForAvatar(avatarVersion)}/${cue}.wav`
   const bytes = readFileSync(`public${url}`)
   const fetcher = vi.fn(async (_url: string) => new Response(new Uint8Array(bytes)))

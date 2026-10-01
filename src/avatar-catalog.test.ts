@@ -1,11 +1,11 @@
 import { createHash } from 'node:crypto'
 import { readFileSync } from 'node:fs'
 import { expect, it } from 'vitest'
-import { avatarAssets, candidateAvatarVersions, avatarVersionForEncounter, sittingMaleAvatarVersion, sittingFemaleAvatarVersion, retainedMaleAvatarVersion, retainedFemaleAvatarVersion } from './avatar-catalog'
+import { avatarAssets, candidateAvatarVersions, avatarVersionForEncounter, sittingMaleAvatarVersion, sittingFemaleAvatarVersion, pickupMaleAvatarVersion, pickupFemaleAvatarVersion, compactMaleAvatarVersion, compactFemaleAvatarVersion, retainedMaleAvatarVersion, retainedFemaleAvatarVersion } from './avatar-catalog'
 import { parseCharacterClips } from './character-clips'
 import { voiceVersionForAvatar, femaleVoiceVersion } from './voice-catalog'
 
-it.each([...candidateAvatarVersions, retainedMaleAvatarVersion, retainedFemaleAvatarVersion])('pins every model and motion file in %s to its actual content', version => {
+it.each([...candidateAvatarVersions, pickupMaleAvatarVersion, pickupFemaleAvatarVersion, sittingMaleAvatarVersion, sittingFemaleAvatarVersion, retainedMaleAvatarVersion, retainedFemaleAvatarVersion])('pins every model and motion file in %s to its actual content', version => {
   const assets = avatarAssets(version)
   for (const name of ['head', 'body', 'animations', 'motion'] as const) {
     const bytes = readFileSync(`public${assets[name]}`)
@@ -29,6 +29,8 @@ it.each([sittingMaleAvatarVersion, sittingFemaleAvatarVersion])('binds the seven
 it('retains the female voice for the expanded female body', () => {
   expect(voiceVersionForAvatar(sittingFemaleAvatarVersion)).toBe(femaleVoiceVersion)
   expect(voiceVersionForAvatar(retainedFemaleAvatarVersion)).toBe(femaleVoiceVersion)
+  expect(voiceVersionForAvatar(pickupFemaleAvatarVersion)).toBe(femaleVoiceVersion)
+  expect(voiceVersionForAvatar(compactFemaleAvatarVersion)).toBe(femaleVoiceVersion)
 })
 
 
@@ -39,7 +41,9 @@ it('uses four scene/body combinations before repeating and rejects invalid count
   expect(() => avatarVersionForEncounter(-1)).toThrow('invalid_encounter_count')
 })
 
-it('selects the seven-clip bodies for new encounters', () => {
-  expect(avatarVersionForEncounter(0)).toBe(sittingMaleAvatarVersion)
-  expect(avatarVersionForEncounter(2)).toBe(sittingFemaleAvatarVersion)
+it('selects the compact eight-clip bodies for new encounters while retaining sitting versions', () => {
+  expect(avatarVersionForEncounter(0)).toBe(compactMaleAvatarVersion)
+  expect(avatarVersionForEncounter(2)).toBe(compactFemaleAvatarVersion)
+  expect(avatarAssets(sittingMaleAvatarVersion).pickup).toBeUndefined()
+  expect(avatarAssets(sittingFemaleAvatarVersion).pickup).toBeUndefined()
 })
